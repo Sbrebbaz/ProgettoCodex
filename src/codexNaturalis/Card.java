@@ -12,4 +12,26 @@ public abstract class Card {
 		side[0]=front;
 		side[1]=back;
 	}
+
+	public Symbol getCardType() {
+		return cardType;
+	}
+
+	public void setCardType(Symbol cardType) {
+		this.cardType = cardType;
+	}
+
+	public Side[] getSide() {
+		return side;
+	}
+
+	public void setSide(Side[] side) {
+		this.side = side;
+	}
+
+	public int getId() {
+		return id;
+	}
+	
+	
 }
