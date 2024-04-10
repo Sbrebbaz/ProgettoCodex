@@ -24,5 +24,31 @@ public abstract class Side {
 	public abstract boolean verifyCondition();//non mi ricordo cosa doveva fare
 	
 	public abstract int getPoints();//data la map e le condizioni della carta ti ritorna i numeri di punti che ha fatto
+
+	public int getPointValue() {
+		return pointValue;
+	}
+
+	public void setPointValue(int pointValue) {
+		this.pointValue = pointValue;
+	}
+
+	public List<Symbol> getCenter() {
+		return center;
+	}
+
+	public void setCenter(List<Symbol> center) {
+		this.center = center;
+	}
+
+	public Symbol[] getCorners() {
+		return corners;
+	}
+
+	public void setCorners(Symbol[] corners) {
+		this.corners = corners;
+	}
+	
+	
 	
 }
