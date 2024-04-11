@@ -21,9 +21,9 @@ public abstract class Side {
 		corners[3]=cornerBottomRight;
 	}
 	
-	public abstract boolean verifyCondition();//non mi ricordo cosa doveva fare
+	public abstract boolean verifyCondition(Map map);//non mi ricordo cosa doveva fare
 	
-	public abstract int getPoints();//data la map e le condizioni della carta ti ritorna i numeri di punti che ha fatto
+	public abstract int getPoints(Map map);//data la map e le condizioni della carta ti ritorna i numeri di punti che ha fatto
 
 	public int getPointValue() {
 		return pointValue;
