@@ -22,7 +22,7 @@ public class ResourceCard extends Side{
 	
 	@Override
 	public int getPoints(Map map) {
-		return 0;
+		return this.getPointValue();
 	}
 
 }
