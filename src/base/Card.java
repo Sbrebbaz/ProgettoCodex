@@ -1,4 +1,4 @@
-package Base;
+package base;
 
 public abstract class Card {
 	private int id;

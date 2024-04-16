@@ -1,4 +1,4 @@
-package Base;
+package base;
 
 public class Corner {
 	private Symbol symbol;

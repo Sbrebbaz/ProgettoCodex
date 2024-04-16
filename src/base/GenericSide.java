@@ -1,4 +1,4 @@
-package Base;
+package base;
 
 import java.util.List;
 
@@ -15,7 +15,7 @@ public class GenericSide extends Side{
 	
 	@Override
 	public boolean verifyCondition(Map map) {
-		return map.verifyCardPosition(this);
+		return map.verifyCondition(this);
 	}
 	
 	@Override

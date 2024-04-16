@@ -1,4 +1,4 @@
-package Base;
+package base;
 
 import java.util.List;
 
@@ -68,6 +68,15 @@ public class Map {
 		}
 		return max+1;
 	}
+
+	public boolean verifyCondition(Side side) {
+		//TODO implement
+		return true;
+	}
 	
+	public int getCardConditionPoints(Side side) {
+		//TODO implement
+		return -1;
+	}
 
 }

@@ -1,4 +1,4 @@
-package codexNaturalis;
+package base;
 
 public class Main {
 
