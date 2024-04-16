@@ -4,21 +4,43 @@ import java.util.List;
 public abstract class Side {
 	private int pointValue;
 	private List<Symbol> center;
-	private Symbol corners [];
+	private Corner corners [];
 	
-	public Side(List<Symbol> center, Symbol[] corners){
+	public Side(List<Symbol> center, Corner[] corners){
 		this.center=center;
 		this.corners=corners;
 	}
 	
-	public Side(List<Symbol> center,Symbol cornerTopLeft,Symbol cornerTopRight,
-			Symbol cornerBottomLeft,Symbol cornerBottomRight) {
+	public Side(List<Symbol> center,Corner cornerTopLeft,Corner cornerTopRight,
+			Corner cornerBottomLeft,Corner cornerBottomRight) {
 		this.center=center;
-		corners=new Symbol[4];
+		corners=new Corner[4];
 		corners[0]=cornerTopLeft;
 		corners[1]=cornerTopRight;
 		corners[2]=cornerBottomLeft;
 		corners[3]=cornerBottomRight;
+	}
+	
+	public Corner getCornerFromPosition(int x, int y) throws Exception{
+		if(x == -1) {
+			if( y == -1) {
+				return corners[3];
+			}else if(y == 1) {
+				return corners[2];
+			}else{
+				throw new Exception();
+			}
+		}else if(x == 1) {
+			if( y == -1) {
+				return corners[1];
+			}else if(y == 1) {
+				return corners[0];
+			}else{
+				throw new Exception();
+			}
+		}else {
+			throw new Exception();
+		}
 	}
 	
 	public abstract boolean verifyCondition(Map map);//non mi ricordo cosa doveva fare
@@ -41,11 +63,11 @@ public abstract class Side {
 		this.center = center;
 	}
 
-	public Symbol[] getCorners() {
+	public Corner[] getCorners() {
 		return corners;
 	}
 
-	public void setCorners(Symbol[] corners) {
+	public void setCorners(Corner[] corners) {
 		this.corners = corners;
 	}
 	

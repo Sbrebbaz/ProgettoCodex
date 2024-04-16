@@ -10,7 +10,7 @@ public class Deck {
 	}
 	
 	/**
-	 * shuffle the card in the deck
+	 * shuffle the cards in the deck
 	 */
 	public void shuffle() {
         Collections.shuffle(deck);
