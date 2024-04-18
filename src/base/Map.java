@@ -13,7 +13,7 @@ public class Map {
 	public Map(Player player) {
 		this.player = player;
 		grid = new MapCard[xSize][ySize];
-		for(int i=0;i<4;i++) {
+		for(int i=0;i<2;i++) {
 			subMap[i] = new Coordinate(xSize/2,ySize/2);
 		}
 	}
@@ -21,6 +21,7 @@ public class Map {
 	public void placeStartingCard(Card card) throws Exception{
 		if(card.getCardType() == CardType.STARTING) {
 			grid[xSize/2][ySize/2] = card.getMapCard(0);
+			updateSubMap(xSize/2,ySize/2);
 		}else {
 			throw new Exception();
 		}
@@ -28,10 +29,10 @@ public class Map {
 	
 	public void placeCard(int x, int y, Card card) throws Exception {
 		if(card.getCardType() != CardType.STARTING && card.getCardType() != CardType.OBJECTIVE) {// controlla se è una carta di tipo accettabile
-			if(checkCardPosition(x,y,card)) {//
+			if(checkCardPosition(x,y,card)) {
 				
 				grid[x][y] = new MapCard(card,getZindexMapCard(x,y));
-				
+				updateSubMap(x,y);
 				
 			}else {
 				throw new Exception();
@@ -42,7 +43,6 @@ public class Map {
 	}
 	
 	public boolean checkCardPosition(int x,int y,Card card) throws Exception {
-		//boolean tmpPass = true;//flag per indicare se la carta ha passato i criteri di piazzamento
 		boolean tmpCorner = false;//flag per indicare se si è trovato una carta con angolo alle diagonali
 		for(int i=-1;i<1;i+=2) {
 			for(int j=-1;j<1;j+=2) {
@@ -75,9 +75,12 @@ public class Map {
 	}
 	
 	public void updateSubMap(int x, int y) throws Exception {
-		for(int i=0;i<4;i++) {
+		for(int i=-1;i<2;i+=2) {
 			if(subMap[i].x == x) {
-				subMap[i].getRowFromIndex(i);
+				subMap[i].x += i;
+			}
+			if(subMap[i].y == y) {
+				subMap[i].y += i;
 			}
 		}
 	}
@@ -99,29 +102,6 @@ public class Map {
 		public Coordinate(int x, int y) {
 			this.x=x;
 			this.y=y;
-		}
-		
-		public int getRowFromIndex(int index) throws Exception{
-			if(index == 0 || index == 1) {
-				return -1;
-			}else if(index == 2 || index == 3) {
-				return 1;
-			}
-			else {
-				throw new Exception();
-			}
-		}
-		
-		
-		public int getColFromIndex(int index) throws Exception {
-			if(index == 0 || index == 2) {
-				return -1;
-			}else if(index == 3 || index == 1) {
-				return 1;
-			}
-			else {
-				throw new Exception();
-			}
 		}
 	}
 
