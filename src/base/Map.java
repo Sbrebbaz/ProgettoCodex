@@ -74,7 +74,7 @@ public class Map {
 		return max+1;
 	}
 	
-	public void updateSubMap(int x, int y) throws Exception {
+	public void updateSubMap(int x, int y) {
 		for(int i=-1;i<2;i+=2) {
 			if(subMap[i].x == x) {
 				subMap[i].x += i;
