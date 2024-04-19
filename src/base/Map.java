@@ -1,5 +1,6 @@
 package base;
 
+import java.awt.Point;
 import java.util.List;
 
 public class Map {
@@ -8,13 +9,13 @@ public class Map {
 	private final int ySize = 80;
 	private MapCard[][] grid;
 	private Player player;
-	private Coordinate subMap[];
+	private Point subMap[];
 	
 	public Map(Player player) {
 		this.player = player;
 		grid = new MapCard[xSize][ySize];
 		for(int i=0;i<2;i++) {
-			subMap[i] = new Coordinate(xSize/2,ySize/2);
+			subMap[i] = new Point(xSize/2,ySize/2);
 		}
 	}
 	
@@ -94,15 +95,4 @@ public class Map {
 		//TODO implement
 		return -1;
 	}
-	
-	private class Coordinate{
-		public int x;
-		public int y;
-		
-		public Coordinate(int x, int y) {
-			this.x=x;
-			this.y=y;
-		}
-	}
-
 }
