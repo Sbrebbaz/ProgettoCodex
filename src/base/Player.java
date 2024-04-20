@@ -117,5 +117,10 @@ public class Player {
 	public Map getMap() {
 		return map;
 	}
+	
+	@Override
+	public String toString() {
+		return getName();
+	}
 
 }
