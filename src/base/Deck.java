@@ -28,4 +28,12 @@ public class Deck {
 			return false;
 		}
 	}
+	
+	public Card drawCard() throws Exception{
+		if(!this.isEmpty()) {
+			return deck.get(0);
+		}else {
+			throw new Exception();
+		}
+	}
 }
