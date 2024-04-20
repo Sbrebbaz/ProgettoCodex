@@ -18,8 +18,8 @@ public class PlaceRequirementSide extends GenericSide{
 	}
 	
 	@Override
-	public int getPoints(Map map) {
-		return map.getCardConditionPoints(this);
+	public boolean verifyCondition(Map map) {
+		return map.findListSymbol(placeRequirements);
 	}
 
 }

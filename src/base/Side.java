@@ -45,7 +45,7 @@ public abstract class Side {
 	
 	public abstract boolean verifyCondition(Map map);//non mi ricordo cosa doveva fare
 	
-	public abstract int getPoints(Map map);//data la map e le condizioni della carta ti ritorna i numeri di punti che ha fatto
+	public abstract int getPoints(Map map,int x,int y);//data la map e le condizioni della carta ti ritorna i numeri di punti che ha fatto
 
 	public int getPointValue() {
 		return pointValue;

@@ -14,5 +14,10 @@ public class PointCornerRequirementSide extends PlaceRequirementSide {
 		super(center, cornerTopLeft, cornerTopRight, cornerBottomLeft, cornerBottomRight, placeRequirements);
 		// TODO Auto-generated constructor stub
 	}
+	
+	@Override
+	public int getPoints(Map map,int x,int y){
+		return this.getPointValue() * map.getNearCorner(x, y);
+	}
 
 }

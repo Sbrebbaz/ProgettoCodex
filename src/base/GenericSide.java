@@ -15,11 +15,11 @@ public class GenericSide extends Side{
 	
 	@Override
 	public boolean verifyCondition(Map map) {
-		return map.verifyCondition(this);
+		return true;
 	}
 	
 	@Override
-	public int getPoints(Map map) {
+	public int getPoints(Map map,int x,int y) {
 		return this.getPointValue();
 	}
 
