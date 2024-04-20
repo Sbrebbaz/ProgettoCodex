@@ -213,12 +213,12 @@ public class Map {
 		if(positionRequirement == null)
 			return false;
 		
-		if(outOfIndex(x+positionRequirement[0].length,y+positionRequirement.length)) {//se la sotto matrice uscirebbe dalla grid...
+		if(outOfIndex(x+positionRequirement.length,y+positionRequirement[0].length)) {//se la sotto matrice uscirebbe dalla grid...
 			return false;//...dimensioni diversi quindi diverse
 		}
 		
-		for(int i=x ; i<x+positionRequirement[0].length && isEquals; i++) {
-			for(int j=y; j<y+positionRequirement.length && isEquals; j++) {
+		for(int i=x ; i<x+positionRequirement.length && isEquals; i++) {
+			for(int j=y; j<y+positionRequirement[0].length && isEquals; j++) {
 				
 				if(outOfIndex(x+i,y+j)) {//se esco dalla grid vado alla prossima riga
 					break;
