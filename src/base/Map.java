@@ -98,26 +98,7 @@ public class Map {
 			}
 		}
 	}
-
-	public boolean verifyCondition(GenericSide side) {
-		return true;
-	}
-
-	public boolean verifyCondition(PointResourceRequirementSide side) {
-		//TODO implement
-		return true;
-	}
-
-	public boolean verifyCondition(PointCornerRequirementSide side) {
-		//TODO implement
-		return true;
-	}
-
-	public int getCardConditionPoints(Side side) {
-		//TODO implement
-		return -1;
-	}
-
+	
 	public int getSymbolCount(Symbol symbol) {//conta il numero di corner visibili con il simbolo cercato nella mappa
 		Corner tmp[];//contiene i 4 corner della carta attualmente scansionata
 		int count=0;
