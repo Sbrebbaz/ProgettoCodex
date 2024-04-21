@@ -5,8 +5,10 @@ public class Table {
 	private Deck goldDeck;
 	private Deck objectiveDeck;
 	private Deck startingDeck;
-	private Deck tableCards [];
-	private final int nTableCard = 6;
+	private Card tableCards [];
+	private Card tableObjectiveCards[];
+	private final int nTableCards = 4;
+	private final int nObjectiveTableCards = 2;
 
 	public Table() {
 
@@ -27,6 +29,20 @@ public class Table {
 		case OBJECTIVE:
 			return objectiveDeck.drawCard();
 		default:
+			throw new Exception();
+		}
+	}
+	
+	public Card drawTableCard(int index) throws Exception,ArrayIndexOutOfBoundsException{
+		if(index<0 && index >= nTableCards) {
+			throw new ArrayIndexOutOfBoundsException();
+		}
+		
+		if(tableCards[index] != null) {
+			Card tmp = tableCards[index];
+			tableCards[index] = this.drawCard(tableCards[index].getCardType());
+			return tmp;
+		}else {
 			throw new Exception();
 		}
 	}
@@ -63,13 +79,26 @@ public class Table {
 		this.startingDeck = startingDeck;
 	}
 
-	public Deck[] getTableCards() {
+	public Card[] getTableCards() {
 		return tableCards;
 	}
 
-	public void setTableCards(Deck[] tableCards) {
-		this.tableCards = tableCards;
+
+	public Card[] getTableObjectiveCards() {
+		return tableObjectiveCards;
 	}
+	
+	public Card getTableObjectiveCard(int index) throws ArrayIndexOutOfBoundsException{
+		if(index >= 0 && index < nObjectiveTableCards) {
+			return tableObjectiveCards[index];
+		}
+		else {
+			throw new ArrayIndexOutOfBoundsException();
+		}
+	}
+
+	
+	
 	
 	
 
