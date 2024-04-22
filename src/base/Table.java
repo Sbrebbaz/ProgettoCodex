@@ -7,8 +7,8 @@ public class Table {
 	private Deck startingDeck;
 	private Card tableCards [];
 	private Card tableObjectiveCards[];
-	private final int nTableCards = 4;
-	private final int nObjectiveTableCards = 2;
+	private final int N_TABLE_CARDS = 4;
+	private final int N_OBJECTIVE_TABLE_CARDS = 2;
 
 	public Table() {
 
@@ -34,7 +34,7 @@ public class Table {
 	}
 	
 	public Card drawTableCard(int index) throws Exception,ArrayIndexOutOfBoundsException{
-		if(index<0 && index >= nTableCards) {
+		if(index<0 && index >= N_TABLE_CARDS) {
 			throw new ArrayIndexOutOfBoundsException();
 		}
 		
@@ -89,7 +89,7 @@ public class Table {
 	}
 	
 	public Card getTableObjectiveCard(int index) throws ArrayIndexOutOfBoundsException{
-		if(index >= 0 && index < nObjectiveTableCards) {
+		if(index >= 0 && index < N_OBJECTIVE_TABLE_CARDS) {
 			return tableObjectiveCards[index];
 		}
 		else {

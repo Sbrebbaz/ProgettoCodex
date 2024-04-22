@@ -36,4 +36,9 @@ public class Deck {
 			throw new Exception();
 		}
 	}
+	
+	public void addCard(Card card) {
+		deck.add(card);
+		shuffle();
+	}
 }

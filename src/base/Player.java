@@ -66,8 +66,24 @@ public class Player {
 		this.points += points;
 	}
 	
-	public void PlayCard(int x, int y, Card card) {
-		
+	public boolean compareTo(Player player) {
+		if(player.getPoints() >= this.getPoints()) {
+			return true;
+		}else {
+			return false;
+		}
+	}
+	
+	public boolean equals(Player player) {
+		if(player.getPoints() == this.getPoints()) {
+			return true;
+		}else {
+			return false;
+		}
+	}
+	
+	public void playCard(int x, int y, Card card) throws Exception{
+		map.placeCard(x, y, card);
 	}
 	
 	public String getName() {
