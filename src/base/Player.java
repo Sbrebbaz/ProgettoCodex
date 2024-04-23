@@ -83,7 +83,7 @@ public class Player {
 	}
 	
 	public void playCard(int x, int y, Card card) throws Exception{
-		map.placeCard(x, y, card);
+		this.AddPoints(map.placeCard(x, y, card));
 	}
 	
 	public String getName() {
