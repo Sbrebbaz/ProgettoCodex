@@ -66,12 +66,8 @@ public class Player {
 		this.points += points;
 	}
 	
-	public boolean compareTo(Player player) {
-		if(player.getPoints() >= this.getPoints()) {
-			return true;
-		}else {
-			return false;
-		}
+	public int compareTo(Player player) {
+		return player.getPoints() - this.getPoints();
 	}
 	
 	public boolean equals(Player player) {
