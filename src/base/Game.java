@@ -1,21 +1,25 @@
 package base;
 
+import java.util.Collections;
 import java.util.List;
 
 public class Game {
 	private List<Player> players;
 	private Table table;
-	private final int N_STARTING_OBJECTIVE = 2;
+	private int turnCounter;
 	public Game(List<Player> players) {
 		this.players=players;
+		Collections.shuffle(players);
+		turnCounter = 0;
 		this.table=new Table();
 	}
 	
-	public void playStartingTurn(Player player) throws Exception{
-		Card objective[] = new Card[N_STARTING_OBJECTIVE]; 
-		for(int i=0;i<N_STARTING_OBJECTIVE;i++) {
-			objective[i] = table.drawCard(CardType.OBJECTIVE);
-		}
+	public void playNextTurn(){
+		turnCounter = (turnCounter+1)%players.size();
+	}
+	
+	public Player getCurrentPlayer() {
+		return players.get(turnCounter);
 	}
 	
 	public void drawCard(Player player, CardType cardType) throws Exception {
@@ -31,5 +35,23 @@ public class Game {
 			}
 		}
 		return null;
+	}
+	
+	public void calculatePlayerPoint(Player player) {
+		int addObjectivePoints = 0;
+		for(int i = 0; i<table.getN_OBJECTIVE_TABLE_CARDS(); i++) {
+			addObjectivePoints += table.getTableObjectiveCards(i).getVisibleSide().getPoints(player.getMap(), 0, 0);
+		}
+		addObjectivePoints += player.getSecretObjective().getVisibleSide().getPoints(player.getMap(), 0, 0);
+		player.AddPoints(addObjectivePoints);
+	}
+	
+	public boolean verifyWinningCondition() {
+		for(Player player:players) {
+			if(player.winningPoints()) {
+				return true;
+			}
+		}
+		return table.isEmpty();
 	}
 }

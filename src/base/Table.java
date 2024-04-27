@@ -1,16 +1,18 @@
 package base;
 
+import java.util.ArrayList;
+
 public class Table {
 	private Deck resourceDeck;
 	private Deck goldDeck;
 	private Deck objectiveDeck;
 	private Deck startingDeck;
-	private Card tableCards [];
+	private ArrayList <Card> tableCards;
 	private Card tableObjectiveCards[];
 	private final int N_TABLE_CARDS = 4;
 	private final int N_OBJECTIVE_TABLE_CARDS = 2;
 
-	public Table() {
+	public Table() {// inizializza i decks dal file, pesca 2 carte gold e resource e li mette in tableCards e pesca 2 carte Objective e li mette in tableObjectiveCards
 
 	}
 
@@ -38,9 +40,9 @@ public class Table {
 			throw new ArrayIndexOutOfBoundsException();
 		}
 		
-		if(tableCards[index] != null) {
-			Card tmp = tableCards[index];
-			tableCards[index] = this.drawCard(tableCards[index].getCardType());
+		if(tableCards.get(index) != null) {
+			Card tmp = tableCards.get(index);
+			tableCards.set(index,this.drawCard(tableCards.get(index).getCardType()));
 			return tmp;
 		}else {
 			throw new Exception();
@@ -79,13 +81,13 @@ public class Table {
 		this.startingDeck = startingDeck;
 	}
 
-	public Card[] getTableCards() {
-		return tableCards;
+	public Card getTableCards(int index) {
+		return tableCards.get(index);
 	}
 
 
-	public Card[] getTableObjectiveCards() {
-		return tableObjectiveCards;
+	public Card getTableObjectiveCards(int index) {
+		return tableObjectiveCards[index];
 	}
 	
 	public Card getTableObjectiveCard(int index) throws ArrayIndexOutOfBoundsException{
@@ -97,7 +99,17 @@ public class Table {
 		}
 	}
 
-	
+	public int getN_TABLE_CARDS() {
+		return N_TABLE_CARDS;
+	}
+
+	public int getN_OBJECTIVE_TABLE_CARDS() {
+		return N_OBJECTIVE_TABLE_CARDS;
+	}
+
+	public boolean isEmpty() {
+		return resourceDeck.isEmpty() && goldDeck.isEmpty() && tableCards.isEmpty();
+	}
 	
 	
 	

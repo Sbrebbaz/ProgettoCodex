@@ -251,6 +251,14 @@ public class Map {
 		
 		return isEquals;
 	}
+
+	public int getxSize() {
+		return xSize;
+	}
+
+	public int getySize() {
+		return ySize;
+	}
 	
 	
 }

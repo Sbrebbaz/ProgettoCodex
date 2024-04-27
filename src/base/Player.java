@@ -66,6 +66,10 @@ public class Player {
 		this.points += points;
 	}
 	
+	public boolean winningPoints() {
+		return points>=20;
+	}
+	
 	public int compareTo(Player player) {
 		return player.getPoints() - this.getPoints();
 	}

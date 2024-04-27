@@ -29,8 +29,8 @@ public abstract class Card {
 		this.cardColor = cardColor;
 	}
 
-	public Side[] getSide() {
-		return side;
+	public Side getSide(int index) {
+		return side[index];
 	}
 
 	public void setSide(Side[] side) {
@@ -55,7 +55,9 @@ public abstract class Card {
 
 	public void swapSide() {
 		
-		visibleSide = (visibleSide+1)%2; 
+		if(this.getCardType() != CardType.OBJECTIVE && this.getSide((visibleSide+1)%2) != null) {
+			visibleSide = (visibleSide+1)%2; 
+		}
 	}
 	
 	
