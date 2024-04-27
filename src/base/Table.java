@@ -81,13 +81,23 @@ public class Table {
 		this.startingDeck = startingDeck;
 	}
 
-	public Card getTableCards(int index) {
-		return tableCards.get(index);
+	public Card getTableCards(int index) throws ArrayIndexOutOfBoundsException {
+		if(index >= 0 && index< N_TABLE_CARDS) {
+			return tableCards.get(index);
+		}else {
+			throw new ArrayIndexOutOfBoundsException();
+		}
+		
 	}
 
 
-	public Card getTableObjectiveCards(int index) {
-		return tableObjectiveCards[index];
+	public Card getTableObjectiveCards(int index) throws ArrayIndexOutOfBoundsException{
+		if(index >= 0 && index < N_OBJECTIVE_TABLE_CARDS) {
+			return tableObjectiveCards[index];
+		}else {
+			throw new ArrayIndexOutOfBoundsException();
+		}
+		
 	}
 	
 	public Card getTableObjectiveCard(int index) throws ArrayIndexOutOfBoundsException{
