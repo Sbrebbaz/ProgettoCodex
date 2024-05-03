@@ -2,14 +2,16 @@ package base;
 
 public abstract class Card {
 	private int id;
+	private static int COUNTER=0;
 	private Symbol cardColor;
 	private Side side [];//0:front, 1:back
 	private CardType cardType;
 	private int visibleSide;
 	
 	
-	public Card(int id, Symbol cardColor, Side front, Side back, CardType cardType) {
-		this.id=id;
+	public Card(Symbol cardColor, Side front, Side back, CardType cardType) {
+		this.id=COUNTER;
+		COUNTER++;
 		this.cardColor = cardColor;
 		this.cardType = cardType;
 		side = new Side [2];
