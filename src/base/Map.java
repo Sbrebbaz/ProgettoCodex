@@ -213,7 +213,7 @@ public class Map {
 		for(int i=subMap[0].x+1; i<subMap[1].x ; i++) {//per tutta la subMap...
 			for(int j=subMap[0].y+1; j<subMap[1].y ; j++) {
 				if(isSubMapEquals(i,j,positionRequirement,usedCard)) {//conto le sotto matrice di griglia uguale ai requisiti allora
-					count++;;
+					count++;
 				}
 			}
 		}
