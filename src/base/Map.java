@@ -1,6 +1,7 @@
 package base;
 
 import java.awt.Point;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Map {
@@ -206,21 +207,23 @@ public class Map {
 		return totalCorner;
 	}
 
-	public boolean findSubMap(MapCard[][] positionRequirement) {
+	public int findSubMap(MapCard[][] positionRequirement) {
+		int count =0;
+		List<Integer> usedCard = new ArrayList<Integer>();
 		for(int i=subMap[0].x+1; i<subMap[1].x ; i++) {//per tutta la subMap...
 			for(int j=subMap[0].y+1; j<subMap[1].y ; j++) {
-				if(isSubMapEquals(i,j,positionRequirement)) {//se esiste una sotto matrice di griglia uguale ai requisiti allora esiste una subMap...
-					return true;
+				if(isSubMapEquals(i,j,positionRequirement,usedCard)) {//conto le sotto matrice di griglia uguale ai requisiti allora
+					count++;;
 				}
 			}
 		}
-		return false;//...se non la trovo non esiste
+		return count;
 	}
 	
-	private boolean isSubMapEquals(int x, int y, MapCard[][] positionRequirement) {
+	private boolean isSubMapEquals(int x, int y, MapCard[][] positionRequirement,List<Integer> usedCard) {
 		
 		boolean isEquals = true;//indica se le 2 sotto matrici sono uguali, rimane vero anche se in una cella di grid c'è una carta ma in positionRequirement non c'è in una certa posizione
-		
+		List<Integer> tmpUsedCard = new ArrayList<Integer>();
 		if(positionRequirement == null)
 			return false;
 		
@@ -236,8 +239,10 @@ public class Map {
 				}
 				
 				if(grid[x+i][y+j]!=null && grid[x+i][y+j].getCard() != null && positionRequirement[i][j] != null) {// se in entrambe le sotto matrice c'è una carta...
-					if(grid[x+i][y+j].getCard().getCardType() != positionRequirement[i][j].getCard().getCardType()) {//... e sono di tipo diverso
+					if(grid[x+i][y+j].getCard().getCardType() != positionRequirement[i][j].getCard().getCardType() || usedCard.contains(grid[x+i][y+j].getCard().getId())) {//... e sono di tipo diverso o è una carta gia usata
 						isEquals = false;//le 2 sotto matrici non sono uguali
+					}else {
+						tmpUsedCard.add(grid[x+i][y+j].getCard().getId());
 					}
 					
 				}else {//se no...
@@ -248,7 +253,9 @@ public class Map {
 				
 			}
 		}
-		
+		if(isEquals == true) {
+			usedCard.addAll(tmpUsedCard);
+		}
 		return isEquals;
 	}
 

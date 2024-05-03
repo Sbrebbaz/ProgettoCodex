@@ -29,10 +29,6 @@ public class PointPositionRequirementSide extends PlaceRequirementSide {
 
 	@Override
 	public int getPoints(Map map,int x,int y){
-		if(map.findSubMap(positionRequirement)) {
-			return this.getPointValue();
-		}else {
-			return 0;
-		}
+		return map.findSubMap(positionRequirement)*this.getPointValue();
 	}
 }
