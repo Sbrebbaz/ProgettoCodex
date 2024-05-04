@@ -47,7 +47,7 @@ public class Map {
 		if(outOfIndex(x,y)) {//controlla se le coordinate si trovano nella griglia
 			throw new IndexOutOfBoundsException();
 		}
-		if(card!=null && card.getCardType() != CardType.STARTING) {// controlla se è una carta di tipo accettabile 
+		if(card!=null && card.getCardType() != CardType.STARTING && card.placeableCard()) {// controlla se è una carta di tipo accettabile 
 			if(checkCardPosition(x,y,card) && card.getVisibleSide().verifyCondition(this)) {//controlla se in quella posizione si puo piazzare una carta e che abbia i requisiti base per essere piazzata
 
 				grid[x][y] = new MapCard(card,getZindexMapCard(x,y));//piazza la carta nel punto

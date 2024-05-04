@@ -28,7 +28,7 @@ public class Game {
 	
 	public List<Player> getWinningPlayers(){
 		List<Player> tmp = players;
-		tmp.sort(null);// non sono sicuro che sorti dal max al min
+		Collections.sort(tmp);// non sono sicuro che sorti dal max al min
 		for(int i=0; i<tmp.size()-1;i++) {
 			if(!tmp.get(i).equals(tmp.get(i+1))) {
 				return tmp.subList(0, i+1);

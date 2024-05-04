@@ -62,5 +62,12 @@ public abstract class Card {
 		}
 	}
 	
+	public boolean placeableCard() {
+		if(this.getCardType() == CardType.OBJECTIVE) {
+			return false;
+		}else {
+			return true;
+		}
+	}
 	
 }

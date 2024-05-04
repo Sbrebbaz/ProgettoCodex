@@ -2,7 +2,7 @@ package base;
 
 import java.util.List;
 
-public class Player {
+public class Player implements Comparable<Player>{
 	private int id;
 	private String name;
 	private List<Card> hand;
