@@ -1,5 +1,6 @@
 package base;
 
+import java.util.Arrays;
 import java.util.List;
 
 public class PointPositionRequirementSide extends PlaceRequirementSide {
@@ -30,5 +31,13 @@ public class PointPositionRequirementSide extends PlaceRequirementSide {
 	@Override
 	public int getPoints(Map map,int x,int y){
 		return map.findSubMap(positionRequirement)*this.getPointValue();
+	}
+
+	@Override
+	public String toString() {
+		return "PointPositionRequirementSide{" +
+				"placeRequirementSide=" + super.toString() +
+				", positionRequirement=" + Arrays.toString(positionRequirement) +
+				'}';
 	}
 }

@@ -23,4 +23,8 @@ public class GenericSide extends Side{
 		return this.getPointValue();
 	}
 
+	@Override
+	public String toString() {
+		return super.toString();
+	}
 }

@@ -1,6 +1,7 @@
 package base;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Table {
 	private Deck resourceDeck;
@@ -120,8 +121,19 @@ public class Table {
 	public boolean isEmpty() {
 		return resourceDeck.isEmpty() && goldDeck.isEmpty() && tableCards.isEmpty();
 	}
-	
-	
-	
 
+
+	@Override
+	public String toString() {
+		return "Table{" +
+				"resourceDeck=" + resourceDeck +
+				", goldDeck=" + goldDeck +
+				", objectiveDeck=" + objectiveDeck +
+				", startingDeck=" + startingDeck +
+				", tableCards=" + tableCards +
+				", tableObjectiveCards=" + Arrays.toString(tableObjectiveCards) +
+				", N_TABLE_CARDS=" + N_TABLE_CARDS +
+				", N_OBJECTIVE_TABLE_CARDS=" + N_OBJECTIVE_TABLE_CARDS +
+				'}';
+	}
 }

@@ -20,4 +20,8 @@ public class PointCornerRequirementSide extends PlaceRequirementSide {
 		return this.getPointValue() * map.getNearCorner(x, y);
 	}
 
+	@Override
+	public String toString() {
+		return super.toString();
+	}
 }

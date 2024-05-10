@@ -1,4 +1,5 @@
 package base;
+import java.util.Arrays;
 import java.util.List;
 
 public abstract class Side {
@@ -70,7 +71,13 @@ public abstract class Side {
 	public void setCorners(Corner[] corners) {
 		this.corners = corners;
 	}
-	
-	
-	
+
+	@Override
+	public String toString() {
+		return "Side{" +
+				"corners=" + Arrays.toString(corners) +
+				", center=" + center +
+				", pointValue=" + pointValue +
+				'}';
+	}
 }

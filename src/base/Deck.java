@@ -41,4 +41,11 @@ public class Deck {
 		deck.add(card);
 		shuffle();
 	}
+
+	@Override
+	public String toString() {
+		return "Deck{" +
+				"deck=" + deck +
+				'}';
+	}
 }

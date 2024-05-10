@@ -34,5 +34,11 @@ public class PointResourceRequirementSide extends PlaceRequirementSide {
 		return totalPoint;
 	}
 
-	
+	@Override
+	public String toString() {
+		return "PointResourceRequirementSide{" +
+				"pointRequirement=" + pointRequirement +
+				'}';
+	}
+
 }

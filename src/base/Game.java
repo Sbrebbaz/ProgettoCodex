@@ -54,4 +54,12 @@ public class Game {
 		}
 		return table.isEmpty();
 	}
+
+	@Override
+	public String toString() {
+		return "Game{" +
+				"players=" + players +
+				", table=" + table +
+				'}';
+	}
 }

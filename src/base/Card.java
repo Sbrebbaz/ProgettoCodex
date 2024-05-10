@@ -18,7 +18,7 @@ public abstract class Card {
 		side[0]=front;
 		side[1]=back;
 	}
-	
+
 	public MapCard getMapCard(int zIndex) {
 		return new MapCard(this,zIndex);
 	}
@@ -69,5 +69,11 @@ public abstract class Card {
 			return true;
 		}
 	}
-	
+
+	@Override
+	public String toString() {
+		return "Card{" +
+				"visibleSide=" + visibleSide +
+				'}';
+	}
 }

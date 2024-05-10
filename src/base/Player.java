@@ -134,4 +134,13 @@ public class Player implements Comparable<Player>{
 		return map;
 	}
 
+	@Override
+	public String toString() {
+		return "Player{" +
+				"id=" + id +
+				", name='" + name + '\'' +
+				", hand=" + hand +
+				", points=" + points +
+				'}';
+	}
 }
