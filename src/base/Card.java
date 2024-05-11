@@ -1,6 +1,6 @@
 package base;
 
-public abstract class Card {
+public class Card {
 	private int id;
 	private static int COUNTER=0;
 	private Symbol cardColor;
