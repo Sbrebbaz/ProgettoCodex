@@ -1,38 +1,35 @@
 package base;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.nio.file.Files;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import base.*;
+import com.google.gson.Gson;
+import com.google.gson.stream.JsonReader;
 
 public class Main {
 
-    public static void main(String[] args) throws Exception {
-        // TODO Auto-generated method stub
-        System.out.print("TEST");
-        List<Card> cards = new ArrayList<>();
-        List<Deck> deck = new ArrayList<>(19);
-        Deck dk = new Deck(cards);
-        Deck dk2 = new Deck(cards);
-        deck.add(dk);
-        deck.add(dk2);
-        List<Symbol> d = new ArrayList<>();
-        Corner[] c = new Corner[1];
-
-        Side s = new GenericSide(d,c);
-        Card cr = new Card(Symbol.ANIMALS,s,s,CardType.OBJECTIVE);
-        cards.add(cr);
-        dk.addCard(cr);
-        deck.forEach(System.out::println);
-        cards.forEach(System.out::println);
-
-        Player p = new Player(1,"Luca",Color.BLUE);
-        p.setHand(cards);
-        System.out.println(p.ToStringPlayerHand());
-
-        Card cr2 = new Card(Symbol.ANIMALS,s,s,CardType.STARTING);
-        Map m = new Map();
-
-        m.placeStartingCard(cr2);
-        
-        System.out.println(m);
-    }
+	private static ArrayList<Card> cards;
+	
+	public static void main(String[] args) {
+		
+		_readCardsFromFile();
+		
+		System.out.println(cards);	
+	}
+	
+	private static void _readCardsFromFile() {
+		Gson gson = new Gson();
+		JsonReader reader = null;
+		try {
+			reader = new JsonReader(new FileReader("cards.json"));
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		cards = gson.fromJson(reader, ArrayList.class);
+	}
 }

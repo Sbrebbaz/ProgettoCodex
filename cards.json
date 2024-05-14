@@ -1,0 +1,3778 @@
+[
+  //CARTE RISORSA
+
+  //CARTE ROSSE
+  {
+    "cardColor": "MUSHROOMS",
+    "cardType": "RESOURCE",
+    "frontSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "placeRequiremenmts": [
+
+      ],
+      "pointRequirements": [
+
+      ],
+      "center": [
+
+      ],
+      "corners": [
+        "MUSHROOMS",
+        "EMPTY",
+        "MUSHROOMS",
+        "NULL"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "MUSHROOMS"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "MUSHROOMS",
+    "cardType": "RESOURCE",
+    "frontSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "placeRequiremenmts": [
+
+      ],
+      "pointRequirements": [
+
+      ],
+      "center": [
+
+      ],
+      "corners": [
+        "MUSHROOMS",
+        "MUSHROOMS",
+        "NULL",
+        "EMPTY"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "MUSHROOMS"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "MUSHROOMS",
+    "cardType": "RESOURCE",
+    "frontSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "placeRequiremenmts": [
+
+      ],
+      "pointRequirements": [
+
+      ],
+      "center": [
+
+      ],
+      "corners": [
+        "EMPTY",
+        "NULL",
+        "MUSHROOMS",
+        "MUSHROOMS"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "MUSHROOMS"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "MUSHROOMS",
+    "cardType": "RESOURCE",
+    "frontSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "placeRequiremenmts": [
+
+      ],
+      "pointRequirements": [
+
+      ],
+      "center": [
+
+      ],
+      "corners": [
+        "NULL",
+        "MUSHROOMS",
+        "EMPTY",
+        "MUSHROOMS"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "MUSHROOMS"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "MUSHROOMS",
+    "cardType": "RESOURCE",
+    "frontSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "placeRequiremenmts": [
+
+      ],
+      "pointRequirements": [
+
+      ],
+      "center": [
+
+      ],
+      "corners": [
+        "NULL",
+        "FEATHER",
+        "VEGETABLES",
+        "MUSHROOMS"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "MUSHROOMS"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "MUSHROOMS",
+    "cardType": "RESOURCE",
+    "frontSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "placeRequiremenmts": [
+
+      ],
+      "pointRequirements": [
+
+      ],
+      "center": [
+
+      ],
+      "corners": [
+        "INK",
+        "MUSHROOMS",
+        "NULL",
+        "ANIMALS"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "MUSHROOMS"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "MUSHROOMS",
+    "cardType": "RESOURCE",
+    "frontSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "placeRequiremenmts": [
+
+      ],
+      "pointRequirements": [
+
+      ],
+      "center": [
+
+      ],
+      "corners": [
+        "MUSHROOMS",
+        "INSECTS",
+        "SCROLL",
+        "EMPTY"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "MUSHROOMS"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "MUSHROOMS",
+    "cardType": "RESOURCE",
+    "frontSide": {
+      "type": "genericSide",
+      "pointValue": 1,
+      "placeRequiremenmts": [
+
+      ],
+      "pointRequirements": [
+
+      ],
+      "center": [
+
+      ],
+      "corners": [
+        "EMPTY",
+        "MUSHROOMS",
+        "EMPTY",
+        "NULL"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "MUSHROOMS"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "MUSHROOMS",
+    "cardType": "RESOURCE",
+    "frontSide": {
+      "type": "genericSide",
+      "pointValue": 1,
+      "placeRequiremenmts": [
+
+      ],
+      "pointRequirements": [
+
+      ],
+      "center": [
+
+      ],
+      "corners": [
+        "MUSHROOMS",
+        "NULL",
+        "EMPTY",
+        "EMPTY"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "MUSHROOMS"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "MUSHROOMS",
+    "cardType": "RESOURCE",
+    "frontSide": {
+      "type": "genericSide",
+      "pointValue": 1,
+      "placeRequiremenmts": [
+
+      ],
+      "pointRequirements": [
+
+      ],
+      "center": [
+
+      ],
+      "corners": [
+        "NULL",
+        "EMPTY",
+        "MUSHROOMS",
+        "EMPTY"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "MUSHROOMS"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },        //CARTE VERDI
+  {
+    "cardColor": "VEGETABLES",
+    "cardType": "RESOURCE",
+    "frontSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "placeRequiremenmts": [
+
+      ],
+      "pointRequirements": [
+
+      ],
+      "center": [
+
+      ],
+      "corners": [
+        "VEGETABLES",
+        "EMPTY",
+        "VEGETABLES",
+        "NULL"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "VEGETABLES"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "VEGETABLES",
+    "cardType": "RESOURCE",
+    "frontSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "placeRequiremenmts": [
+
+      ],
+      "pointRequirements": [
+
+      ],
+      "center": [
+
+      ],
+      "corners": [
+        "VEGETABLES",
+        "VEGETABLES",
+        "NULL",
+        "EMPTY"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "VEGETABLES"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "VEGETABLES",
+    "cardType": "RESOURCE",
+    "frontSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "placeRequiremenmts": [
+
+      ],
+      "pointRequirements": [
+
+      ],
+      "center": [
+
+      ],
+      "corners": [
+        "EMPTY",
+        "NULL",
+        "VEGETABLES",
+        "VEGETABLES"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "VEGETABLES"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "VEGETABLES",
+    "cardType": "RESOURCE",
+    "frontSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "placeRequiremenmts": [
+
+      ],
+      "pointRequirements": [
+
+      ],
+      "center": [
+
+      ],
+      "corners": [
+        "NULL",
+        "VEGETABLES",
+        "EMPTY",
+        "VEGETABLES"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "VEGETABLES"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "VEGETABLES",
+    "cardType": "RESOURCE",
+    "frontSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "placeRequiremenmts": [
+
+      ],
+      "pointRequirements": [
+
+      ],
+      "center": [
+
+      ],
+      "corners": [
+        "NULL",
+        "INSECTS",
+        "FEATHER",
+        "VEGETABLES"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "VEGETABLES"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "VEGETABLES",
+    "cardType": "RESOURCE",
+    "frontSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "placeRequiremenmts": [
+
+      ],
+      "pointRequirements": [
+
+      ],
+      "center": [
+
+      ],
+      "corners": [
+        "MUSHROOMS",
+        "VEGETABLES",
+        "NULL",
+        "INK"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "VEGETABLES"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "VEGETABLES",
+    "cardType": "RESOURCE",
+    "frontSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "placeRequiremenmts": [
+
+      ],
+      "pointRequirements": [
+
+      ],
+      "center": [
+
+      ],
+      "corners": [
+        "SCROLL",
+        "NULL",
+        "VEGETABLES",
+        "ANIMALS"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "VEGETABLES"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "VEGETABLES",
+    "cardType": "RESOURCE",
+    "frontSide": {
+      "type": "genericSide",
+      "pointValue": 1,
+      "placeRequiremenmts": [
+
+      ],
+      "pointRequirements": [
+
+      ],
+      "center": [
+
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "VEGETABLES",
+        "NULL"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "VEGETABLES"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "VEGETABLES",
+    "cardType": "RESOURCE",
+    "frontSide": {
+      "type": "genericSide",
+      "pointValue": 1,
+      "placeRequiremenmts": [
+
+      ],
+      "pointRequirements": [
+
+      ],
+      "center": [
+
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "NULL",
+        "VEGETABLES"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "VEGETABLES"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "VEGETABLES",
+    "cardType": "RESOURCE",
+    "frontSide": {
+      "type": "genericSide",
+      "pointValue": 1,
+      "placeRequiremenmts": [
+
+      ],
+      "pointRequirements": [
+
+      ],
+      "center": [
+
+      ],
+      "corners": [
+        "NULL",
+        "VEGETABLES",
+        "NULL",
+        "NULL"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "VEGETABLES"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  //CARTE BLU
+  {
+    "cardColor": "ANIMALS",
+    "cardType": "RESOURCE",
+    "frontSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "placeRequiremenmts": [
+
+      ],
+      "pointRequirements": [
+
+      ],
+      "center": [
+
+      ],
+      "corners": [
+        "ANIMALS",
+        "ANIMALS",
+        "EMPTY",
+        "NULL"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "ANIMALS"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "ANIMALS",
+    "cardType": "RESOURCE",
+    "frontSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "placeRequiremenmts": [
+
+      ],
+      "pointRequirements": [
+
+      ],
+      "center": [
+
+      ],
+      "corners": [
+        "NULL",
+        "EMPTY",
+        "ANIMALS",
+        "ANIMALS"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "ANIMALS"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "ANIMALS",
+    "cardType": "RESOURCE",
+    "frontSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "placeRequiremenmts": [
+
+      ],
+      "pointRequirements": [
+
+      ],
+      "center": [
+
+      ],
+      "corners": [
+        "ANIMALS",
+        "NULL",
+        "ANIMALS",
+        "EMPTY"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "ANIMALS"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "ANIMALS",
+    "cardType": "RESOURCE",
+    "frontSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "placeRequiremenmts": [
+
+      ],
+      "pointRequirements": [
+
+      ],
+      "center": [
+
+      ],
+      "corners": [
+        "EMPTY",
+        "ANIMALS",
+        "NULL",
+        "ANIMALS"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "ANIMALS"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "ANIMALS",
+    "cardType": "RESOURCE",
+    "frontSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "placeRequiremenmts": [
+
+      ],
+      "pointRequirements": [
+
+      ],
+      "center": [
+
+      ],
+      "corners": [
+        "NULL",
+        "INSECTS",
+        "INK",
+        "ANIMALS"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "ANIMALS"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "ANIMALS",
+    "cardType": "RESOURCE",
+    "frontSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "placeRequiremenmts": [
+
+      ],
+      "pointRequirements": [
+
+      ],
+      "center": [
+
+      ],
+      "corners": [
+        "VEGETABLES",
+        "ANIMALS",
+        "NULL",
+        "SCROLL"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "ANIMALS"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "ANIMALS",
+    "cardType": "RESOURCE",
+    "frontSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "placeRequiremenmts": [
+
+      ],
+      "pointRequirements": [
+
+      ],
+      "center": [
+
+      ],
+      "corners": [
+        "FEATHER",
+        "NULL",
+        "ANIMALS",
+        "MUSHROOMS"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "ANIMALS"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "ANIMALS",
+    "cardType": "RESOURCE",
+    "frontSide": {
+      "type": "genericSide",
+      "pointValue": 1,
+      "placeRequiremenmts": [
+
+      ],
+      "pointRequirements": [
+
+      ],
+      "center": [
+
+      ],
+      "corners": [
+        "NULL",
+        "EMPTY",
+        "ANIMALS",
+        "EMPTY"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "ANIMALS"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "ANIMALS",
+    "cardType": "RESOURCE",
+    "frontSide": {
+      "type": "genericSide",
+      "pointValue": 1,
+      "placeRequiremenmts": [
+
+      ],
+      "pointRequirements": [
+
+      ],
+      "center": [
+
+      ],
+      "corners": [
+        "EMPTY",
+        "NULL",
+        "EMPTY",
+        "ANIMALS"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "ANIMALS"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "ANIMALS",
+    "cardType": "RESOURCE",
+    "frontSide": {
+      "type": "genericSide",
+      "pointValue": 1,
+      "placeRequiremenmts": [
+
+      ],
+      "pointRequirements": [
+
+      ],
+      "center": [
+
+      ],
+      "corners": [
+        "EMPTY",
+        "ANIMALS",
+        "EMPTY",
+        "NULL"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "ANIMALS"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  //CARTE VIOLA
+  {
+    "cardColor": "INSECTS",
+    "cardType": "RESOURCE",
+    "frontSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "placeRequiremenmts": [
+
+      ],
+      "pointRequirements": [
+
+      ],
+      "center": [
+
+      ],
+      "corners": [
+        "INSECTS",
+        "INSECTS",
+        "EMPTY",
+        "NULL"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "INSECTS"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "INSECTS",
+    "cardType": "RESOURCE",
+    "frontSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "placeRequiremenmts": [
+
+      ],
+      "pointRequirements": [
+
+      ],
+      "center": [
+
+      ],
+      "corners": [
+        "NULL",
+        "EMPTY",
+        "INSECTS",
+        "INSECTS"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "INSECTS"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "INSECTS",
+    "cardType": "RESOURCE",
+    "frontSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "placeRequiremenmts": [
+
+      ],
+      "pointRequirements": [
+
+      ],
+      "center": [
+
+      ],
+      "corners": [
+        "INSECTS",
+        "NULL",
+        "INSECTS",
+        "EMPTY"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "INSECTS"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "INSECTS",
+    "cardType": "RESOURCE",
+    "frontSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "placeRequiremenmts": [
+
+      ],
+      "pointRequirements": [
+
+      ],
+      "center": [
+
+      ],
+      "corners": [
+        "EMPTY",
+        "INSECTS",
+        "NULL",
+        "INSECTS"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "INSECTS"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "INSECTS",
+    "cardType": "RESOURCE",
+    "frontSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "placeRequiremenmts": [
+
+      ],
+      "pointRequirements": [
+
+      ],
+      "center": [
+
+      ],
+      "corners": [
+        "NULL",
+        "FEATHER",
+        "ANIMALS",
+        "INSECTS"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "INSECTS"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "INSECTS",
+    "cardType": "RESOURCE",
+    "frontSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "placeRequiremenmts": [
+
+      ],
+      "pointRequirements": [
+
+      ],
+      "center": [
+
+      ],
+      "corners": [
+        "SCROLL",
+        "INSECTS",
+        "NULL",
+        "MUSHROOMS"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "INSECTS"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "INSECTS",
+    "cardType": "RESOURCE",
+    "frontSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "placeRequiremenmts": [
+
+      ],
+      "pointRequirements": [
+
+      ],
+      "center": [
+
+      ],
+      "corners": [
+        "INSECTS",
+        "VEGETABLES",
+        "INK",
+        "NULL"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "INSECTS"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "INSECTS",
+    "cardType": "RESOURCE",
+    "frontSide": {
+      "type": "genericSide",
+      "pointValue": 1,
+      "placeRequiremenmts": [
+
+      ],
+      "pointRequirements": [
+
+      ],
+      "center": [
+
+      ],
+      "corners": [
+        "INSECTS",
+        "NULL",
+        "EMPTY",
+        "EMPTY"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "INSECTS"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "INSECTS",
+    "cardType": "RESOURCE",
+    "frontSide": {
+      "type": "genericSide",
+      "pointValue": 1,
+      "placeRequiremenmts": [
+
+      ],
+      "pointRequirements": [
+
+      ],
+      "center": [
+
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "NULL",
+        "INSECTS"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "INSECTS"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "INSECTS",
+    "cardType": "RESOURCE",
+    "frontSide": {
+      "type": "genericSide",
+      "pointValue": 1,
+      "placeRequiremenmts": [
+
+      ],
+      "pointRequirements": [
+
+      ],
+      "center": [
+
+      ],
+      "corners": [
+        "NULL",
+        "INSECTS",
+        "EMPTY",
+        "EMPTY"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "INSECTS"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  //CARTE INIZIALI
+  {
+    "cardColor": "",
+    "cardType": "STARTING",
+    "frontSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "placeRequiremenmts": [
+
+      ],
+      "pointRequirements": [
+
+      ],
+      "center": [
+        "INSECTS"
+      ],
+      "corners": [
+        "EMPTY",
+        "VEGETABLES",
+        "INSECTS",
+        "EMPTY"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        
+      ],
+      "corners": [
+        "MUSHROOMS",
+        "VEGETABLES",
+        "INSECTS",
+        "ANIMALS"
+      ]
+    }
+  },
+  {
+    "cardColor": "",
+    "cardType": "STARTING",
+    "frontSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "placeRequiremenmts": [
+
+      ],
+      "pointRequirements": [
+
+      ],
+      "center": [
+        "MUSHROOMS"
+      ],
+      "corners": [
+        "ANIMALS",
+        "EMPTY",
+        "EMPTY",
+        "MUSHROOMS"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        
+      ],
+      "corners": [
+        "MUSHROOMS",
+        "VEGETABLES",
+        "INSECTS",
+        "ANIMALS"
+      ]
+    }
+  },
+  {
+    "cardColor": "",
+    "cardType": "STARTING",
+    "frontSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "placeRequiremenmts": [
+
+      ],
+      "pointRequirements": [
+
+      ],
+      "center": [
+        "VEGETABLES",
+        "MUSHROOMS"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        
+      ],
+      "corners": [
+        "MUSHROOMS",
+        "VEGETABLES",
+        "INSECTS",
+        "ANIMALS"
+      ]
+    }
+  },
+  {
+    "cardColor": "",
+    "cardType": "STARTING",
+    "frontSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "placeRequiremenmts": [
+
+      ],
+      "pointRequirements": [
+
+      ],
+      "center": [
+        "ANIMALS",
+        "INSECTS"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        
+      ],
+      "corners": [
+        "MUSHROOMS",
+        "VEGETABLES",
+        "INSECTS",
+        "ANIMALS"
+      ]
+    }
+  },
+  {
+    "cardColor": "",
+    "cardType": "STARTING",
+    "frontSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "placeRequiremenmts": [
+
+      ],
+      "pointRequirements": [
+
+      ],
+      "center": [
+        "ANIMALS",
+        "INSECTS",
+        "VEGETABLES"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        
+      ],
+      "corners": [
+        "MUSHROOMS",
+        "VEGETABLES",
+        "INSECTS",
+        "ANIMALS"
+      ]
+    }
+  },
+  {
+    "cardColor": "",
+    "cardType": "STARTING",
+    "frontSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "placeRequiremenmts": [
+
+      ],
+      "pointRequirements": [
+
+      ],
+      "center": [
+        "VEGETABLES",
+        "ANIMALS",
+        "MUSHROOMS"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        
+      ],
+      "corners": [
+        "MUSHROOMS",
+        "VEGETABLES",
+        "INSECTS",
+        "ANIMALS"
+      ]
+    }
+  },
+  //CARTE GOLD
+  //CARTE ROSSE
+  {
+    "cardColor": "MUSHROOMS",
+    "cardType": "GOLD",
+    "frontSide": {
+      "type": "PointResourceRequirementSide",
+      "pointValue": 1,
+      "placeRequiremenmts": [
+        "MUSHROOMS",
+        "MUSHROOMS",
+        "ANIMALS"
+      ],
+      "pointRequirements": [
+        "FEATHER"
+      ],
+      "center": [
+
+      ],
+      "corners": [
+        "NULL",
+        "EMPTY",
+        "EMPTY",
+        "FEATHER"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "MUSHROOMS"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "MUSHROOMS",
+    "cardType": "GOLD",
+    "frontSide": {
+      "type": "PointResourceRequirementSide",
+      "pointValue": 1,
+      "placeRequiremenmts": [
+        "MUSHROOMS",
+        "MUSHROOMS",
+        "VEGETABLES"
+      ],
+      "pointRequirements": [
+        "INK"
+      ],
+      "center": [
+        
+      ],
+      "corners": [
+        "EMPTY",
+        "INK",
+        "NULL",
+        "EMPTY"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "MUSHROOMS"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "MUSHROOMS",
+    "cardType": "GOLD",
+    "frontSide": {
+      "type": "PointResourceRequirementSide",
+      "pointValue": 1,
+      "placeRequiremenmts": [
+        "MUSHROOMS",
+        "MUSHROOMS",
+        "ANIMALS"
+      ],
+      "pointRequirements": [
+        "SCROLL"
+      ],
+      "center": [
+        
+      ],
+      "corners": [
+        "SCROLL",
+        "EMPTY",
+        "EMPTY",
+        "NULL"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "MUSHROOMS"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "MUSHROOMS",
+    "cardType": "GOLD",
+    "frontSide": {
+      "type": "PointCornerRequirementSide",
+      "pointValue": 2,
+      "placeRequiremenmts": [
+        "MUSHROOMS",
+        "MUSHROOMS",
+        "MUSHROOMS",
+        "ANIMALS"
+      ],
+      "pointRequirements": [
+                                                  ////COME DEVO SEGNARE???
+      ],
+      "center": [
+        
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "NULL",
+        "EMPTY"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "MUSHROOMS"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "MUSHROOMS",
+    "cardType": "GOLD",
+    "frontSide": {
+      "type": "PointCornerRequirementSide",
+      "pointValue": 2,
+      "placeRequiremenmts": [
+        "MUSHROOMS",
+        "MUSHROOMS",
+        "MUSHROOMS",
+        "VEGETABLES"
+      ],
+      "pointRequirements": [
+                                      //COME SEGNO?
+      ],
+      "center": [
+        
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "NULL"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "MUSHROOMS"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "MUSHROOMS",
+    "cardType": "GOLD",
+    "frontSide": {
+      "type": "PointCornerRequirementSide",
+      "pointValue": 2,
+      "placeRequiremenmts": [
+        "MUSHROOMS",
+        "MUSHROOMS",
+        "MUSHROOMS",
+        "INSECTS"
+      ],
+      "pointRequirements": [
+        //COSA SEGNO?
+      ],
+      "center": [
+              
+      ],
+      "corners": [
+        "EMPTY",
+        "NULL",
+        "EMPTY",
+        "EMPTY"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "MUSHROOMS"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "MUSHROOMS",
+    "cardType": "GOLD",
+    "frontSide": {
+      "type": "PointResourceRequirementSide",
+      "pointValue": 3,
+      "placeRequiremenmts": [
+        "MUSHROOMS",
+        "MUSHROOMS",
+        "MUSHROOMS"
+      ],
+      "pointRequirements": [
+        
+      ],
+      "center": [
+        
+      ],
+      "corners": [
+        "EMPTY",
+        "NULL",
+        "INK",
+        "NULL"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "MUSHROOMS"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "MUSHROOMS",
+    "cardType": "GOLD",
+    "frontSide": {
+      "type": "PointResourceRequirementSide",
+      "pointValue": 3,
+      "placeRequiremenmts": [
+        "MUSHROOMS",
+        "MUSHROOMS",
+        "MUSHROOMS"
+      ],
+      "pointRequirements": [
+        
+      ],
+      "center": [
+        
+      ],
+      "corners": [
+        "FEATHER",
+        "EMPTY",
+        "NULL",
+        "NULL"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "MUSHROOMS"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "MUSHROOMS",
+    "cardType": "GOLD",
+    "frontSide": {
+      "type": "PointResourceRequirementSide",
+      "pointValue": 3,
+      "placeRequiremenmts": [
+        "MUSHROOMS",
+        "MUSHROOMS",
+        "ANIMALS"
+      ],
+      "pointRequirements": [
+      
+      ],
+      "center": [
+        
+      ],
+      "corners": [
+        "NULL",
+        "SCROLL",
+        "NULL",
+        "EMPTY"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "MUSHROOMS"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "MUSHROOMS",
+    "cardType": "GOLD",
+    "frontSide": {
+      "type": "PointResourceRequirementSide",
+      "pointValue": 5,
+      "placeRequiremenmts": [
+        "MUSHROOMS",
+        "MUSHROOMS",
+        "MUSHROOMS",
+        "MUSHROOMS",
+        "MUSHROOMS"
+      ],
+      "pointRequirements": [
+        
+      ],
+      "center": [
+        
+      ],
+      "corners": [
+        "EMPTY",
+        "NULL",
+        "EMPTY",
+        "NULL"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "MUSHROOMS"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  //CARTE VERDI
+  {
+    "cardColor": "VEGETABLES",
+    "cardType": "GOLD",
+    "frontSide": {
+      "type": "PointResourceRequirementSide",
+      "pointValue": 1,
+      "placeRequiremenmts": [
+        "VEGETABLES",
+        "VEGETABLES",
+        "INSECTS"
+      ],
+      "pointRequirements": [
+        "FEATHER"
+      ],
+      "center": [
+
+      ],
+      "corners": [
+        "FEATHER",
+        "EMPTY",
+        "EMPTY",
+        "NULL"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "VEGETABLES"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "VEGETABLES",
+    "cardType": "GOLD",
+    "frontSide": {
+      "type": "PointResourceRequirementSide",
+      "pointValue": 1,
+      "placeRequiremenmts": [
+        "VEGETABLES",
+        "VEGETABLES",
+        "MUSHROOMS"
+      ],
+      "pointRequirements": [
+        "SCROLL"
+      ],
+      "center": [
+
+      ],
+      "corners": [
+        "EMPTY",
+        "SCROLL",
+        "NULL",
+        "EMPTY"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "VEGETABLES"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "VEGETABLES",
+    "cardType": "GOLD",
+    "frontSide": {
+      "type": "PointResourceRequirementSide",
+      "pointValue": 1,
+      "placeRequiremenmts": [
+        "VEGETABLES",
+        "VEGETABLES",
+        "ANIMALS"
+      ],
+      "pointRequirements": [
+        "INK"
+      ],
+      "center": [
+
+      ],
+      "corners": [
+        "EMPTY",
+        "NULL",
+        "INK",
+        "EMPTY"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "VEGETABLES"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "VEGETABLES",
+    "cardType": "GOLD",
+    "frontSide": {
+      "type": "PointCornerRequirementSide",
+      "pointValue": 2,
+      "placeRequiremenmts": [
+        "VEGETABLES",
+        "VEGETABLES",
+        "VEGETABLES",
+        "INSECTS"
+      ],
+      "pointRequirements": [
+            //COMEE
+      ],
+      "center": [
+
+      ],
+      "corners": [
+        "NULL",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "VEGETABLES"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "VEGETABLES",
+    "cardType": "GOLD",
+    "frontSide": {
+      "type": "PointCornerRequirementSide",
+      "pointValue": 2,
+      "placeRequiremenmts": [
+        "VEGETABLES",
+        "VEGETABLES",
+        "VEGETABLES",
+        "ANIMALS"
+      ],
+      "pointRequirements": [
+            //COMEE
+      ],
+      "center": [
+
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "NULL"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "VEGETABLES"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "VEGETABLES",
+    "cardType": "GOLD",
+    "frontSide": {
+      "type": "PointCornerRequirementSide",
+      "pointValue": 2,
+      "placeRequiremenmts": [
+        "VEGETABLES",
+        "VEGETABLES",
+        "VEGETABLES",
+        "MUSHROOMS"
+      ],
+      "pointRequirements": [
+            //COMEE
+      ],
+      "center": [
+
+      ],
+      "corners": [
+        "EMPTY",
+        "NULL",
+        "EMPTY",
+        "EMPTY"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "VEGETABLES"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "VEGETABLES",
+    "cardType": "GOLD",
+    "frontSide": {
+      "type": "PointResourceRequirementSide",
+      "pointValue": 3,
+      "placeRequiremenmts": [
+        "VEGETABLES",
+        "VEGETABLES",
+        "VEGETABLES"
+      ],
+      "pointRequirements": [
+      
+      ],
+      "center": [
+
+      ],
+      "corners": [
+        "EMPTY",
+        "NULL",
+        "FEATHER",
+        "NULL"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "VEGETABLES"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "VEGETABLES",
+    "cardType": "GOLD",
+    "frontSide": {
+      "type": "PointResourceRequirementSide",
+      "pointValue": 3,
+      "placeRequiremenmts": [
+        "VEGETABLES",
+        "VEGETABLES",
+        "VEGETABLES",
+      ],
+      "pointRequirements": [
+          
+      ],
+      "center": [
+
+      ],
+      "corners": [
+        "SCROLL",
+        "EMPTY",
+        "NULL",
+        "NULL"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "VEGETABLES"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "VEGETABLES",
+    "cardType": "GOLD",
+    "frontSide": {
+      "type": "PointResourceRequirementSide",
+      "pointValue": 3,
+      "placeRequiremenmts": [
+        "VEGETABLES",
+        "VEGETABLES",
+        "VEGETABLES"
+      ],
+      "pointRequirements": [
+          
+      ],
+      "center": [
+
+      ],
+      "corners": [
+        "NULL",
+        "INK",
+        "NULL",
+        "EMPTY"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "VEGETABLES"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "VEGETABLES",
+    "cardType": "GOLD",
+    "frontSide": {
+      "type": "PointResourceRequirementSide",
+      "pointValue": 5,
+      "placeRequiremenmts": [
+        "VEGETABLES",
+        "VEGETABLES",
+        "VEGETABLES",
+        "VEGETABLES",
+        "VEGETABLES"
+      ],
+      "pointRequirements": [
+            
+      ],
+      "center": [
+
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "NULL",
+        "NULL"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "VEGETABLES"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  //CARTE BLU
+  {
+    "cardColor": "ANIMALS",
+    "cardType": "GOLD",
+    "frontSide": {
+      "type": "PointResourceRequirementSide",
+      "pointValue": 1,
+      "placeRequiremenmts": [
+        "ANIMALS",
+        "ANIMALS",
+        "INSECTS"
+      ],
+      "pointRequirements": [
+        "INK"
+      ],
+      "center": [
+
+      ],
+      "corners": [
+        "INK",
+        "EMPTY",
+        "EMPTY",
+        "NULL"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "ANIMALS"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "ANIMALS",
+    "cardType": "GOLD",
+    "frontSide": {
+      "type": "PointResourceRequirementSide",
+      "pointValue": 1,
+      "placeRequiremenmts": [
+        "ANIMALS",
+        "ANIMALS",
+        "VEGETABLES"
+      ],
+      "pointRequirements": [
+        "SCROLL"
+      ],
+      "center": [
+
+      ],
+      "corners": [
+        "NULL",
+        "EMPTY",
+        "EMPTY",
+        "SCROLL"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "ANIMALS"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "ANIMALS",
+    "cardType": "GOLD",
+    "frontSide": {
+      "type": "PointResourceRequirementSide",
+      "pointValue": 1,
+      "placeRequiremenmts": [
+        "ANIMALS",
+        "ANIMALS",
+        "MUSHROOMS"
+      ],
+      "pointRequirements": [
+        "FEATHER"
+      ],
+      "center": [
+
+      ],
+      "corners": [
+        "EMPTY",
+        "NULL",
+        "FEATHER",
+        "EMPTY"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "ANIMALS"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "ANIMALS",
+    "cardType": "GOLD",
+    "frontSide": {
+      "type": "PointCornerRequirementSide",
+      "pointValue": 2,
+      "placeRequiremenmts": [
+        "ANIMALS",
+        "ANIMALS",
+        "ANIMALS",
+        "INSECTS"
+      ],
+      "pointRequirements": [
+          //COME
+      ],
+      "center": [
+
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "NULL",
+        "EMPTY"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "ANIMALS"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "ANIMALS",
+    "cardType": "GOLD",
+    "frontSide": {
+      "type": "PointCornerRequirementSide",
+      "pointValue": 2,
+      "placeRequiremenmts": [
+        "ANIMALS",
+        "ANIMALS",
+        "ANIMALS",
+        "MUSHROOMS"
+      ],
+      "pointRequirements": [
+          //COME
+      ],
+      "center": [
+
+      ],
+      "corners": [
+        "EMPTY",
+        "NULL",
+        "EMPTY",
+        "EMPTY"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "ANIMALS"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "ANIMALS",
+    "cardType": "GOLD",
+    "frontSide": {
+      "type": "PointCornerRequirementSide",
+      "pointValue": 2,
+      "placeRequiremenmts": [
+        "ANIMALS",
+        "ANIMALS",
+        "ANIMALS",
+        "VEGETABLES"
+      ],
+      "pointRequirements": [
+          //COME
+      ],
+      "center": [
+
+      ],
+      "corners": [
+        "NULL",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "ANIMALS"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "ANIMALS",
+    "cardType": "GOLD",
+    "frontSide": {
+      "type": "PointResourceRequirementSide",
+      "pointValue": 3,
+      "placeRequiremenmts": [
+        "ANIMALS",
+        "ANIMALS",
+        "ANIMALS"
+      ],
+      "pointRequirements": [
+          
+      ],
+      "center": [
+
+      ],
+      "corners": [
+        "EMPTY",
+        "NULL",
+        "SCROLL",
+        "NULL"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "ANIMALS"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "ANIMALS",
+    "cardType": "GOLD",
+    "frontSide": {
+      "type": "PointResourceRequirementSide",
+      "pointValue": 3,
+      "placeRequiremenmts": [
+        "ANIMALS",
+        "ANIMALS",
+        "ANIMALS"
+      ],
+      "pointRequirements": [
+          
+      ],
+      "center": [
+
+      ],
+      "corners": [
+        "EMPTY",
+        "INK",
+        "NULL",
+        "NULL"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "ANIMALS"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "ANIMALS",
+    "cardType": "GOLD",
+    "frontSide": {
+      "type": "PointResourceRequirementSide",
+      "pointValue": 3,
+      "placeRequiremenmts": [
+        "ANIMALS",
+        "ANIMALS",
+        "ANIMALS"
+      ],
+      "pointRequirements": [
+          
+      ],
+      "center": [
+
+      ],
+      "corners": [
+        "NULL",
+        "EMPTY",
+        "NULL",
+        "FEATHER"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "ANIMALS"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "ANIMALS",
+    "cardType": "GOLD",
+    "frontSide": {
+      "type": "PointResourceRequirementSide",
+      "pointValue": 5,
+      "placeRequiremenmts": [
+        "ANIMALS",
+        "ANIMALS",
+        "ANIMALS",
+        "ANIMALS",
+        "ANIMALS"
+      ],
+      "pointRequirements": [
+          
+      ],
+      "center": [
+
+      ],
+      "corners": [
+        "NULL",
+        "EMPTY",
+        "NULL",
+        "EMPTY"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "ANIMALS"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  //CARTE VIOLA
+  {
+    "cardColor": "INSECTS",
+    "cardType": "GOLD",
+    "frontSide": {
+      "type": "PointResourceRequirementSide",
+      "pointValue": 1,
+      "placeRequiremenmts": [
+        "INSECTS",
+        "INSECTS",
+        "VEGETABLES"
+      ],
+      "pointRequirements": [
+        "FEATHER"
+      ],
+      "center": [
+
+      ],
+      "corners": [
+        "EMPTY",
+        "FEATHER",
+        "NULL",
+        "EMPTY"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "INSECTS"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "INSECTS",
+    "cardType": "GOLD",
+    "frontSide": {
+      "type": "PointResourceRequirementSide",
+      "pointValue": 1,
+      "placeRequiremenmts": [
+        "INSECTS",
+        "INSECTS",
+        "ANIMALS"
+      ],
+      "pointRequirements": [
+        "SCROLL"
+      ],
+      "center": [
+
+      ],
+      "corners": [
+        "EMPTY",
+        "NULL",
+        "SCROLL",
+        "EMPTY"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "INSECTS"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "INSECTS",
+    "cardType": "GOLD",
+    "frontSide": {
+      "type": "PointResourceRequirementSide",
+      "pointValue": 1,
+      "placeRequiremenmts": [
+        "INSECTS",
+        "INSECTS",
+        "MUSHROOMS"
+      ],
+      "pointRequirements": [
+        "INK"
+      ],
+      "center": [
+
+      ],
+      "corners": [
+        "NULL",
+        "EMPTY",
+        "EMPTY",
+        "INK"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "INSECTS"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "INSECTS",
+    "cardType": "GOLD",
+    "frontSide": {
+      "type": "PointCornerRequirementSide",
+      "pointValue": 2,
+      "placeRequiremenmts": [
+        "INSECTS",
+        "INSECTS",
+        "INSECTS",
+        "ANIMALS"
+      ],
+      "pointRequirements": [
+        //COME
+      ],
+      "center": [
+
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "NULL",
+        "EMPTY"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "INSECTS"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "INSECTS",
+    "cardType": "GOLD",
+    "frontSide": {
+      "type": "PointCornerRequirementSide",
+      "pointValue": 2,
+      "placeRequiremenmts": [
+        "INSECTS",
+        "INSECTS",
+        "INSECTS",
+        "VEGETABLES"
+      ],
+      "pointRequirements": [
+        //COME
+      ],
+      "center": [
+
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "NULL"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "INSECTS"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "INSECTS",
+    "cardType": "GOLD",
+    "frontSide": {
+      "type": "PointCornerRequirementSide",
+      "pointValue": 2,
+      "placeRequiremenmts": [
+        "INSECTS",
+        "INSECTS",
+        "INSECTS",
+        "MUSHROOMS"
+      ],
+      "pointRequirements": [
+        //COME
+      ],
+      "center": [
+
+      ],
+      "corners": [
+        "EMPTY",
+        "NULL",
+        "EMPTY",
+        "EMPTY"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "INSECTS"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "INSECTS",
+    "cardType": "GOLD",
+    "frontSide": {
+      "type": "PointResourceRequirementSide",
+      "pointValue": 3,
+      "placeRequiremenmts": [
+        "INSECTS",
+        "INSECTS",
+        "INSECTS"
+      ],
+      "pointRequirements": [
+
+      ],
+      "center": [
+
+      ],
+      "corners": [
+        "INK",
+        "NULL",
+        "EMPTY",
+        "NULL"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "INSECTS"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "INSECTS",
+    "cardType": "GOLD",
+    "frontSide": {
+      "type": "PointResourceRequirementSide",
+      "pointValue": 3,
+      "placeRequiremenmts": [
+        "INSECTS",
+        "INSECTS",
+        "INSECTS"
+      ],
+      "pointRequirements": [
+
+      ],
+      "center": [
+
+      ],
+      "corners": [
+        "EMPTY",
+        "SCROLL",
+        "NULL",
+        "NULL"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "INSECTS"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "INSECTS",
+    "cardType": "GOLD",
+    "frontSide": {
+      "type": "PointResourceRequirementSide",
+      "pointValue": 3,
+      "placeRequiremenmts": [
+        "INSECTS",
+        "INSECTS",
+        "INSECTS"
+      ],
+      "pointRequirements": [
+
+      ],
+      "center": [
+
+      ],
+      "corners": [
+        "NULL",
+        "NULL",
+        "FEATHER",
+        "EMPTY"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "INSECTS"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "INSECTS",
+    "cardType": "GOLD",
+    "frontSide": {
+      "type": "PointResourceRequirementSide",
+      "pointValue": 5,
+      "placeRequiremenmts": [
+        "INSECTS",
+        "INSECTS",
+        "INSECTS",
+        "INSECTS",
+        "INSECTS"
+      ],
+      "pointRequirements": [
+
+      ],
+      "center": [
+
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "NULL",
+        "NULL"
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        "INSECTS"
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  //CARTE OBBIETTIVO
+  {
+    "cardColor": "",
+    "cardType": "OBJECTIVE",
+    "frontSide": {
+      "type": "PointCornerRequirementSide",
+      "pointValue": 2,
+      "placeRequiremenmts": [
+        
+      ],
+      "pointRequirements": [
+        ["NULL","NULL","MUSHROOMS"],
+        ["NULL","MUSHROOMS","NULL"],
+        ["MUSHROOMS","NULL","NULL"]
+      ],
+      "center": [
+
+      ],
+      "corners": [
+      
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "",
+    "cardType": "OBJECTIVE",
+    "frontSide": {
+      "type": "PointCornerRequirementSide",
+      "pointValue": 2,
+      "placeRequiremenmts": [
+        
+      ],
+      "pointRequirements": [
+        ["VEGETABLES","NULL","NULL"],
+        ["NULL","VEGETABLES","NULL"],
+        ["NULL","NULL","VEGETABLES"]
+      ],
+      "center": [
+
+      ],
+      "corners": [
+      
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "",
+    "cardType": "OBJECTIVE",
+    "frontSide": {
+      "type": "PointCornerRequirementSide",
+      "pointValue": 2,
+      "placeRequiremenmts": [
+        
+      ],
+      "pointRequirements": [
+        ["NULL","NULL","ANIMALS"],
+        ["NULL","ANIMALS","NULL"],
+        ["ANIMALS","NULL","NULL"]
+      ],
+      "center": [
+
+      ],
+      "corners": [
+      
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "",
+    "cardType": "OBJECTIVE",
+    "frontSide": {
+      "type": "PointCornerRequirementSide",
+      "pointValue": 2,
+      "placeRequiremenmts": [
+        
+      ],
+      "pointRequirements": [
+        ["INSECTS","NULL","NULL"],
+        ["NULL","INSECTS","NULL"],
+        ["NULL","NULL","INSECTS"]
+      ],
+      "center": [
+
+      ],
+      "corners": [
+      
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "",
+    "cardType": "OBJECTIVE",
+    "frontSide": {
+      "type": "PointPositionRequirementSide",
+      "pointValue": 3,
+      "placeRequiremenmts": [
+        
+      ],
+      "pointRequirements": [
+        [ "MUSHROOMS", "NULL", "NULL" ],
+        [ "NULL", "NULL", "NULL" ],
+        [ "MUSHROOMS", "NULL", "NULL" ],
+        [ "NULL", "VEGETABLES", "NULL" ]
+      ],
+      "center": [
+
+      ],
+      "corners": [
+      
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "",
+    "cardType": "OBJECTIVE",
+    "frontSide": {
+      "type": "PointPositionRequirementSide",
+      "pointValue": 3,
+      "placeRequiremenmts": [
+        
+      ],
+      "pointRequirements": [
+        [ "NULL", "VEGETABLES", "NULL" ],
+        [ "NULL", "NULL", "NULL" ],
+        [ "NULL", "VEGETABLES", "NULL" ],
+        [ "INSECTS", "NULL", "NULL" ]
+      ],
+      "center": [
+
+      ],
+      "corners": [
+      
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "",
+    "cardType": "OBJECTIVE",
+    "frontSide": {
+      "type": "PointPositionRequirementSide",
+      "pointValue": 3,
+      "placeRequiremenmts": [
+        
+      ],
+      "pointRequirements": [
+        [ "ANIMALS", "NULL", "NULL" ],
+        [ "NULL", "INSECTS", "NULL" ],
+        [ "NULL", "NULL", "NULL" ],
+        [ "NULL", "INSECTS", "NULL" ]
+      ],
+      "center": [
+
+      ],
+      "corners": [
+      
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "",
+    "cardType": "OBJECTIVE",
+    "frontSide": {
+      "type": "PointPositionRequirementSide",
+      "pointValue": 3,
+      "placeRequiremenmts": [
+        
+      ],
+      "pointRequirements": [
+        ["NULL","ANIMALS","NULL"],
+        [ "NULL", "NULL", "INSECTS" ],
+        ["NULL","NULL","NULL"],
+        ["NULL","NULL","INSECTS"]
+      ],
+      "center": [
+
+      ],
+      "corners": [
+      
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "",
+    "cardType": "OBJECTIVE",
+    "frontSide": {
+      "type": "PointResourceRequirementSide",
+      "pointValue": 2,
+      "placeRequiremenmts": [
+        
+      ],
+      "pointRequirements": [
+          "MUSHROOMS",
+          "MUSHROOMS",
+          "MUSHROOMS"
+      ],
+      "center": [
+
+      ],
+      "corners": [
+      
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "",
+    "cardType": "OBJECTIVE",
+    "frontSide": {
+      "type": "PointResourceRequirementSide",
+      "pointValue": 2,
+      "placeRequiremenmts": [
+        
+      ],
+      "pointRequirements": [
+          "VEGETABLES",
+          "VEGETABLES",
+          "VEGETABLES"
+      ],
+      "center": [
+
+      ],
+      "corners": [
+      
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "",
+    "cardType": "OBJECTIVE",
+    "frontSide": {
+      "type": "PointResourceRequirementSide",
+      "pointValue": 2,
+      "placeRequiremenmts": [
+        
+      ],
+      "pointRequirements": [
+          "ANIMALS",
+          "ANIMALS",
+          "ANIMALS"
+      ],
+      "center": [
+
+      ],
+      "corners": [
+      
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "",
+    "cardType": "OBJECTIVE",
+    "frontSide": {
+      "type": "PointResourceRequirementSide",
+      "pointValue": 2,
+      "placeRequiremenmts": [
+        
+      ],
+      "pointRequirements": [
+          "INSECTS",
+          "INSECTS",
+          "INSECTS"
+      ],
+      "center": [
+
+      ],
+      "corners": [
+      
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "",
+    "cardType": "OBJECTIVE",
+    "frontSide": {
+      "type": "PointResourceRequirementSide",
+      "pointValue": 3,
+      "placeRequiremenmts": [
+        
+      ],
+      "pointRequirements": [
+          "FEATHER",
+          "INK",
+          "SCROLL"
+      ],
+      "center": [
+
+      ],
+      "corners": [
+      
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "",
+    "cardType": "OBJECTIVE",
+    "frontSide": {
+      "type": "PointResourceRequirementSide",
+      "pointValue": 2,
+      "placeRequiremenmts": [
+        
+      ],
+      "pointRequirements": [
+          "SCROLL",
+          "SCROLL"
+      ],
+      "center": [
+
+      ],
+      "corners": [
+      
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "",
+    "cardType": "OBJECTIVE",
+    "frontSide": {
+      "type": "PointResourceRequirementSide",
+      "pointValue": 2,
+      "placeRequiremenmts": [
+        
+      ],
+      "pointRequirements": [
+          "INK",
+          "INK"
+      ],
+      "center": [
+
+      ],
+      "corners": [
+      
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  },
+  {
+    "cardColor": "",
+    "cardType": "OBJECTIVE",
+    "frontSide": {
+      "type": "PointResourceRequirementSide",
+      "pointValue": 2,
+      "placeRequiremenmts": [
+        
+      ],
+      "pointRequirements": [
+          "FEATHER",
+          "FEATHER"
+      ],
+      "center": [
+
+      ],
+      "corners": [
+      
+      ]
+    },
+    "backSide": {
+      "type": "genericSide",
+      "pointValue": 0,
+      "center": [
+        
+      ],
+      "corners": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    }
+  }
+]
+
