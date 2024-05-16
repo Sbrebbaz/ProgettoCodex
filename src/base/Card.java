@@ -1,5 +1,7 @@
 package base;
 
+import java.util.Arrays;
+
 public class Card {
 	private int id;
 	private static int COUNTER=0;
@@ -18,7 +20,7 @@ public class Card {
 		side[0]=front;
 		side[1]=back;
 	}
-	
+
 	public MapCard getMapCard(int zIndex) {
 		return new MapCard(this,zIndex);
 	}
@@ -69,5 +71,9 @@ public class Card {
 			return true;
 		}
 	}
-	
+
+	@Override
+	public String toString() {
+		return String.format("Card %s \n",Arrays.deepToString(side));
+	}
 }

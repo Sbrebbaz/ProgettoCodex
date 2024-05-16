@@ -22,5 +22,4 @@ public class GenericSide extends Side{
 	public int getPoints(Map map,int x,int y) {
 		return this.getPointValue();
 	}
-
 }

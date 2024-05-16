@@ -1,6 +1,8 @@
 package base;
 
+import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 
 public class Player implements Comparable<Player>{
 	private int id;
@@ -134,4 +136,17 @@ public class Player implements Comparable<Player>{
 		return map;
 	}
 
+	@Override
+	public String toString() {
+		final StringBuilder sb = new StringBuilder("Player{");
+		sb.append("id=").append(id);
+		sb.append(", name='").append(name).append('\'');
+		sb.append(", points=").append(points);
+		sb.append('}');
+		return sb.toString();
+	}
+
+	public String ToStringPlayerHand() {
+		return String.format("%s \n %s",toString(), Arrays.deepToString(hand.toArray()));
+	}
 }

@@ -14,5 +14,11 @@ public class Corner {
 	public void setSymbol(Symbol symbol) {
 		this.symbol = symbol;
 	}
-	
+
+	@Override
+	public String toString() {
+		return "Corner{" +
+				"symbol=" + symbol +
+				'}';
+	}
 }
