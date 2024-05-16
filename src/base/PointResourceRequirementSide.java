@@ -38,6 +38,7 @@ public class PointResourceRequirementSide extends PlaceRequirementSide {
 	public String toString() {
 		return "PointResourceRequirementSide{" +
 				"pointRequirement=" + pointRequirement +
+				"placeRequirementSide= "+ super.toString() +
 				'}';
 	}
 

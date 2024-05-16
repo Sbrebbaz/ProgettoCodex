@@ -132,8 +132,6 @@ public class Table {
 				", startingDeck=" + startingDeck +
 				", tableCards=" + tableCards +
 				", tableObjectiveCards=" + Arrays.toString(tableObjectiveCards) +
-				", N_TABLE_CARDS=" + N_TABLE_CARDS +
-				", N_OBJECTIVE_TABLE_CARDS=" + N_OBJECTIVE_TABLE_CARDS +
-				'}';
+				"}\n";
 	}
 }

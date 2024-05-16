@@ -37,7 +37,7 @@ public class PointPositionRequirementSide extends PlaceRequirementSide {
 	public String toString() {
 		return "PointPositionRequirementSide{" +
 				"placeRequirementSide=" + super.toString() +
-				", positionRequirement=" + Arrays.toString(positionRequirement) +
-				'}';
+				", positionRequirement=" + Arrays.deepToString(positionRequirement) +
+				"}\n";
 	}
 }

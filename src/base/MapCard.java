@@ -29,6 +29,7 @@ public class MapCard {
 	public String toString() {
 		return "MapCard{" +
 				"card=" + card +
-				'}';
+				"index="+zIndex+
+				"}\n";
 	}
 }

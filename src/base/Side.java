@@ -74,10 +74,6 @@ public abstract class Side {
 
 	@Override
 	public String toString() {
-		return "Side{" +
-				"corners=" + Arrays.toString(corners) +
-				", center=" + center +
-				", pointValue=" + pointValue +
-				'}';
+		return String.format("\n Corners %s Center %s Points %s \n",Arrays.toString(corners),center,pointValue);
 	}
 }

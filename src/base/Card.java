@@ -1,5 +1,7 @@
 package base;
 
+import java.util.Arrays;
+
 public class Card {
 	private int id;
 	private static int COUNTER=0;
@@ -72,8 +74,6 @@ public class Card {
 
 	@Override
 	public String toString() {
-		return "Card{" +
-				"visibleSide=" + visibleSide +
-				'}';
+		return String.format("Card %s \n",Arrays.deepToString(side));
 	}
 }

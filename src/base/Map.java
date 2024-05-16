@@ -276,8 +276,8 @@ public class Map {
 		return "Map{" +
 				"xSize=" + xSize +
 				", ySize=" + ySize +
-				", grid=" + Arrays.toString(grid) +
-				", subMap=" + Arrays.toString(subMap) +
-				'}';
+				", Cards=" + Arrays.deepToString(grid) +
+				", subMap=" + Arrays.deepToString(subMap) +
+				"}";
 	}
 }
