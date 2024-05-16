@@ -1,8 +1,14 @@
 package base;
 
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.io.Writer;
 import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -12,24 +18,51 @@ import com.google.gson.Gson;
 import com.google.gson.stream.JsonReader;
 
 public class Main {
-
-	private static ArrayList<Card> cards;
+	
+	public static ArrayList<Card> cards;
 	
 	public static void main(String[] args) {
+				
+		/*ArrayList<Symbol> symb = new ArrayList<Symbol>();
+		symb.add(Symbol.INK);
+		symb.add(Symbol.SCROLL);
+		
+		Side s = new GenericSide(
+				symb,
+				new Corner[] {new Corner(Symbol.INK),new Corner(Symbol.INK),new Corner(Symbol.INK),new Corner(Symbol.INK)});
+
+		Card c2 = new Card(Symbol.FEATHER,s,s,CardType.GOLD);
+		Card c3 = new Card(Symbol.FEATHER,s,s,CardType.GOLD);
+		
+		ArrayList<Card> cards = new ArrayList<Card>();
+		cards.add(c2);
+		cards.add(c3);
+		
+		Gson gson = new Gson();
+		
+	    try {
+	        FileWriter myWriter = new FileWriter("filename.txt");
+	        myWriter.write(gson.toJson(cards));
+	        myWriter.close();
+	        System.out.println("Successfully wrote to the file.");
+	      } catch (IOException e) {
+	        System.out.println("An error occurred.");
+	        e.printStackTrace();
+	      }*/
 		
 		_readCardsFromFile();
 		
-		System.out.println(cards);	
+		
 	}
 	
 	private static void _readCardsFromFile() {
 		Gson gson = new Gson();
 		JsonReader reader = null;
 		try {
-			reader = new JsonReader(new FileReader("cards.json"));
+			reader = new JsonReader(new FileReader("filename.txt"));
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
-		cards = gson.fromJson(reader, ArrayList.class);
+		cards = gson.fromJson(reader, Card[].class);
 	}
 }
