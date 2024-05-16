@@ -74,6 +74,6 @@ public class Card {
 
 	@Override
 	public String toString() {
-		return String.format("Card %s \n",Arrays.deepToString(side));
+		return  "Card: " + side[visibleSide];
 	}
 }

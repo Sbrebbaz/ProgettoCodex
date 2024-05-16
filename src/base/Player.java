@@ -138,15 +138,31 @@ public class Player implements Comparable<Player>{
 
 	@Override
 	public String toString() {
-		final StringBuilder sb = new StringBuilder("Player{");
-		sb.append("id=").append(id);
-		sb.append(", name='").append(name).append('\'');
-		sb.append(", points=").append(points);
-		sb.append('}');
+		StringBuilder sb = new StringBuilder();
+		sb.append("[Player ");
+		sb.append("id ");
+		sb.append(id);
+		sb.append(" name '");
+		sb.append(name);
+		sb.append("' ");
+		sb.append("points ");
+		sb.append(points);
+		sb.append("]");
 		return sb.toString();
 	}
 
 	public String ToStringPlayerHand() {
-		return String.format("%s \n %s",toString(), Arrays.deepToString(hand.toArray()));
+
+		StringBuilder sb = new StringBuilder();
+		sb.append(toString());
+		sb.append("\nHand:\n[\n");
+		
+		for(Card card : hand) {
+			sb.append(card);
+			sb.append("\n");
+		}
+		sb.append("]");
+		
+		return sb.toString();
 	}
 }

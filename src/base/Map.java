@@ -105,13 +105,15 @@ public class Map {
     }
 
     private void updateSubMap(int x, int y) {//aggiorna i 2 punti della subMap per renderla più grande dello spazio con carte giocate, usando le coordinate dell'ultima carta piazzata
-        for (int i = -1; i < 2; i += 2) {
+    	int subMapValue= -1;
+    	for (int i = 0; i < 2; i ++) {
             if (subMap[i].x == x) {
-                subMap[i].x += i;
+                subMap[i].x += subMapValue;
             }
             if (subMap[i].y == y) {
-                subMap[i].y += i;
+                subMap[i].y += subMapValue;
             }
+            subMapValue +=2;
         }
     }
 
@@ -273,8 +275,24 @@ public class Map {
 
 	@Override
 	public String toString() {
-		return "Map{" +
-				" Cards=" + Arrays.deepToString(grid) +
-				"}";
+		
+		StringBuilder sb = new StringBuilder();
+		for(int i=subMap[0].x;i<subMap[1].x;i++) {
+			for(int j=subMap[0].y;j<subMap[1].y;j++) {
+				if(grid[i][j] != null) {
+					sb.append("[");
+					sb.append(grid[i][j].toString());
+					sb.append(" ~ ");
+					sb.append("X: " + i);
+					sb.append(" Y: " + j);
+					sb.append("]");
+					sb.append("\n");
+				}
+			}
+		}
+		
+		return "Map{\n" + 
+				sb.toString() 
+		+"}";
 	}
 }

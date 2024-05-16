@@ -27,9 +27,6 @@ public class MapCard {
 
 	@Override
 	public String toString() {
-		return "MapCard{" +
-				"card=" + card +
-				"index="+ zIndex +
-				"}\n";
+		return card + " zIndex="+ zIndex;
 	}
 }
