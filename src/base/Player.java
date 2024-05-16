@@ -147,6 +147,6 @@ public class Player implements Comparable<Player>{
 	}
 
 	public String ToStringPlayerHand() {
-		return String.format("%s \n %s",toString(), Objects.toString(Arrays.deepToString(hand.toArray()), null));
+		return String.format("%s \n %s",toString(), Arrays.deepToString(hand.toArray()));
 	}
 }

@@ -274,10 +274,7 @@ public class Map {
 	@Override
 	public String toString() {
 		return "Map{" +
-				"xSize=" + xSize +
-				", ySize=" + ySize +
-				", Cards=" + Arrays.deepToString(grid) +
-				", subMap=" + Arrays.deepToString(subMap) +
+				" Cards=" + Arrays.deepToString(grid) +
 				"}";
 	}
 }
