@@ -1,25 +1,27 @@
 package base;
 import java.util.Arrays;
-import java.util.List;
 
+import java.util.List;
 public abstract class Side {
 	private int pointValue;
 	private List<Symbol> center;
 	private Corner corners [];
 	
-	public Side(List<Symbol> center, Corner[] corners){
+	public Side(List<Symbol> center, Corner[] corners ,int pointValue){
+		this.pointValue = pointValue;
 		this.center=center;
 		this.corners=corners;
 	}
 	
 	public Side(List<Symbol> center,Corner cornerTopLeft,Corner cornerTopRight,
-			Corner cornerBottomLeft,Corner cornerBottomRight) {
+			Corner cornerBottomLeft,Corner cornerBottomRight,int pointValue) {
 		this.center=center;
 		corners=new Corner[4];
 		corners[0]=cornerTopLeft;
 		corners[1]=cornerTopRight;
 		corners[2]=cornerBottomLeft;
 		corners[3]=cornerBottomRight;
+		this.pointValue = pointValue;
 	}
 	
 	public Corner getCornerFromPosition(int x, int y) throws Exception{
@@ -76,4 +78,5 @@ public abstract class Side {
 	public String toString() {
 		return String.format("Corners %s Center %s Points %s",Arrays.toString(corners),center,pointValue);
 	}
+	
 }

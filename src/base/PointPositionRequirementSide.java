@@ -7,16 +7,16 @@ public class PointPositionRequirementSide extends PlaceRequirementSide {
 
 	private MapCard[][] positionRequirement;
 
-	public PointPositionRequirementSide(List<Symbol> center, Corner[] corners, List<Symbol> placeRequirements,
+	public PointPositionRequirementSide(List<Symbol> center, Corner[] corners,int pointValue, List<Symbol> placeRequirements,
 			MapCard[][] positionRequirement) {
-		super(center, corners, placeRequirements);
+		super(center, corners,pointValue, placeRequirements);
 		this.positionRequirement = positionRequirement;
 	}
 
 	public PointPositionRequirementSide(List<Symbol> center, Corner cornerTopLeft, Corner cornerTopRight,
-			Corner cornerBottomLeft, Corner cornerBottomRight, List<Symbol> placeRequirements,
+			Corner cornerBottomLeft, Corner cornerBottomRight,int pointValue, List<Symbol> placeRequirements,
 			MapCard[][] positionRequirement) {
-		super(center, cornerTopLeft, cornerTopRight, cornerBottomLeft, cornerBottomRight, placeRequirements);
+		super(center, cornerTopLeft, cornerTopRight, cornerBottomLeft, cornerBottomRight,pointValue, placeRequirements);
 		this.positionRequirement = positionRequirement;
 	}
 

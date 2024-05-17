@@ -4,13 +4,13 @@ import java.util.List;
 
 public class GenericSide extends Side{
 
-	public GenericSide(List<Symbol> center, Corner[] corners){
-		super(center,corners);
+	public GenericSide(List<Symbol> center, Corner[] corners,int pointValue){
+		super(center,corners,pointValue);
 	}
 	
 	public GenericSide(List<Symbol> center,Corner cornerTopLeft,Corner cornerTopRight,
-			Corner cornerBottomLeft,Corner cornerBottomRight) {
-		super(center,cornerTopLeft,cornerTopRight,cornerBottomLeft,cornerBottomRight);
+			Corner cornerBottomLeft,Corner cornerBottomRight,int pointValue) {
+		super(center,cornerTopLeft,cornerTopRight,cornerBottomLeft,cornerBottomRight,pointValue);
 	}
 	
 	@Override

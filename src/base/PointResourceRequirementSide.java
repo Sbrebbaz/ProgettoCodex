@@ -6,14 +6,14 @@ public class PointResourceRequirementSide extends PlaceRequirementSide {
 
 	private List<Symbol> pointRequirement;
 	
-	public PointResourceRequirementSide(List<Symbol> center, Corner[] corners, List<Symbol> placeRequirements ,List<Symbol> pointRequirement){
-		super(center,corners,placeRequirements);
+	public PointResourceRequirementSide(List<Symbol> center, Corner[] corners,int pointValue, List<Symbol> placeRequirements ,List<Symbol> pointRequirement){
+		super(center,corners,pointValue,placeRequirements);
 		this.pointRequirement=pointRequirement;
 	}
 	
 	public PointResourceRequirementSide(List<Symbol> center,Corner cornerTopLeft,Corner cornerTopRight,
-			Corner cornerBottomLeft,Corner cornerBottomRight, List<Symbol> placeRequirements, List<Symbol> pointRequirements) {
-		super(center,cornerTopLeft,cornerTopRight,cornerBottomLeft,cornerBottomRight,placeRequirements);
+			Corner cornerBottomLeft,Corner cornerBottomRight,int pointValue, List<Symbol> placeRequirements, List<Symbol> pointRequirements) {
+		super(center,cornerTopLeft,cornerTopRight,cornerBottomLeft,cornerBottomRight,pointValue,placeRequirements);
 		this.pointRequirement=pointRequirements;
 	}
 
