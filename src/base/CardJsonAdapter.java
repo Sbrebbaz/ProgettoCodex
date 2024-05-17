@@ -86,7 +86,6 @@ public class CardJsonAdapter  implements  JsonDeserializer<Card[]>{
 			
 			Card finishCard = new Card(cardColor,front,back,cardType);
 			cards.add(finishCard);
-			System.out.println(finishCard.toString());
 		}
 		return  cards.toArray(new Card[cards.size()]);
 		
