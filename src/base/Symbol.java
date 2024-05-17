@@ -4,7 +4,7 @@ public enum Symbol {
 	EMPTY,
 	VEGETABLES,
 	MUSHROOMS,
-	INSECT,
+	INSECTS,
 	ANIMALS,
 	FEATHER,
 	INK,

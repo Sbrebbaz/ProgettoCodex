@@ -1,93 +1,24 @@
 package base;
-import com.google.gson.JsonSerializationContext;
-import com.google.gson.JsonSerializer;
+
+import java.lang.reflect.Type;
+import java.util.ArrayList;
+import java.util.Arrays;
+
 import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
 import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonDeserializer;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
-import java.lang.reflect.Type;
-import java.util.*;
-public class Card {
-	private int id;
-	private static int COUNTER=0;
-	private Symbol cardColor;
-	private Side side [];//0:front, 1:back
-	private CardType cardType;
-	private int visibleSide;
-	
-	
-	public Card(Symbol cardColor, Side front, Side back, CardType cardType) {
-		this.id=COUNTER;
-		COUNTER++;
-		this.cardColor = cardColor;
-		this.cardType = cardType;
-		side = new Side [2];
-		side[0]=front;
-		side[1]=back;
-	}
-	
-	public MapCard getMapCard(int zIndex) {
-		return new MapCard(this,zIndex);
-	}
 
-	public Symbol getCardColor() {
-		return cardColor;
-	}
-
-	public void setCardColor(Symbol cardColor) {
-		this.cardColor = cardColor;
-	}
-
-	public Side getSide(int index) {
-		return side[index];
-	}
-
-	public void setSide(Side[] side) {
-		this.side = side;
-	}
-
-	public int getId() {
-		return id;
-	}
-
-	public CardType getCardType() {
-		return cardType;
-	}
-
-	public void setCardType(CardType cardType) {
-		this.cardType = cardType;
-	}
-
-	public Side getVisibleSide() {
-		return side[visibleSide];
-	}
-
-	public void swapSide() {
-		
-		if(this.getCardType() != CardType.OBJECTIVE && this.getSide((visibleSide+1)%2) != null) {
-			visibleSide = (visibleSide+1)%2; 
-		}
-	}
-	
-	public boolean placeableCard() {
-		if(this.getCardType() == CardType.OBJECTIVE) {
-			return false;
-		}else {
-			return true;
-		}
-	}
-	
-	public String toString() {
-		return "["+" id:"+id+" colore:"+cardColor+" tipo:"+cardType+" front:"+side[0].toString()+" back:"+side[1].toString()+"]\n";
-	}
-	
-	public static class CardJsonAdapte implements  JsonDeserializer<Card>{
-
-		@Override
-		public Card deserialize(JsonElement elem, Type type, JsonDeserializationContext context) throws JsonParseException {
-			JsonObject jObject = elem.getAsJsonObject();
+public class CardJsonAdapter  implements  JsonDeserializer<Card[]>{
+	@Override
+	public Card[] deserialize(JsonElement elem, Type type, JsonDeserializationContext context) throws JsonParseException {
+		JsonArray array = elem.getAsJsonArray();
+		ArrayList<Card> cards = new ArrayList<Card>();
+		for(int k=0;k<array.size();k++) {
+			JsonObject jObject = array.get(k).getAsJsonObject();
 			CardType cardType = CardType.valueOf(jObject.get("cardType").getAsString());
 			Symbol cardColor = Symbol.valueOf(jObject.get("cardColor").getAsString());
 			JsonObject jFrontSide = jObject.get("frontSide").getAsJsonObject();
@@ -97,9 +28,11 @@ public class Card {
 			Symbol [] center = new GsonBuilder().create().fromJson(jFrontSide.get("center"),Symbol[].class);
 			Symbol [] placeRequirement = new GsonBuilder().create().fromJson(jFrontSide.get("placeRequiremenmts"),Symbol[].class);
 			
-			String tmpCorners[] = new GsonBuilder().create().fromJson(jFrontSide.get("corner"),String[].class);//estrai i corners
+			String tmpCorners[] = new GsonBuilder().create().fromJson(jFrontSide.get("corners"),String[].class);//estrai i corners
 			Corner[] corners = new Corner[4];
 			for(int i=0;i<corners.length;i++) {
+				if(tmpCorners == null)
+					break;
 				if(!tmpCorners[i].equals("NULL")) {
 					corners[i] = new Corner(Symbol.valueOf(tmpCorners[i]));
 				}
@@ -142,7 +75,7 @@ public class Card {
 			Side back;
 			pointValue = jBackSide.get("pointValue").getAsInt();
 			center = new GsonBuilder().create().fromJson(jBackSide.get("center"),Symbol[].class);
-			tmpCorners = new GsonBuilder().create().fromJson(jFrontSide.get("corner"),String[].class);//estrai i corners
+			tmpCorners = new GsonBuilder().create().fromJson(jFrontSide.get("corners"),String[].class);//estrai i corners
 			corners = new Corner[4];
 			for(int i=0;i<corners.length;i++) {
 				if(!tmpCorners[i].equals("NULL")) {
@@ -152,10 +85,10 @@ public class Card {
 			back = new GenericSide(new ArrayList<Symbol>(Arrays.asList(center)),corners,pointValue);
 			
 			Card finishCard = new Card(cardColor,front,back,cardType);
+			cards.add(finishCard);
 			System.out.println(finishCard.toString());
-			return finishCard;
 		}
+		return  cards.toArray(new Card[cards.size()]);
 		
 	}
-	
 }
