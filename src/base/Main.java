@@ -16,20 +16,10 @@ public class Main {
 	private static ArrayList<Card> cards;
 	
 	public static void main(String[] args) {
-		
-		_readCardsFromFile();
-		
-		System.out.println(cards);	
+
+		cards = new CardUtility().readCardsFromFile();		//memorizzo tutte le carte nell'ArrayList cards
+	
+		System.out.println(cards);							//stampo tutte la lista delle carte
 	}
 	
-	private static void _readCardsFromFile() {
-		Gson gson = new Gson();
-		JsonReader reader = null;
-		try {
-			reader = new JsonReader(new FileReader("cards.json"));
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		}
-		cards = gson.fromJson(reader, ArrayList.class);
-	}
 }
