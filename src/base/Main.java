@@ -12,14 +12,21 @@ import java.io.Writer;
 import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Scanner;
+
 import base.*;
 import com.google.gson.Gson;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonParser;
+import com.google.gson.internal.LinkedTreeMap;
+import com.google.gson.reflect.TypeToken;
 import com.google.gson.stream.JsonReader;
 
 public class Main {
 	
-	public static ArrayList<Card> cards;
+	public static Card cards[];
 	
 	public static void main(String[] args) {
 				
@@ -49,9 +56,25 @@ public class Main {
 	        System.out.println("An error occurred.");
 	        e.printStackTrace();
 	      }*/
-		
+		/*String data;
+		try {
+		      File myObj = new File("cards.json");
+		      Scanner myReader = new Scanner(myObj);
+		      while (myReader.hasNextLine()) {
+		        data = myReader.nextLine();
+		        System.out.println(data);
+		      }
+		      myReader.close();
+		    } catch (FileNotFoundException e) {
+		      System.out.println("An error occurred.");
+		      e.printStackTrace();
+		    }
+		JsonParser jsonParser = new JsonParser();
+		JsonArray jsonArray = (JsonArray) jsonParser.parse(data);*/
 		_readCardsFromFile();
-		
+		ArrayList<Card> tmp = new ArrayList<Card>(Arrays.asList(cards));
+		//tmp.putAll(cards.get(0));
+		System.out.println(tmp);
 		
 	}
 	
@@ -59,7 +82,7 @@ public class Main {
 		Gson gson = new Gson();
 		JsonReader reader = null;
 		try {
-			reader = new JsonReader(new FileReader("filename.txt"));
+			reader = new JsonReader(new FileReader("cards.json"));
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
