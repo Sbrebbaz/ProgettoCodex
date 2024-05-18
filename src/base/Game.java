@@ -54,6 +54,10 @@ public class Game {
 		}
 		return table.isEmpty();
 	}
+	
+	public int getNumberOfPlayer() {
+		return players.size();
+	}
 
 	@Override
 	public String toString() {

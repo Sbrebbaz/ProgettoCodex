@@ -34,9 +34,7 @@ public class Deck {
 
 	public Card drawCard() throws Exception {
 		if (!this.isEmpty()) {
-			Card draw = deck.get(0);
-			deck.remove(0);
-			return draw;
+			return deck.remove(0);
 		} else {
 			throw new Exception();
 		}

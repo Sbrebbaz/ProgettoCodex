@@ -3,7 +3,6 @@ package base;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 
-import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.stream.JsonReader;
 
@@ -13,7 +12,6 @@ public class CardUtility {
 	
 	public static void readCardsFromFile() {
 
-		Gson gson = new Gson();
 		JsonReader reader = null;
 		try {
 			reader = new JsonReader(new FileReader("cards.json"));

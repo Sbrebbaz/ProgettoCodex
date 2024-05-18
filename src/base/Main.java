@@ -1,31 +1,6 @@
 package base;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
-import java.io.Writer;
-import java.nio.file.Files;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Scanner;
-
-import base.*;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonParser;
-import com.google.gson.internal.LinkedTreeMap;
-import com.google.gson.reflect.TypeToken;
-import com.google.gson.stream.JsonReader;
 
 public class Main {
 
@@ -51,9 +26,21 @@ public class Main {
 			for(Player player : players) {
 				UIUtility.printLineColor(player.toString(), player.getColor());
 			}
+			Game game = new Game(players);
+			for(int i=0 ; i<game.getNumberOfPlayer();i++) {
+				for(int j=0; j<2;j++) {
+					game.drawCard(game.getCurrentPlayer(), CardType.OBJECTIVE);
+				}
+				UIUtility.setSecretObjectiveCard(game.getCurrentPlayer());
+				game.playNextTurn();
+			}
 			
-
-			//Create decks from different card types
+			while(!game.verifyWinningCondition()) {
+				//TODO turno di gioco
+			}
+			
+			
+			
 
 
 		}

@@ -3,6 +3,7 @@ package base;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 
 public class UIUtility {
 
@@ -183,7 +184,22 @@ public class UIUtility {
 		return new Player(playerName, playerColor);
 	}
 	
-	public static void playStartingTurn(Game game) {
-		
+	public static void setSecretObjectiveCard(Player player) {
+		Boolean valid= false;
+		do{
+			try {
+				clearScreen();
+				System.out.println("scegli la tua carta obbiettvio <1|2>:");
+				System.out.println(player.ToStringPlayerHand());
+				int input = Integer.parseInt(consoleReader.readLine());
+				player.SetSecretObjective(player.selectCard(input));
+				player.setHand(new ArrayList<Card>());
+				valid = true;
+				
+			}catch(Exception e) {
+				clearScreen();
+				printLineColor("Invalid operation! please select a valid option!", ANSI_RED);
+			}
+		}while(!valid);
 	}
 }

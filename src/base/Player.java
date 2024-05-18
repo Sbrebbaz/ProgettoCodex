@@ -1,8 +1,6 @@
 package base;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 public class Player implements Comparable<Player>{
 	private int id;
@@ -20,6 +18,7 @@ public class Player implements Comparable<Player>{
 		COUNTER++;
 		this.name = name;
 		this.color = color;
+		hand = new ArrayList<Card>();
 	}
 
 	/**
@@ -84,6 +83,13 @@ public class Player implements Comparable<Player>{
 		}else {
 			return false;
 		}
+	}
+	
+	public Card selectCard(int index) throws IllegalArgumentException{
+		if(index<=0 || index > hand.size()) {
+			throw new IllegalArgumentException("Unexpected value: "+index);
+		}
+		return hand.get(index-1);
 	}
 	
 	public void playCard(int x, int y, Card card) throws Exception{
