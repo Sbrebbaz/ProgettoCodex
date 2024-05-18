@@ -13,9 +13,11 @@ public class Player implements Comparable<Player>{
 	private int points;
 	private String color;
 	private Map map;
+	private static int COUNTER=0;
 
-	public Player(int id, String name, String color) {
-		this.id = id;
+	public Player(String name, String color) {
+		this.id = COUNTER;
+		COUNTER++;
 		this.name = name;
 		this.color = color;
 	}

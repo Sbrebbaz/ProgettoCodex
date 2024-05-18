@@ -31,7 +31,6 @@ public class Main {
 
 
 	public static void main(String[] args) {
-
 		int playerCount = -1;
 		ArrayList<Player> players = new ArrayList<Player>();
 
@@ -46,7 +45,7 @@ public class Main {
 			playerCount = UIUtility.playerSelectionManagement();
 
 			for(int i = 0;i < playerCount; i++) {
-				players.add(UIUtility.playerCreation(i));
+				players.add(UIUtility.playerCreation());
 			}
 
 			for(Player player : players) {

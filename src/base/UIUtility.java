@@ -98,7 +98,7 @@ public class UIUtility {
 		return players;
 	}
 
-	public static Player playerCreation(int id) {
+	public static Player playerCreation() {
 
 		Boolean valid= false;
 		String playerName = "";
@@ -180,6 +180,10 @@ public class UIUtility {
 			}
 		}while(!valid);
 
-		return new Player(id, playerName, playerColor);
+		return new Player(playerName, playerColor);
+	}
+	
+	public static void playStartingTurn(Game game) {
+		
 	}
 }
