@@ -33,28 +33,26 @@ public class Table {
 			case STARTING:
 				starting.add(card);
 			}
-			resourceDeck = new Deck(resource);
-			goldDeck = new Deck(gold);
-			objectiveDeck = new Deck(objective);
-			startingDeck = new Deck(starting);
-			tableObjectiveCards = new Card[N_TABLE_CARDS];
-			tableObjectiveCards = new Card[N_OBJECTIVE_TABLE_CARDS];
-			try {
-				for(int i = 0;i<N_TABLE_CARDS/2;i++) {
-					tableObjectiveCards[i] = goldDeck.drawCard();
-				}
-				for(int i = N_TABLE_CARDS/2;i<N_TABLE_CARDS;i++) {
-					tableObjectiveCards[i] = resourceDeck.drawCard();
-				}
-				
-				for(int i = 0; i<N_OBJECTIVE_TABLE_CARDS;i++) {
-					tableObjectiveCards[i] = objectiveDeck.drawCard();
-				}
-			}catch(Exception e) {
-				System.out.println("errore nell'inizializzazione del tavolo da gioco");
+		}
+		resourceDeck = new Deck(resource);
+		goldDeck = new Deck(gold);
+		objectiveDeck = new Deck(objective);
+		startingDeck = new Deck(starting);
+		tableCards = new ArrayList<Card>();
+		tableObjectiveCards = new Card[N_OBJECTIVE_TABLE_CARDS];
+		try {
+			for(int i = 0;i<N_TABLE_CARDS/2;i++) {
+				tableCards.add(goldDeck.drawCard());
+			}
+			for(int i = N_TABLE_CARDS/2;i<N_TABLE_CARDS;i++) {
+				tableCards.add(resourceDeck.drawCard());
 			}
 			
-			
+			for(int i = 0; i<N_OBJECTIVE_TABLE_CARDS;i++) {
+				tableObjectiveCards[i] = objectiveDeck.drawCard();
+			}
+		}catch(Exception e) {
+			System.out.println("errore nell'inizializzazione del tavolo da gioco:"+e.getMessage());
 		}
 	}
 
