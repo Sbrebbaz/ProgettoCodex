@@ -14,7 +14,48 @@ public class Table {
 	private final int N_OBJECTIVE_TABLE_CARDS = 2;
 
 	public Table() {// inizializza i decks dal file, pesca 2 carte gold e resource e li mette in tableCards e pesca 2 carte Objective e li mette in tableObjectiveCards
-
+		ArrayList <Card> cards= new ArrayList<Card>(Arrays.asList(CardUtility.getCards()));
+		ArrayList <Card> resource = new ArrayList<Card>();
+		ArrayList <Card> gold = new ArrayList<Card>();
+		ArrayList <Card> objective = new ArrayList<Card>();
+		ArrayList <Card> starting = new ArrayList<Card>();
+		for(Card card:cards) {
+			switch(card.getCardType()) {
+			case RESOURCE:
+				resource.add(card);
+				break;
+			case GOLD:
+				gold.add(card);
+				break;
+			case OBJECTIVE:
+				objective.add(card);
+				break;
+			case STARTING:
+				starting.add(card);
+			}
+			resourceDeck = new Deck(resource);
+			goldDeck = new Deck(gold);
+			objectiveDeck = new Deck(objective);
+			startingDeck = new Deck(starting);
+			tableObjectiveCards = new Card[N_TABLE_CARDS];
+			tableObjectiveCards = new Card[N_OBJECTIVE_TABLE_CARDS];
+			try {
+				for(int i = 0;i<N_TABLE_CARDS/2;i++) {
+					tableObjectiveCards[i] = goldDeck.drawCard();
+				}
+				for(int i = N_TABLE_CARDS/2;i<N_TABLE_CARDS;i++) {
+					tableObjectiveCards[i] = resourceDeck.drawCard();
+				}
+				
+				for(int i = 0; i<N_OBJECTIVE_TABLE_CARDS;i++) {
+					tableObjectiveCards[i] = objectiveDeck.drawCard();
+				}
+			}catch(Exception e) {
+				System.out.println("errore nell'inizializzazione del tavolo da gioco");
+			}
+			
+			
+		}
 	}
 
 	public boolean canDraw(Deck deck) {

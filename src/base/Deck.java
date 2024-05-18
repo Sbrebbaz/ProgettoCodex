@@ -6,7 +6,10 @@ public class Deck {
 	private List<Card> deck;
 
 	public Deck(List<Card> deck) {
-		this.deck = deck;
+		if(deck != null)
+			this.deck = deck;
+		else
+			deck = new ArrayList<Card>();
 	}
 
 	/**
@@ -31,7 +34,9 @@ public class Deck {
 
 	public Card drawCard() throws Exception {
 		if (!this.isEmpty()) {
-			return deck.get(0);
+			Card draw = deck.get(0);
+			deck.remove(0);
+			return draw;
 		} else {
 			throw new Exception();
 		}
