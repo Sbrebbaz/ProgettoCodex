@@ -11,10 +11,10 @@ public class Player implements Comparable<Player>{
 	private Card secretObjective;
 	private Card startingCard;
 	private int points;
-	private Color color;
+	private String color;
 	private Map map;
 
-	public Player(int id, String name, Color color) {
+	public Player(int id, String name, String color) {
 		this.id = id;
 		this.name = name;
 		this.color = color;
@@ -112,11 +112,11 @@ public class Player implements Comparable<Player>{
 		this.points = points;
 	}
 
-	public Color getColor() {
+	public String getColor() {
 		return color;
 	}
 
-	public void setColor(Color color) {
+	public void setColor(String color) {
 		this.color = color;
 	}
 
