@@ -3,6 +3,8 @@ package base;
 import java.util.Collections;
 import java.util.List;
 
+import javax.swing.plaf.synth.Region;
+
 public class Game {
 	private List<Player> players;
 	private Table table;
@@ -26,9 +28,31 @@ public class Game {
 		}
 		
 		while(!verifyWinningCondition()) {
-			//TODO turno di gioco
+									
+			UIUtility.clearScreen();
+			
+			UIUtility.printPlayer(getCurrentPlayer());
+					
+			UIUtility.playerTurnBase(this);
+			
+			//Choose card or go back to start turn
+			
+			UIUtility.playerTurnBase(this);
+			
+			//Draw card or go back to end turn
+								
+			playNextTurn();			
 		}
+		
+		//Play LAST TURN
+		
+		
+		
+		UIUtility.printScoreboard(this);
 	}
+	
+	
+	
 	
 	public void playNextTurn(){
 		turnCounter = (turnCounter+1)%players.size();
@@ -75,6 +99,14 @@ public class Game {
 		return players.size();
 	}
 
+	public List<Player> getPlayers() {
+		return players;
+	}
+	
+	public Table getTable() {
+		return table;
+	}
+	
 	@Override
 	public String toString() {
 		return "Game{" +

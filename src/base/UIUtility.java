@@ -38,8 +38,8 @@ public class UIUtility {
 
 		do {
 			try {
-				System.out.println("Press '1' to start a game!");	
-				System.out.println("Press '2' to quit!");	
+				System.out.println("1 - Start a game");	
+				System.out.println("2 - Quit");	
 
 				String input = consoleReader.readLine();
 
@@ -189,7 +189,7 @@ public class UIUtility {
 		do{
 			try {
 				clearScreen();
-				System.out.println("choose your objective card <1|2>:");
+				System.out.println("choose your objective card (1-2):");
 				System.out.println(player.ToStringPlayerHand());
 				int input = Integer.parseInt(consoleReader.readLine());
 				player.SetSecretObjective(player.selectCard(input));
@@ -202,15 +202,15 @@ public class UIUtility {
 			}
 		}while(!valid);
 	}
-	
+
 	public static void setStartingCard(Player player) {
 		Boolean valid= false;
 		do{
 			try {
 				clearScreen();
-				System.out.println("place the starting card:");
-				System.out.println("1-swap side");
-				System.out.println("2-place");
+				System.out.println("Place the starting card:");
+				System.out.println("1 - Swap card side");
+				System.out.println("2 - Place card");
 				System.out.println(player.ToStringPlayerHand());
 				int input = Integer.parseInt(consoleReader.readLine());
 				switch(input) {
@@ -230,4 +230,76 @@ public class UIUtility {
 			}
 		}while(!valid);
 	}
+
+	public static void printPlayer(Player toPrint) {
+		printLineColor(toPrint.toString(), toPrint.getColor());
+	}
+	
+	public static void playerTurnBase(Game game) {
+		Boolean valid= false;
+		do{
+			try {
+				clearScreen();
+				//System.out.println(game.getCurrentPlayer().ToStringPlayerHand()); --Maybe remove option #4 and always display the player hand?
+				System.out.println("Player turn option:");
+				System.out.println("1 - Show map");
+				System.out.println("2 - Show players");
+				System.out.println("3 - Show table");
+				System.out.println("4 - Show hand");
+				System.out.println("5 - Play card");
+				int input = Integer.parseInt(consoleReader.readLine());
+				switch(input) {
+					case 1:
+						System.out.println(game.getCurrentPlayer().getMap().toString());
+						System.out.println("Press any key to continue...");
+						consoleReader.readLine();
+						break;
+					case 2:
+						for(Player player : game.getPlayers()) {
+							printPlayer(player);
+						}						
+						System.out.println("Press any key to continue...");
+						consoleReader.readLine();
+						break;
+					case 3:
+						System.out.println(game.getTable().toString());										
+						System.out.println("Press any key to continue...");
+						valid = true;
+						break;
+					case 4:
+						System.out.println(game.getCurrentPlayer().ToStringPlayerHand());										
+						System.out.println("Press any key to continue...");
+						break;
+					case 5:
+						
+						valid = true;
+						break;
+					default:
+							throw new IllegalArgumentException("Unexpected value: " + input);
+				}
+			}catch(Exception e) {
+				clearScreen();
+				printLineColor("Invalid operation! please select a valid option!", ANSI_RED);
+			}
+		}while(!valid);
+	}
+	
+	public static void printScoreboard(Game game) {
+		clearScreen();
+		System.out.println("PLAYERS: ");	
+		System.out.println("");	
+		
+		for(Player player : game.getPlayers()) {
+			printPlayer(player);
+		}	
+
+		System.out.println("");	
+		System.out.println("WINNER(S): ");	
+		System.out.println("");	
+		
+		for(Player player : game.getWinningPlayers()) {
+			printPlayer(player);
+		}	
+	}
+	
 }

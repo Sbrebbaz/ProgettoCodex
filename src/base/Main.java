@@ -13,21 +13,26 @@ public class Main {
 			//Read card configuration from file
 			CardUtility.readCardsFromFile();
 
-			UIUtility.printTitle();
+			while (true) {				
+				UIUtility.clearScreen();
+				
+				UIUtility.printTitle();
 
-			UIUtility.mainMenuManagement();
+				UIUtility.mainMenuManagement();
 
-			playerCount = UIUtility.playerSelectionManagement();
+				playerCount = UIUtility.playerSelectionManagement();
 
-			for(int i = 0;i < playerCount; i++) {
-				players.add(UIUtility.playerCreation());
+				for(int i = 0;i < playerCount; i++) {
+					players.add(UIUtility.playerCreation());
+				}
+
+				for(Player player : players) {
+					UIUtility.printPlayer(player);
+				}
+				
+				new Game(players).play();
 			}
-
-			for(Player player : players) {
-				UIUtility.printLineColor(player.toString(), player.getColor());
-			}
-			Game game = new Game(players);
-			game.play();
+			
 		}
 		catch(Exception e) {
 			UIUtility.printLineColor("There was a fatal problem while processing the latest action: " + e.getMessage(), UIUtility.ANSI_RED);
