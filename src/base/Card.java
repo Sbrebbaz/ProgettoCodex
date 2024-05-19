@@ -74,4 +74,8 @@ public class Card {
 		return "["+" id:"+id+" colore:"+cardColor+" tipo:"+cardType+" front:"+side[0].toString()+" back:"+side[1].toString()+"]\n";
 	}
 	
+	public String toStringVisibleSide() {
+		return "["+" id:"+id+" colore:"+cardColor+" tipo:"+cardType+" lato:"+side[visibleSide].toString()+"]\n";
+	}
+	
 }

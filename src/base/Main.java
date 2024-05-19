@@ -27,22 +27,7 @@ public class Main {
 				UIUtility.printLineColor(player.toString(), player.getColor());
 			}
 			Game game = new Game(players);
-			for(int i=0 ; i<game.getNumberOfPlayer();i++) {
-				for(int j=0; j<2;j++) {
-					game.drawCard(game.getCurrentPlayer(), CardType.OBJECTIVE);
-				}
-				UIUtility.setSecretObjectiveCard(game.getCurrentPlayer());
-				game.playNextTurn();
-			}
-			
-			while(!game.verifyWinningCondition()) {
-				//TODO turno di gioco
-			}
-			
-			
-			
-
-
+			game.play();
 		}
 		catch(Exception e) {
 			UIUtility.printLineColor("There was a fatal problem while processing the latest action: " + e.getMessage(), UIUtility.ANSI_RED);

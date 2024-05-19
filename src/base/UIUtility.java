@@ -189,13 +189,41 @@ public class UIUtility {
 		do{
 			try {
 				clearScreen();
-				System.out.println("scegli la tua carta obbiettvio <1|2>:");
+				System.out.println("choose your objective card <1|2>:");
 				System.out.println(player.ToStringPlayerHand());
 				int input = Integer.parseInt(consoleReader.readLine());
 				player.SetSecretObjective(player.selectCard(input));
 				player.setHand(new ArrayList<Card>());
 				valid = true;
 				
+			}catch(Exception e) {
+				clearScreen();
+				printLineColor("Invalid operation! please select a valid option!", ANSI_RED);
+			}
+		}while(!valid);
+	}
+	
+	public static void setStartingCard(Player player) {
+		Boolean valid= false;
+		do{
+			try {
+				clearScreen();
+				System.out.println("place the starting card:");
+				System.out.println("1-swap side");
+				System.out.println("2-place");
+				System.out.println(player.ToStringPlayerHand());
+				int input = Integer.parseInt(consoleReader.readLine());
+				switch(input) {
+					case 1:
+						player.selectCard(1).swapSide();
+						break;
+					case 2:
+						player.placeStartingCard(1);
+						valid = true;
+						break;
+					default:
+							throw new IllegalArgumentException("Unexpected value: " + input);
+				}
 			}catch(Exception e) {
 				clearScreen();
 				printLineColor("Invalid operation! please select a valid option!", ANSI_RED);

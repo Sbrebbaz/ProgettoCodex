@@ -7,7 +7,6 @@ public class Player implements Comparable<Player>{
 	private String name;
 	private List<Card> hand;
 	private Card secretObjective;
-	private Card startingCard;
 	private int points;
 	private String color;
 	private Map map;
@@ -19,7 +18,10 @@ public class Player implements Comparable<Player>{
 		this.name = name;
 		this.color = color;
 		hand = new ArrayList<Card>();
+		map = new Map();
 	}
+	
+	
 
 	/**
 	 * set the secret objective card for the player
@@ -35,20 +37,12 @@ public class Player implements Comparable<Player>{
 			throw new Exception();
 		}
 	}
-
-	/**
-	 * set the starting card for the player
-	 * 
-	 * @param startingCard
-	 */
-	public void SetStartingCard(Card startingCard) throws Exception {
-		if (startingCard.getCardType() == CardType.STARTING) {
-			this.startingCard = startingCard;
-		}	
-		else {
-			throw new Exception();
+	
+	public void placeStartingCard(int index) throws Exception,IllegalArgumentException{
+		if(!inRange(index-1)) {
+			throw new IllegalArgumentException("Unexpected value: "+index);
 		}
-		
+		map.placeStartingCard(hand.remove(index-1));
 	}
 
 	/**
@@ -86,14 +80,21 @@ public class Player implements Comparable<Player>{
 	}
 	
 	public Card selectCard(int index) throws IllegalArgumentException{
-		if(index<=0 || index > hand.size()) {
+		if(!inRange(index-1)) {
 			throw new IllegalArgumentException("Unexpected value: "+index);
 		}
 		return hand.get(index-1);
 	}
 	
-	public void playCard(int x, int y, Card card) throws Exception{
-		this.AddPoints(map.placeCard(x, y, card));
+	private boolean inRange(int index) {
+		return index>=0 && index < hand.size();
+	}
+	
+	public void playCard(int x, int y, int index) throws Exception,IllegalArgumentException{
+		if(!inRange(index-1)) {
+			throw new IllegalArgumentException("Unexpected value: "+index);
+		}
+		this.AddPoints(map.placeCard(x, y, hand.remove(index-1)));
 	}
 	
 	public String getName() {
@@ -136,9 +137,6 @@ public class Player implements Comparable<Player>{
 		return secretObjective;
 	}
 
-	public Card getStartingCard() {
-		return startingCard;
-	}
 
 	public Map getMap() {
 		return map;

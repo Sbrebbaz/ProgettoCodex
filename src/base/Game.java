@@ -14,6 +14,22 @@ public class Game {
 		this.table=new Table();
 	}
 	
+	public void play() throws Exception{
+		for(int i=0 ; i<getNumberOfPlayer();i++) {// set secret and starting card
+			for(int j=0; j<2;j++) {
+				drawCard(getCurrentPlayer(), CardType.OBJECTIVE);
+			}
+			UIUtility.setSecretObjectiveCard(getCurrentPlayer());
+			drawCard(getCurrentPlayer(), CardType.STARTING);
+			UIUtility.setStartingCard(getCurrentPlayer());
+			playNextTurn();
+		}
+		
+		while(!verifyWinningCondition()) {
+			//TODO turno di gioco
+		}
+	}
+	
 	public void playNextTurn(){
 		turnCounter = (turnCounter+1)%players.size();
 	}
