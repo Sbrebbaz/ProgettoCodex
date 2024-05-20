@@ -86,7 +86,7 @@ public class Player implements Comparable<Player>{
 		return hand.get(index-1);
 	}
 	
-	private boolean inRange(int index) {
+	public boolean inRange(int index) {
 		return index>=0 && index < hand.size();
 	}
 	
@@ -94,7 +94,8 @@ public class Player implements Comparable<Player>{
 		if(!inRange(index-1)) {
 			throw new IllegalArgumentException("Unexpected value: "+index);
 		}
-		this.AddPoints(map.placeCard(x, y, hand.remove(index-1)));
+		this.AddPoints(map.placeCard(x, y, hand.get(index-1)));
+		hand.remove(index-1);
 	}
 	
 	public String getName() {

@@ -264,11 +264,12 @@ public class UIUtility {
 					case 3:
 						System.out.println(game.getTable().toString());										
 						System.out.println("Press any key to continue...");
-						valid = true;
+						consoleReader.readLine();
 						break;
 					case 4:
 						System.out.println(game.getCurrentPlayer().ToStringPlayerHand());										
 						System.out.println("Press any key to continue...");
+						consoleReader.readLine();
 						break;
 					case 5:
 						
@@ -300,6 +301,149 @@ public class UIUtility {
 		for(Player player : game.getWinningPlayers()) {
 			printPlayer(player);
 		}	
+	}
+	
+	public static boolean selectCardToPlace(Player player) {//true: go back, false: continue whit the next phase
+		boolean valid = false;
+		clearScreen();
+		do {
+			try {
+				System.out.println("Choose a card to place(1-3) or type -1 to go back:");
+				System.out.println(player.ToStringPlayerHand());
+				int index = Integer.parseInt(consoleReader.readLine());
+				if(index == -1) {
+					return true;
+				}
+				if(!player.inRange(index-1)) {
+					throw new IllegalArgumentException("Unexpected value: " + index);
+				}
+				if(!selectSideToPlace(player,index)){
+					valid = true;
+				}else {
+					clearScreen();
+				}
+			}catch(Exception e) {
+				clearScreen();
+				printLineColor("Invalid operation! please select a valid option!", ANSI_RED);
+			}
+			
+		}while(!valid);
+		return false;
+	}
+	
+	public static boolean selectSideToPlace(Player player,int index) {//true: go back, false: continue whit the next phase
+		boolean valid = false;
+		clearScreen();
+		do {
+			try {
+				System.out.println("Select the side to placa:");
+				System.out.println("1 - Swap card side");
+				System.out.println("2 - Place card");
+				System.out.println("3 - go back");
+				System.out.println(player.selectCard(index).toStringVisibleSide());
+				int input = Integer.parseInt(consoleReader.readLine());
+				switch(input) {
+				case 1:
+					player.selectCard(index).swapSide();
+					break;
+				case 2:
+					if(!placeCard(player,index)) {
+						valid = true;
+					}
+					break;
+				case 3:
+					return true;
+				default:
+						throw new IllegalArgumentException("Unexpected value: " + input);
+			}
+			}catch(Exception e) {
+				clearScreen();
+				printLineColor("Invalid operation! please select a valid option!", ANSI_RED);
+			}
+		}while(!valid);
+		return false;
+	}
+	
+	public static boolean placeCard(Player player,int index) {//true: go back, false: continue whit the next phase
+		boolean valid = false;
+		clearScreen();
+		do {
+			try {
+				System.out.println("Select where you want to place the card(x,y) or type -1 (in x or y) to go back:");
+				System.out.println(player.getMap().toString());
+				System.out.println(player.selectCard(index).toStringVisibleSide());
+				int x = Integer.parseInt(consoleReader.readLine());
+				if(x == -1) {
+					return true;
+				}
+				int y = Integer.parseInt(consoleReader.readLine());
+				if(y == -1) {
+					return true;
+				}
+				player.playCard(x,y,index);
+				valid = true;
+			}catch(Exception e) {
+				clearScreen();
+				printLineColor("Invalid operation! please select a valid option!", ANSI_RED);
+			}
+		}while(!valid);
+		return false;
+	}
+	
+	public static void drawPhase(Game game) {
+		boolean valid = false;
+		clearScreen();
+		do {
+			try {
+				System.out.println("Draw from:");
+				System.out.println("1 - Resource deck");
+				System.out.println("2 - Gold deck");
+				System.out.println("3 - Table cards");
+				System.out.println(game.getTable().toString());
+				int input = Integer.parseInt(consoleReader.readLine());
+				switch(input) {
+				case 1:
+					game.drawCard(game.getCurrentPlayer(), CardType.RESOURCE);
+					valid = true;
+					break;
+				case 2:
+					game.drawCard(game.getCurrentPlayer(), CardType.GOLD);
+					valid = true;
+					break;
+				case 3:
+					if(!drawFromTable(game)) {
+						valid = true;
+					}else {
+						clearScreen();
+					}
+				}
+			}
+			catch(Exception e) {
+				clearScreen();
+				printLineColor("Invalid operation! please select a valid option!", ANSI_RED);
+			}
+		}while(!valid);
+	}
+	
+	public static boolean drawFromTable(Game game) {//true: go back, false: continue whit the next phase
+		boolean valid = false;
+		clearScreen();
+		do {
+			try {
+				System.out.println("Select Card to Draw (1-4) or type -1 to go back:");
+				System.out.println(game.getTable().toString());
+				int input = Integer.parseInt(consoleReader.readLine());
+				if(input == -1) {
+					return true;
+				}
+				game.drawCardFormTable(input-1);
+				valid = true;
+			}catch(Exception e) {
+				clearScreen();
+				printLineColor("Invalid operation! please select a valid option!", ANSI_RED);
+			}
+		}while(!valid);
+		return false;
 	}
 	
 }

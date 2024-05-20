@@ -24,6 +24,9 @@ public class Game {
 			UIUtility.setSecretObjectiveCard(getCurrentPlayer());
 			drawCard(getCurrentPlayer(), CardType.STARTING);
 			UIUtility.setStartingCard(getCurrentPlayer());
+			drawCard(getCurrentPlayer(), CardType.RESOURCE);
+			drawCard(getCurrentPlayer(), CardType.RESOURCE);
+			drawCard(getCurrentPlayer(), CardType.GOLD);
 			playNextTurn();
 		}
 		
@@ -32,15 +35,16 @@ public class Game {
 			UIUtility.clearScreen();
 			
 			UIUtility.printPlayer(getCurrentPlayer());
-					
-			UIUtility.playerTurnBase(this);
+			do {
+				UIUtility.playerTurnBase(this);
+			}while(UIUtility.selectCardToPlace(getCurrentPlayer()));
 			
-			//Choose card or go back to start turn
 			
-			UIUtility.playerTurnBase(this);
 			
 			//Draw card or go back to end turn
-								
+			if(!this.getTable().isEmpty()) {
+				UIUtility.drawPhase(this);
+			}				
 			playNextTurn();			
 		}
 		
@@ -49,6 +53,10 @@ public class Game {
 		
 		
 		UIUtility.printScoreboard(this);
+	}
+	
+	public Card drawCardFormTable(int index) throws Exception{
+		return table.drawTableCard(index);
 	}
 	
 	

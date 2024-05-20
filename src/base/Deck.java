@@ -6,10 +6,13 @@ public class Deck {
 	private List<Card> deck;
 
 	public Deck(List<Card> deck) {
-		if(deck != null)
+		if(deck != null) {
 			this.deck = deck;
-		else
+			shuffle();
+		}
+		else {
 			deck = new ArrayList<Card>();
+		}
 	}
 
 	/**

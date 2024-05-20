@@ -76,7 +76,7 @@ public class Table {
 	}
 	
 	public Card drawTableCard(int index) throws Exception,ArrayIndexOutOfBoundsException{
-		if(index<0 && index >= N_TABLE_CARDS) {
+		if(index<0 || index > tableCards.size()) {
 			throw new ArrayIndexOutOfBoundsException();
 		}
 		
