@@ -76,7 +76,7 @@ public class Table {
 	}
 	
 	public Card drawTableCard(int index) throws Exception,ArrayIndexOutOfBoundsException{
-		if(index<0 || index > tableCards.size()) {
+		if(index<0 || index >= tableCards.size()) {
 			throw new ArrayIndexOutOfBoundsException();
 		}
 		
@@ -122,7 +122,7 @@ public class Table {
 	}
 
 	public Card getTableCards(int index) throws ArrayIndexOutOfBoundsException {
-		if(index >= 0 && index< N_TABLE_CARDS) {
+		if(index >= 0 && index< tableCards.size()) {
 			return tableCards.get(index);
 		}else {
 			throw new ArrayIndexOutOfBoundsException();
@@ -140,14 +140,6 @@ public class Table {
 		
 	}
 	
-	public Card getTableObjectiveCard(int index) throws ArrayIndexOutOfBoundsException{
-		if(index >= 0 && index < N_OBJECTIVE_TABLE_CARDS) {
-			return tableObjectiveCards[index];
-		}
-		else {
-			throw new ArrayIndexOutOfBoundsException();
-		}
-	}
 
 	public int getN_TABLE_CARDS() {
 		return N_TABLE_CARDS;
