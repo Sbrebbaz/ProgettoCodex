@@ -43,7 +43,7 @@ public class Game {
 			playTurn(false);
 		}
 		//calculate objective points points
-		for(int i=0 ; i<getNumberOfPlayer();i++) {3
+		for(int i=0 ; i<getNumberOfPlayer();i++) {
 			calculatePlayerPoint(getCurrentPlayer());
 			playNextTurn();
 		}
