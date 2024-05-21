@@ -27,6 +27,6 @@ public class MapCard {
 
 	@Override
 	public String toString() {
-		return card + " zIndex="+ zIndex;
+		return card.toStringVisibleSide() + " zIndex="+ zIndex;
 	}
 }

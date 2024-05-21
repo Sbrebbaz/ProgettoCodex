@@ -24,15 +24,15 @@ public class UIUtility {
 	}
 
 	public static void clearScreen() {  
-		System.out.print("\033[H\033[2J");  
+		System.out.print("\n\033[H\033[2J");  
 		System.out.flush();  
 	}  
-	
+
 	public static void printTitle() {
 		printLineColor("CODEX NATURALIS by group 45", ANSI_GREEN);
 	}
 
-	public static void mainMenuManagement() {
+	public static Boolean mainMenuManagement() {
 
 		Boolean valid= false;
 
@@ -63,6 +63,8 @@ public class UIUtility {
 				printLineColor("Invalid operation! please select a valid option!", ANSI_RED);
 			}
 		}while(!valid);
+
+		return valid;		
 	}
 
 	public static int playerSelectionManagement() {
@@ -72,6 +74,8 @@ public class UIUtility {
 
 		do {
 			try {
+				clearScreen();
+
 				System.out.println("How many people are playing the game? (2-4)");
 
 				String input = consoleReader.readLine();
@@ -105,6 +109,8 @@ public class UIUtility {
 		String playerName = "";
 		String playerColor= "";
 
+		clearScreen();
+
 		do {
 			try {
 				System.out.println("Whats the name of the player?");
@@ -130,9 +136,9 @@ public class UIUtility {
 				printLineColor("4 - BLUE",ANSI_BLUE);
 				printLineColor("5 - PURPLE",ANSI_PURPLE);
 				printLineColor("6 - CYAN",ANSI_CYAN);
-				
+
 				playerColor = consoleReader.readLine();	
-				
+
 				switch (playerColor) {
 				case "1":
 				{
@@ -183,19 +189,20 @@ public class UIUtility {
 
 		return new Player(playerName, playerColor);
 	}
-	
+
 	public static void setSecretObjectiveCard(Player player) {
 		Boolean valid= false;
 		do{
 			try {
+
 				clearScreen();
-				System.out.println("choose your objective card (1-2):");
+				System.out.println("Choose your objective card (1-2):");
 				System.out.println(player.ToStringPlayerHand());
 				int input = Integer.parseInt(consoleReader.readLine());
 				player.SetSecretObjective(player.selectCard(input));
 				player.setHand(new ArrayList<Card>());
 				valid = true;
-				
+
 			}catch(Exception e) {
 				clearScreen();
 				printLineColor("Invalid operation! please select a valid option!", ANSI_RED);
@@ -214,15 +221,15 @@ public class UIUtility {
 				System.out.println(player.ToStringPlayerHand());
 				int input = Integer.parseInt(consoleReader.readLine());
 				switch(input) {
-					case 1:
-						player.selectCard(1).swapSide();
-						break;
-					case 2:
-						player.placeStartingCard(1);
-						valid = true;
-						break;
-					default:
-							throw new IllegalArgumentException("Unexpected value: " + input);
+				case 1:
+					player.selectCard(1).swapSide();
+					break;
+				case 2:
+					player.placeStartingCard(1);
+					valid = true;
+					break;
+				default:
+					throw new IllegalArgumentException("Unexpected value: " + input);
 				}
 			}catch(Exception e) {
 				clearScreen();
@@ -234,7 +241,7 @@ public class UIUtility {
 	public static void printPlayer(Player toPrint) {
 		printLineColor(toPrint.toString(), toPrint.getColor());
 	}
-	
+
 	public static void playerTurnBase(Game game) {
 		Boolean valid= false;
 		do{
@@ -249,34 +256,26 @@ public class UIUtility {
 				System.out.println("5 - Play card");
 				int input = Integer.parseInt(consoleReader.readLine());
 				switch(input) {
-					case 1:
-						System.out.println(game.getCurrentPlayer().getMap().toString());
-						System.out.println("Press any key to continue...");
-						consoleReader.readLine();
-						break;
-					case 2:
-						for(Player player : game.getPlayers()) {
-							printPlayer(player);
-						}						
-						System.out.println("Press any key to continue...");
-						consoleReader.readLine();
-						break;
-					case 3:
-						System.out.println(game.getTable().toString());										
-						System.out.println("Press any key to continue...");
-						consoleReader.readLine();
-						break;
-					case 4:
-						System.out.println(game.getCurrentPlayer().ToStringPlayerHand());										
-						System.out.println("Press any key to continue...");
-						consoleReader.readLine();
-						break;
-					case 5:
-						
-						valid = true;
-						break;
-					default:
-							throw new IllegalArgumentException("Unexpected value: " + input);
+				case 1:
+					System.out.println(game.getCurrentPlayer().getMap().toString());
+					break;
+				case 2:
+					for(Player player : game.getPlayers()) {
+						printPlayer(player);
+					}						
+					break;
+				case 3:
+					System.out.println(game.getTable().toString());				
+					break;
+				case 4:
+					System.out.println(game.getCurrentPlayer().ToStringPlayerHand());
+					break;
+				case 5:
+
+					valid = true;
+					break;
+				default:
+					throw new IllegalArgumentException("Unexpected value: " + input);
 				}
 			}catch(Exception e) {
 				clearScreen();
@@ -284,31 +283,24 @@ public class UIUtility {
 			}
 		}while(!valid);
 	}
-	
+
 	public static void printScoreboard(Game game) {
-		clearScreen();
-		System.out.println("PLAYERS: ");	
-		System.out.println("");	
-		
-		for(Player player : game.getPlayers()) {
-			printPlayer(player);
-		}	
 
 		System.out.println("");	
 		System.out.println("WINNER(S): ");	
 		System.out.println("");	
-		
+
 		for(Player player : game.getWinningPlayers()) {
 			printPlayer(player);
 		}	
 	}
-	
+
 	public static boolean selectCardToPlace(Player player) {//true: go back, false: continue whit the next phase
 		boolean valid = false;
 		clearScreen();
 		do {
 			try {
-				System.out.println("Choose a card to place(1-3) or type -1 to go back:");
+				System.out.println("Choose a card to place (1-3) or type -1 to go back:");
 				System.out.println(player.ToStringPlayerHand());
 				int index = Integer.parseInt(consoleReader.readLine());
 				if(index == -1) {
@@ -326,17 +318,17 @@ public class UIUtility {
 				clearScreen();
 				printLineColor("Invalid operation! please select a valid option!", ANSI_RED);
 			}
-			
+
 		}while(!valid);
 		return false;
 	}
-	
+
 	public static boolean selectSideToPlace(Player player,int index) {//true: go back, false: continue whit the next phase
 		boolean valid = false;
 		clearScreen();
 		do {
 			try {
-				System.out.println("Select the side to placa:");
+				System.out.println("Select the side to place:");
 				System.out.println("1 - Swap card side");
 				System.out.println("2 - Place card");
 				System.out.println("3 - go back");
@@ -354,8 +346,8 @@ public class UIUtility {
 				case 3:
 					return true;
 				default:
-						throw new IllegalArgumentException("Unexpected value: " + input);
-			}
+					throw new IllegalArgumentException("Unexpected value: " + input);
+				}
 			}catch(Exception e) {
 				clearScreen();
 				printLineColor("Invalid operation! please select a valid option!", ANSI_RED);
@@ -363,7 +355,7 @@ public class UIUtility {
 		}while(!valid);
 		return false;
 	}
-	
+
 	public static boolean placeCard(Player player,int index) {//true: go back, false: continue whit the next phase
 		boolean valid = false;
 		clearScreen();
@@ -389,7 +381,7 @@ public class UIUtility {
 		}while(!valid);
 		return false;
 	}
-	
+
 	public static void drawPhase(Game game) {
 		boolean valid = false;
 		clearScreen();
@@ -424,7 +416,7 @@ public class UIUtility {
 			}
 		}while(!valid);
 	}
-	
+
 	public static boolean drawFromTable(Game game) {//true: go back, false: continue whit the next phase
 		boolean valid = false;
 		clearScreen();
@@ -445,5 +437,5 @@ public class UIUtility {
 		}while(!valid);
 		return false;
 	}
-	
+
 }

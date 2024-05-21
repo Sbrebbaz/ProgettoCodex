@@ -71,11 +71,51 @@ public class Card {
 	}
 	
 	public String toString() {
-		return "["+" id:"+id+" colore:"+cardColor+" tipo:"+cardType+" front:"+side[0].toString()+" back:"+side[1].toString()+"]\n";
+		
+		StringBuilder sb = new StringBuilder();
+
+		sb.append("[ id: '");
+		sb.append(id);
+
+		sb.append("' color: '");
+		sb.append(cardColor);
+
+		sb.append("' type: '");
+		sb.append(cardType);
+		
+		sb.append("' selected side: '");
+		sb.append(visibleSide);
+
+		sb.append("' front[0]: '");
+		sb.append(side[0].toString());
+
+		sb.append("' back[1]: '");
+		sb.append(side[1].toString());
+		
+		sb.append("']");
+		
+		return sb.toString();
 	}
 	
 	public String toStringVisibleSide() {
-		return "["+" id:"+id+" colore:"+cardColor+" tipo:"+cardType+" lato:"+side[visibleSide].toString()+"]\n";
+		
+		StringBuilder sb = new StringBuilder();
+
+		sb.append("[ id: '");
+		sb.append(id);
+
+		sb.append("' color: '");
+		sb.append(cardColor);
+
+		sb.append("' type: '");
+		sb.append(cardType);
+		
+		sb.append("' side: '");
+		sb.append(side[visibleSide].toString());
+
+		sb.append("']");
+		
+		return sb.toString();
 	}
 	
 }

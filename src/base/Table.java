@@ -156,13 +156,36 @@ public class Table {
 
 	@Override
 	public String toString() {
-		return "Table{" +
-				"resourceDeck=" + resourceDeck +
-				", goldDeck=" + goldDeck +
-				", objectiveDeck=" + objectiveDeck +
-				", startingDeck=" + startingDeck +
-				", tableCards=" + tableCards +
-				", tableObjectiveCards=" + Arrays.toString(tableObjectiveCards) +
-				"}\n";
+		
+		StringBuilder sb = new StringBuilder();
+
+		sb.append("TABLE:");
+		sb.append("\n");
+		
+		sb.append("resourceDeck : ");
+		sb.append(resourceDeck);
+		
+		sb.append("goldDeck : ");
+		sb.append(goldDeck);
+		
+		sb.append("objectiveDeck : ");
+		sb.append(objectiveDeck);
+		
+		sb.append("startingDeck : ");
+		sb.append(startingDeck);
+		
+		sb.append("tableCards : ");
+		for(Card c : tableCards) {
+			sb.append("\n\t");
+			sb.append(c);			
+		}
+		
+		sb.append("tableObjectiveCards : ");
+		for(Card c : tableObjectiveCards) {
+			sb.append("\n\t");
+			sb.append(c);			
+		}
+				
+		return sb.toString();
 	}
 }

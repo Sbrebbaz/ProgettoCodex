@@ -2,7 +2,7 @@ package base;
 
 import java.util.*;
 
-public class Player implements Comparable<Player>{
+public class Player implements Comparable<Player> {
 	private int id;
 	private String name;
 	private List<Card> hand;
@@ -10,7 +10,7 @@ public class Player implements Comparable<Player>{
 	private int points;
 	private String color;
 	private Map map;
-	private static int COUNTER=0;
+	private static int COUNTER = 0;
 
 	public Player(String name, String color) {
 		this.id = COUNTER;
@@ -20,8 +20,6 @@ public class Player implements Comparable<Player>{
 		hand = new ArrayList<Card>();
 		map = new Map();
 	}
-	
-	
 
 	/**
 	 * set the secret objective card for the player
@@ -32,17 +30,16 @@ public class Player implements Comparable<Player>{
 	public void SetSecretObjective(Card secretObjective) throws Exception {
 		if (secretObjective.getCardType() == CardType.OBJECTIVE) {
 			this.secretObjective = secretObjective;
-		}	
-		else {
+		} else {
 			throw new Exception();
 		}
 	}
-	
-	public void placeStartingCard(int index) throws Exception,IllegalArgumentException{
-		if(!inRange(index-1)) {
-			throw new IllegalArgumentException("Unexpected value: "+index);
+
+	public void placeStartingCard(int index) throws Exception, IllegalArgumentException {
+		if (!inRange(index - 1)) {
+			throw new IllegalArgumentException("Unexpected value: " + index);
 		}
-		map.placeStartingCard(hand.remove(index-1));
+		map.placeStartingCard(hand.remove(index - 1));
 	}
 
 	/**
@@ -62,42 +59,42 @@ public class Player implements Comparable<Player>{
 	public void AddPoints(int points) {
 		this.points += points;
 	}
-	
+
 	public boolean winningPoints() {
-		return points>=20;
+		return points >= 20;
 	}
-	
+
 	public int compareTo(Player player) {
 		return player.getPoints() - this.getPoints();
 	}
-	
+
 	public boolean equals(Player player) {
-		if(player.getPoints() == this.getPoints()) {
+		if (player.getPoints() == this.getPoints()) {
 			return true;
-		}else {
+		} else {
 			return false;
 		}
 	}
-	
-	public Card selectCard(int index) throws IllegalArgumentException{
-		if(!inRange(index-1)) {
-			throw new IllegalArgumentException("Unexpected value: "+index);
+
+	public Card selectCard(int index) throws IllegalArgumentException {
+		if (!inRange(index - 1)) {
+			throw new IllegalArgumentException("Unexpected value: " + index);
 		}
-		return hand.get(index-1);
+		return hand.get(index - 1);
 	}
-	
+
 	public boolean inRange(int index) {
-		return index>=0 && index < hand.size();
+		return index >= 0 && index < hand.size();
 	}
-	
-	public void playCard(int x, int y, int index) throws Exception,IllegalArgumentException{
-		if(!inRange(index-1)) {
-			throw new IllegalArgumentException("Unexpected value: "+index);
+
+	public void playCard(int x, int y, int index) throws Exception, IllegalArgumentException {
+		if (!inRange(index - 1)) {
+			throw new IllegalArgumentException("Unexpected value: " + index);
 		}
-		this.AddPoints(map.placeCard(x, y, hand.get(index-1)));
-		hand.remove(index-1);
+		this.AddPoints(map.placeCard(x, y, hand.get(index - 1)));
+		hand.remove(index - 1);
 	}
-	
+
 	public String getName() {
 		return name;
 	}
@@ -138,7 +135,6 @@ public class Player implements Comparable<Player>{
 		return secretObjective;
 	}
 
-
 	public Map getMap() {
 		return map;
 	}
@@ -161,15 +157,18 @@ public class Player implements Comparable<Player>{
 	public String ToStringPlayerHand() {
 
 		StringBuilder sb = new StringBuilder();
+		sb.append(color);
 		sb.append(toString());
+		sb.append(UIUtility.ANSI_RESET);
 		sb.append("\nHand:\n[\n");
-		
-		for(Card card : hand) {
+
+		for (Card card : hand) {
+			sb.append("\t");
 			sb.append(card);
 			sb.append("\n");
 		}
 		sb.append("]");
-		
+
 		return sb.toString();
 	}
 }
