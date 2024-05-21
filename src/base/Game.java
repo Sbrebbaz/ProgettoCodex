@@ -30,26 +30,18 @@ public class Game {
 			playNextTurn();
 		}
 		
-		while(!verifyWinningCondition()) {
-									
-			UIUtility.clearScreen();
-			
-			UIUtility.printPlayer(getCurrentPlayer());
-			do {
-				UIUtility.playerTurnBase(this);
-			}while(UIUtility.selectCardToPlace(getCurrentPlayer()));
-			
-			
-			
-			//Draw card or go back to end turn
-			if(!this.getTable().isEmpty()) {
-				UIUtility.drawPhase(this);
-			}				
-			playNextTurn();			
+		while(!verifyWinningCondition()) {					
+			playTurn(true);
 		}
-		
 		//Play LAST TURN
-		
+		for(int i=0 ; i<getNumberOfPlayer();i++) {
+			playTurn(false);
+		}
+		//calculate objective points points
+		for(int i=0 ; i<getNumberOfPlayer();i++) {
+			calculatePlayerPoint(getCurrentPlayer());
+			playNextTurn();
+		}
 		
 		
 		UIUtility.printScoreboard(this);
@@ -57,6 +49,23 @@ public class Game {
 	
 	public Card drawCardFormTable(int index) throws Exception{
 		return table.drawTableCard(index);
+	}
+	
+	public void playTurn(boolean flagForDraw) {//if set to true you can draw, else you can't
+		UIUtility.clearScreen();
+		
+		UIUtility.printPlayer(getCurrentPlayer());
+		do {
+			UIUtility.playerTurnBase(this);
+		}while(UIUtility.selectCardToPlace(getCurrentPlayer()));
+		
+		
+		
+		//Draw card or go back to end turn
+		if(!this.getTable().isEmpty() && flagForDraw) {
+			UIUtility.drawPhase(this);
+		}				
+		playNextTurn();	
 	}
 	
 	

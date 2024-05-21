@@ -276,8 +276,8 @@ public class Map {
 	public String toString() {
 		
 		StringBuilder sb = new StringBuilder();
-		for(int i=subMap[0].x;i<subMap[1].x;i++) {
-			for(int j=subMap[0].y;j<subMap[1].y;j++) {
+		for(int i=subMap[0].x+1;i<subMap[1].x;i++) {
+			for(int j=subMap[0].y+1;j<subMap[1].y;j++) {
 				if(grid[i][j] != null) {
 					sb.append("[");
 					sb.append(grid[i][j].toString());
