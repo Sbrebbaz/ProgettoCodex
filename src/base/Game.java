@@ -43,7 +43,7 @@ public class Game {
 			playNextTurn();
 		}
 		
-		
+		UIUtility.clearScreen();
 		UIUtility.printScoreboard(this);
 	}
 	
