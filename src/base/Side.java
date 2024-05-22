@@ -6,13 +6,26 @@ public abstract class Side {
 	private int pointValue;
 	private List<Symbol> center;
 	private Corner corners [];
-	
+	/**
+	 * creates a GenericSide from the center, corners and point value
+	 * @param center
+	 * @param corners
+	 * @param pointValue
+	 */
 	public Side(List<Symbol> center, Corner[] corners ,int pointValue){
 		this.pointValue = pointValue;
 		this.center=center;
 		this.corners=corners;
 	}
-	
+	/**
+	 *  creates a GenericSide from the center, corners and point value
+	 * @param center
+	 * @param cornerTopLeft
+	 * @param cornerTopRight
+	 * @param cornerBottomLeft
+	 * @param cornerBottomRight
+	 * @param pointValue
+	 */
 	public Side(List<Symbol> center,Corner cornerTopLeft,Corner cornerTopRight,
 			Corner cornerBottomLeft,Corner cornerBottomRight,int pointValue) {
 		this.center=center;
@@ -23,7 +36,13 @@ public abstract class Side {
 		corners[3]=cornerBottomRight;
 		this.pointValue = pointValue;
 	}
-	
+	/**
+	 * takes the corner adjacent to a card from their relative position
+	 * @param x
+	 * @param y
+	 * @return
+	 * @throws Exception
+	 */
 	public Corner getCornerFromPosition(int x, int y) throws Exception{
 		if(x == -1) {
 			if( y == -1) {
@@ -45,35 +64,59 @@ public abstract class Side {
 			throw new Exception();
 		}
 	}
-	
-	public abstract boolean verifyCondition(Map map);//non mi ricordo cosa doveva fare
-	
-	public abstract int getPoints(Map map,int x,int y);//data la map e le condizioni della carta ti ritorna i numeri di punti che ha fatto
-
+	/**
+	 * verify  if the requirements for placing the side have been met
+	 */
+	public abstract boolean verifyCondition(Map map);
+	/**
+	 * get the point score by the card
+	 */
+	public abstract int getPoints(Map map,int x,int y);
+	/**
+	 * get the point value of this side
+	 * @return
+	 */
 	public int getPointValue() {
 		return pointValue;
 	}
-
+	/**
+	 * set the point value of this side
+	 * @param pointValue
+	 */
 	public void setPointValue(int pointValue) {
 		this.pointValue = pointValue;
 	}
-
+	/**
+	 * get the center of this side
+	 * @return
+	 */
 	public List<Symbol> getCenter() {
 		return center;
 	}
-
+	/**
+	 * set the center of this side
+	 * @param center
+	 */
 	public void setCenter(List<Symbol> center) {
 		this.center = center;
 	}
-
+	/**
+	 * get the corners of this side
+	 * @return
+	 */
 	public Corner[] getCorners() {
 		return corners;
 	}
-
+	/**
+	 * set the corners of this side
+	 * @param corners
+	 */
 	public void setCorners(Corner[] corners) {
 		this.corners = corners;
 	}
-
+	/**
+	 * return a String whit all informations of this side
+	 */
 	@Override
 	public String toString() {
 		return String.format("Corners %s Center %s Points %s",Arrays.toString(corners),center,pointValue);

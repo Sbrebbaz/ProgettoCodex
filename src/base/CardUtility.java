@@ -9,7 +9,9 @@ import com.google.gson.stream.JsonReader;
 public class CardUtility {
 
 	private static Card cards[];
-	
+	/**
+	 * get the Arrays of Card from the Json file
+	 */
 	public static void readCardsFromFile() {
 
 		JsonReader reader = null;
@@ -23,7 +25,10 @@ public class CardUtility {
 
 		cards = gsonBldr.create().fromJson(reader, Card[].class);
 	}
-	
+	/**
+	 * get the Arrays of all Card
+	 * @return Arrays of Card
+	 */
 	public static Card[] getCards() {
 		return cards;
 	}

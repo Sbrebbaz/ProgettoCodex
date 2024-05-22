@@ -11,24 +11,35 @@ public class Map {
     private MapCard[][] grid;
 
 	private Point subMap[];
-
+	/**
+	 * construct a new map
+	 */
     public Map() {
         grid = new MapCard[xSize][ySize];
         subMap = new Point[2];
         for (int i = 0; i < 2; i++) {
-            subMap[i] = new Point(xSize / 2, ySize / 2);
+            subMap[i] = new Point((xSize / 2)-1, (ySize / 2)-1);
         }
     }
-
+    /**
+     * place the starting card at the center of the map
+     * @param card
+     * @throws Exception
+     */
     public void placeStartingCard(Card card) throws Exception {//piazza la carta iniziale al centro (40,40)
         if (card != null && card.getCardType() == CardType.STARTING) {
-            grid[xSize / 2][ySize / 2] = card.getMapCard(0);
-            updateSubMap(xSize / 2, ySize / 2);
+            grid[(xSize / 2)-1][(ySize / 2)-1] = card.getMapCard(0);// centro matrice (1-80) = 80/2, centro indice matrice (0-79) = (80/2)-1
+            updateSubMap((xSize / 2)-1, (ySize / 2)-1);
         } else {
             throw new Exception();
         }
     }
-
+    /**
+     * find if the coordinates are outside of the map
+     * @param x
+     * @param y
+     * @return true if they are outside, false if not
+     */
     private boolean outOfIndex(int x, int y) {// ritorna vero se il punto si trova fuori dalla griglia, false se no
         if (x >= xSize || y >= ySize || x < 0 || y < 0) {
             return true;
@@ -63,7 +74,14 @@ public class Map {
             throw new Exception();
         }
     }
-
+    /**
+     * checks if the coordinates entered to place the card are correct
+     * @param x
+     * @param y
+     * @param card
+     * @return true if you can place, false if not
+     * @throws Exception
+     */
     public boolean checkCardPosition(int x, int y, Card card) throws Exception {
         boolean tmpCorner = false;//flag per indicare se si è trovato una carta con angolo alle diagonali
         if (outOfIndex(x, y)) {
@@ -85,7 +103,12 @@ public class Map {
         }
         return tmpCorner;
     }
-
+    /**
+     * get the maximum zIndex +1 of the cards connected by a corner
+     * @param x
+     * @param y
+     * @return
+     */
     private int getZindexMapCard(int x, int y) {// ritorna lo zIndex  massimo +1  delle carte collegate da un corner
         int max = Integer.MIN_VALUE;
         for (int i = -1; i < 1; i += 2) {
@@ -102,7 +125,11 @@ public class Map {
             return max + 1;
         }
     }
-
+    /**
+     * update the subMap to ensure that all cards are within the sub-matrix 
+     * @param x
+     * @param y
+     */
     private void updateSubMap(int x, int y) {//aggiorna i 2 punti della subMap per renderla più grande dello spazio con carte giocate, usando le coordinate dell'ultima carta piazzata
     	int subMapValue= -1;
     	for (int i = 0; i < 2; i ++) {
@@ -115,7 +142,11 @@ public class Map {
             subMapValue +=2;
         }
     }
-
+    /**
+     * get the number of time the @param symbol is found 
+     * @param symbol
+     * @return
+     */
     public int getSymbolCount(Symbol symbol) {//conta il numero di corner visibili con il simbolo cercato nella mappa
         Corner tmp[];//contiene i 4 corner della carta attualmente scansionata
         int count = 0;
@@ -133,7 +164,13 @@ public class Map {
         }
         return count;
     }
-
+    /**
+     * from the corner get the zIndex value of the card connected to it
+     * @param x
+     * @param y
+     * @param indexCorner
+     * @return -1 if card not found, else the zIndex of the card in the relative position form the corner
+     */
     private int getZindexFromIndexCorner(int x, int y, int indexCorner) {// per ogni corner ti dice il valore dello zIndex della carta ad esso collegata
         switch (indexCorner) {
             case 0:
@@ -164,7 +201,11 @@ public class Map {
                 return -1;
         }
     }
-
+    /**
+     * find if a List of Symbol are present in the map
+     * @param symbol
+     * @return true if they are found, false if not
+     */
     public boolean findListSymbol(List<Symbol> symbol) {
         Corner tmp[];//contiene i 4 corner della carta attualmente scansionata
         boolean finish = false;//indica se hai gia finito di cerca i simboli nella lista -> lista vuota
@@ -197,7 +238,12 @@ public class Map {
         }
         return finish;
     }
-
+    /**
+     * get the number of near corner connected to the position
+     * @param x
+     * @param y
+     * @return
+     */
     public int getNearCorner(int x, int y) {
         int totalCorner = 0;//numero totale di conrner adiacenti
         for (int i = -1; i < 1; i += 2) {
@@ -211,7 +257,11 @@ public class Map {
         }
         return totalCorner;
     }
-
+    /**
+     * get the number of unique subMap are found in the Map
+     * @param positionRequirement
+     * @return
+     */
     public int findSubMap(MapCard[][] positionRequirement) {
         int count = 0;
         List<Integer> usedCard = new ArrayList<Integer>();
@@ -224,7 +274,14 @@ public class Map {
         }
         return count;
     }
-
+    /**
+     * find if the subMap are equals
+     * @param x
+     * @param y
+     * @param positionRequirement
+     * @param usedCard
+     * @return true if they are equals, false if not
+     */
     private boolean isSubMapEquals(int x, int y, MapCard[][] positionRequirement, List<Integer> usedCard) {
 
         boolean isEquals = true;//indica se le 2 sotto matrici sono uguali, rimane vero anche se in una cella di grid c'è una carta ma in positionRequirement non c'è in una certa posizione
@@ -263,15 +320,23 @@ public class Map {
         }
         return isEquals;
     }
-
+    /**
+     * get the rows size of the map
+     * @return
+     */
     public int getxSize() {
         return xSize;
     }
-
+    /**
+     * get the coulums size of the map
+     * @return
+     */
     public int getySize() {
         return ySize;
     }
-
+    /**
+     * returns a String whit all informations of the Map
+     */
 	@Override
 	public String toString() {
 		

@@ -12,7 +12,9 @@ public class Table {
 	private Card tableObjectiveCards[];
 	private final int N_TABLE_CARDS = 4;
 	private final int N_OBJECTIVE_TABLE_CARDS = 2;
-
+	/**
+	 * construct a table whit all deck taken from the Json file and prepare the table cards
+	 */
 	public Table() {// inizializza i decks dal file, pesca 2 carte gold e resource e li mette in tableCards e pesca 2 carte Objective e li mette in tableObjectiveCards
 		ArrayList <Card> cards= new ArrayList<Card>(Arrays.asList(CardUtility.getCards()));
 		ArrayList <Card> resource = new ArrayList<Card>();
@@ -55,26 +57,59 @@ public class Table {
 			System.out.println("errore nell'inizializzazione del tavolo da gioco:"+e.getMessage());
 		}
 	}
-
+	/**
+	 * find if you can draw from a specific deck
+	 * @param deck
+	 * @return
+	 */
 	public boolean canDraw(Deck deck) {
-		return deck.isEmpty();
+		return !deck.isEmpty();
 	}
-
+	/**
+	 * draw a card from the type
+	 * @param type
+	 * @return
+	 * @throws Exception
+	 */
 	public Card drawCard(CardType type) throws Exception{
 		switch(type) {
 		case RESOURCE:
-			return resourceDeck.drawCard();
+			if(canDraw(resourceDeck)) {
+				return resourceDeck.drawCard();
+			}else {
+				throw new Exception();
+			}
 		case GOLD:
-			return goldDeck.drawCard();
+			if(canDraw(resourceDeck)) {
+				return goldDeck.drawCard();
+			}else {
+				throw new Exception();
+			}
+			
 		case STARTING:
-			return startingDeck.drawCard();
+			if(canDraw(resourceDeck)) {
+				return startingDeck.drawCard();
+			}else {
+				throw new Exception();
+			}
+			
 		case OBJECTIVE:
-			return objectiveDeck.drawCard();
+			if(canDraw(resourceDeck)) {
+				return objectiveDeck.drawCard();
+			}else {
+				throw new Exception();
+			}
 		default:
 			throw new Exception();
 		}
 	}
-	
+	/**
+	 * draw selected card from the table
+	 * @param index
+	 * @return
+	 * @throws Exception
+	 * @throws ArrayIndexOutOfBoundsException
+	 */
 	public Card drawTableCard(int index) throws Exception,ArrayIndexOutOfBoundsException{
 		if(index<0 || index >= tableCards.size()) {
 			throw new ArrayIndexOutOfBoundsException();
@@ -88,49 +123,70 @@ public class Table {
 			throw new Exception();
 		}
 	}
-
+	/**
+	 * get resource deck
+	 * @return
+	 */
 	public Deck getResourceDeck() {
 		return resourceDeck;
 	}
-
+	/**
+	 * set resource deck
+	 * @return
+	 */
 	public void setResourceDeck(Deck resourceDeck) {
 		this.resourceDeck = resourceDeck;
 	}
-
+	/**
+	 * get gold deck
+	 * @return
+	 */
 	public Deck getGoldDeck() {
 		return goldDeck;
 	}
-
+	/**
+	 * set gold deck
+	 * @return
+	 */
 	public void setGoldDeck(Deck goldDeck) {
 		this.goldDeck = goldDeck;
 	}
-
+	/**
+	 * get objective deck
+	 * @return
+	 */
 	public Deck getObjectiveDeck() {
 		return objectiveDeck;
 	}
-
+	/**
+	 * set objective deck
+	 * @return
+	 */
 	public void setObjectiveDeck(Deck objectiveDeck) {
 		this.objectiveDeck = objectiveDeck;
 	}
-
+	/**
+	 * get starting deck
+	 * @return
+	 */
 	public Deck getStartingDeck() {
 		return startingDeck;
 	}
-
+	/**
+	 * set starting deck
+	 * @return
+	 */
 	public void setStartingDeck(Deck startingDeck) {
 		this.startingDeck = startingDeck;
 	}
 
-	public Card getTableCards(int index) throws ArrayIndexOutOfBoundsException {
-		if(index >= 0 && index< tableCards.size()) {
-			return tableCards.get(index);
-		}else {
-			throw new ArrayIndexOutOfBoundsException();
-		}
-		
-	}
 
-
+	/**
+	 * get the selected objective card from the table
+	 * @param index
+	 * @return
+	 * @throws ArrayIndexOutOfBoundsException
+	 */
 	public Card getTableObjectiveCards(int index) throws ArrayIndexOutOfBoundsException{
 		if(index >= 0 && index < N_OBJECTIVE_TABLE_CARDS) {
 			return tableObjectiveCards[index];
@@ -140,20 +196,31 @@ public class Table {
 		
 	}
 	
-
+	/**
+	 * get the max number of table cards
+	 * @return
+	 */
 	public int getN_TABLE_CARDS() {
 		return N_TABLE_CARDS;
 	}
-
+	/**
+	 * get the max number of objective table cards
+	 * @return
+	 */
 	public int getN_OBJECTIVE_TABLE_CARDS() {
 		return N_OBJECTIVE_TABLE_CARDS;
 	}
-
+	/**
+	 * find if the deck is empty
+	 * @return
+	 */
 	public boolean isEmpty() {
 		return resourceDeck.isEmpty() && goldDeck.isEmpty() && tableCards.isEmpty();
 	}
 
-
+	/**
+	 * returns a String whit all informations of the Table
+	 */
 	@Override
 	public String toString() {
 		

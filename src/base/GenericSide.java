@@ -7,7 +7,7 @@ public class GenericSide extends Side{
 	public GenericSide(List<Symbol> center, Corner[] corners,int pointValue){
 		super(center,corners,pointValue);
 	}
-	
+
 	public GenericSide(List<Symbol> center,Corner cornerTopLeft,Corner cornerTopRight,
 			Corner cornerBottomLeft,Corner cornerBottomRight,int pointValue) {
 		super(center,cornerTopLeft,cornerTopRight,cornerBottomLeft,cornerBottomRight,pointValue);

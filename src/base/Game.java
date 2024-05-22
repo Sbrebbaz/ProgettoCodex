@@ -7,13 +7,20 @@ public class Game {
 	private List<Player> players;
 	private Table table;
 	private int turnCounter;
+	/**
+	 * construction for the Game, create a new game from a List of Player
+	 * @param players
+	 */
 	public Game(List<Player> players) {
 		this.players=players;
 		Collections.shuffle(players);
 		turnCounter = 0;
 		this.table=new Table();
 	}
-
+	/**
+	 * start the game
+	 * @throws Exception, cast if a critical error occurs
+	 */
 	public void play() throws Exception{
 
 		for(int i=0 ; i<getNumberOfPlayer();i++) {// set secret and starting card
@@ -51,11 +58,19 @@ public class Game {
 		UIUtility.clearScreen();
 		UIUtility.printScoreboard(this);
 	}
-
+	/**
+	 * draw a card from the table deck
+	 * @param index
+	 * @return
+	 * @throws Exception
+	 */
 	public Card drawCardFormTable(int index) throws Exception{
 		return table.drawTableCard(index);
 	}
-
+	/**
+	 * play the turn for a player
+	 * @param flagForDraw indicate if the player can draw or not
+	 */
 	public void playTurn(boolean flagForDraw) {//if set to true you can draw, else you can't
 		UIUtility.clearScreen();
 
@@ -71,19 +86,32 @@ public class Game {
 		playNextTurn();	
 	}	
 
-
+	/**
+	 * wheel players play the game
+	 */
 	public void playNextTurn(){
 		turnCounter = (turnCounter+1)%players.size();
 	}
-
+	/**
+	 * get the player playing the turn
+	 * @return
+	 */
 	public Player getCurrentPlayer() {
 		return players.get(turnCounter);
 	}
-
+	/**
+	 * draw a card from the Type of the deck and give it to the indicates player
+	 * @param player
+	 * @param cardType
+	 * @throws Exception
+	 */
 	public void drawCard(Player player, CardType cardType) throws Exception {
 		player.DrawCard(table.drawCard(cardType));
 	}
-
+	/**
+	 * returns a list of the winning players
+	 * @return
+	 */
 	public List<Player> getWinningPlayers(){
 		List<Player> tmp = players;
 		Collections.sort(tmp);// non sono sicuro che sorti dal max al min
@@ -94,7 +122,10 @@ public class Game {
 		}
 		return null;
 	}
-
+	/**
+	 * calculates the points taken by the player from the objective cards
+	 * @param player
+	 */
 	public void calculatePlayerPoint(Player player) {
 		int addObjectivePoints = 0;
 		for(int i = 0; i<table.getN_OBJECTIVE_TABLE_CARDS(); i++) {
@@ -103,7 +134,10 @@ public class Game {
 		addObjectivePoints += player.getSecretObjective().getVisibleSide().getPoints(player.getMap(), 0, 0);
 		player.AddPoints(addObjectivePoints);
 	}
-
+	/**
+	 * checks if a player has reached the winning requirements or if there are no more cards in the decks
+	 * @return true if they have been achieved, false if not
+	 */
 	public boolean verifyWinningCondition() {
 		for(Player player:players) {
 			if(player.winningPoints()) {
@@ -112,19 +146,30 @@ public class Game {
 		}
 		return table.isEmpty();
 	}
-
+	/**
+	 * returns the number of player
+	 * @return
+	 */
 	public int getNumberOfPlayer() {
 		return players.size();
 	}
-
+	/**
+	 * get all players
+	 * @return a List of Player
+	 */
 	public List<Player> getPlayers() {
 		return players;
 	}
-
+	/**
+	 * get the table
+	 * @return
+	 */
 	public Table getTable() {
 		return table;
 	}
-
+	/**
+	 * returns a String whit all informations of the game
+	 */
 	@Override
 	public String toString() {
 		return "Game{" +

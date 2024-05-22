@@ -13,6 +13,9 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 
 public class CardJsonAdapter  implements  JsonDeserializer<Card[]>{
+	/**
+	 * deserialize the Json file to java object Arrays of Card
+	 */
 	@Override
 	public Card[] deserialize(JsonElement elem, Type type, JsonDeserializationContext context) throws JsonParseException {
 		JsonArray array = elem.getAsJsonArray();

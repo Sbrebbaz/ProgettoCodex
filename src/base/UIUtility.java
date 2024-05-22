@@ -18,20 +18,32 @@ public class UIUtility {
 	public static final String ANSI_PURPLE = "\u001B[35m";
 	public static final String ANSI_CYAN = "\u001B[36m";
 	public static final String ANSI_WHITE = "\u001B[37m";
-
+	
+	/**
+	 * print a String whit a color
+	 * @param lineToPrint
+	 * @param color
+	 */
 	public static void printLineColor(String lineToPrint, String color) {
 		System.out.println(color + lineToPrint + ANSI_RESET);	
 	}
-
+	/**
+	 * clear the screen
+	 */
 	public static void clearScreen() {  
 		System.out.print("\n\033[H\033[2J");  
 		System.out.flush();  
 	}  
-
+	/**
+	 * print the title
+	 */
 	public static void printTitle() {
 		printLineColor("CODEX NATURALIS by group 45", ANSI_GREEN);
 	}
-
+	/**
+	 * manages the mainMenu
+	 * @return true if the user select the option "start game"
+	 */
 	public static Boolean mainMenuManagement() {
 
 		Boolean valid= false;
@@ -66,7 +78,10 @@ public class UIUtility {
 
 		return valid;		
 	}
-
+	/**
+	 * manages the selection of the players
+	 * @return the number of players
+	 */
 	public static int playerSelectionManagement() {
 
 		int players = -1;
@@ -102,7 +117,10 @@ public class UIUtility {
 
 		return players;
 	}
-
+	/**
+	 * manages the creation of a player
+	 * @return
+	 */
 	public static Player playerCreation() {
 
 		Boolean valid= false;
@@ -189,7 +207,10 @@ public class UIUtility {
 
 		return new Player(playerName, playerColor);
 	}
-
+	/**
+	 * set secret objective card for a player
+	 * @param player
+	 */
 	public static void setSecretObjectiveCard(Player player) {
 		Boolean valid= false;
 		do{
@@ -209,7 +230,10 @@ public class UIUtility {
 			}
 		}while(!valid);
 	}
-
+	/**
+	 * set starting card for a player
+	 * @param player
+	 */
 	public static void setStartingCard(Player player) {
 		Boolean valid= false;
 		do{
@@ -237,11 +261,16 @@ public class UIUtility {
 			}
 		}while(!valid);
 	}
-
+	/**
+	 * print a player
+	 */
 	public static void printPlayer(Player toPrint) {
 		printLineColor(toPrint.toString(), toPrint.getColor());
 	}
-
+	/**
+	 * manages the basic turn input/output logic
+	 * @param game
+	 */
 	public static void playerTurnBase(Game game) {
 		Boolean valid= false;
 		do{
@@ -283,7 +312,10 @@ public class UIUtility {
 			}
 		}while(!valid);
 	}
-
+	/**
+	 * print thesScoreboard of a game
+	 * @param game
+	 */
 	public static void printScoreboard(Game game) {
 
 		System.out.println("");	
@@ -294,8 +326,12 @@ public class UIUtility {
 			printPlayer(player);
 		}	
 	}
-
-	public static boolean selectCardToPlace(Player player) {//true: go back, false: continue whit the next phase
+	/**
+	 * manages the selection of the card in the hand a player want to place
+	 * @param player
+	 * @return true: go back, false: continue whit the next phase
+	 */
+	public static boolean selectCardToPlace(Player player) {
 		boolean valid = false;
 		clearScreen();
 		do {
@@ -322,8 +358,13 @@ public class UIUtility {
 		}while(!valid);
 		return false;
 	}
-
-	public static boolean selectSideToPlace(Player player,int index) {//true: go back, false: continue whit the next phase
+	/**
+	 * manages the selection of the side a player want to place
+	 * @param player
+	 * @param index
+	 * @return true: go back, false: continue whit the next phase
+	 */
+	public static boolean selectSideToPlace(Player player,int index) {
 		boolean valid = false;
 		clearScreen();
 		do {
@@ -355,8 +396,13 @@ public class UIUtility {
 		}while(!valid);
 		return false;
 	}
-
-	public static boolean placeCard(Player player,int index) {//true: go back, false: continue whit the next phase
+	/**
+	 *  manages the selection of the coordinate for placing a card
+	 * @param player
+	 * @param index
+	 * @return true: go back, false: continue whit the next phase
+	 */
+	public static boolean placeCard(Player player,int index) {
 		boolean valid = false;
 		clearScreen();
 		do {
@@ -381,7 +427,10 @@ public class UIUtility {
 		}while(!valid);
 		return false;
 	}
-
+	/**
+	 * manages the selection of the deck from which to draw
+	 * @param game
+	 */
 	public static void drawPhase(Game game) {
 		boolean valid = false;
 		clearScreen();
@@ -416,8 +465,12 @@ public class UIUtility {
 			}
 		}while(!valid);
 	}
-
-	public static boolean drawFromTable(Game game) {//true: go back, false: continue whit the next phase
+	/**
+	 * manages the selection of the table card to draw
+	 * @param game
+	 * @return true: go back, false: continue whit the next phase
+	 */
+	public static boolean drawFromTable(Game game) {
 		boolean valid = false;
 		clearScreen();
 		do {
