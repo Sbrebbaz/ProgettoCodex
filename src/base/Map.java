@@ -87,8 +87,8 @@ public class Map {
         if (outOfIndex(x, y)) {
             return false;
         }
-        for (int i = -1; i < 1; i += 2) {
-            for (int j = -1; j < 1; j += 2) {
+        for (int i = -1; i <= 2; i += 2) {
+            for (int j = -1; j <= 2; j += 2) {
 
                 if (!outOfIndex(x + i, y + j) && grid[x + i][y + j] != null && grid[x + i][y + j].getCard() != null) {
                     if (grid[x + i][y + j].getCard().getVisibleSide().getCornerFromPosition(i, j) == null) {
@@ -111,8 +111,8 @@ public class Map {
      */
     private int getZindexMapCard(int x, int y) {// ritorna lo zIndex  massimo +1  delle carte collegate da un corner
         int max = Integer.MIN_VALUE;
-        for (int i = -1; i < 1; i += 2) {
-            for (int j = -1; j < 1; j += 2) {
+        for (int i = -1; i <= 2; i += 2) {
+            for (int j = -1; j <= 2; j += 2) {
                 if (!outOfIndex(x + i, y + j) && grid[x + i][y + j] != null && grid[x + i][y + j].getzIndex() > max) {
                     max = grid[x + i][y + j].getzIndex();
                 }
@@ -246,8 +246,8 @@ public class Map {
      */
     public int getNearCorner(int x, int y) {
         int totalCorner = 0;//numero totale di conrner adiacenti
-        for (int i = -1; i < 1; i += 2) {
-            for (int j = -1; j < 1; j += 2) {
+        for (int i = -1; i <= 2; i += 2) {
+            for (int j = -1; j <= 2; j += 2) {
 
                 if (!outOfIndex(x + i, y + j) && grid[x + i][y + j] != null && grid[x + i][y + j].getCard() != null) {//se esiste una carta in quel corner
                     totalCorner++;//aumento il count del corner
