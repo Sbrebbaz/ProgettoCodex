@@ -41,7 +41,7 @@ public class MapCard {
 		this.zIndex = zIndex;
 	}
 	/**
-	 * returns a String whit all informations of the MapCard
+	 * returns a String with all informations of the MapCard
 	 */
 	@Override
 	public String toString() {

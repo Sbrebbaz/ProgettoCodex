@@ -38,9 +38,14 @@ public class PlaceRequirementSide extends GenericSide {
 
     @Override
     public String toString() {
-        return "PlaceRequirementSide{" +
-                "side=" + super.toString() +
-                ", placeRequirements=" + placeRequirements +
-                '}';
+		StringBuilder sb = new StringBuilder();
+		
+		sb.append(super.toString());
+
+		sb.append("Place Requirement ");
+		sb.append(placeRequirements);
+		sb.append(" ");
+		
+		return sb.toString();
     }
 }

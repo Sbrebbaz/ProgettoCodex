@@ -168,7 +168,7 @@ public class Game {
 		return table;
 	}
 	/**
-	 * returns a String whit all informations of the game
+	 * returns a String with all informations of the game
 	 */
 	@Override
 	public String toString() {

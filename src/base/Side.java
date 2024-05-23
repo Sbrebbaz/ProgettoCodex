@@ -115,11 +115,62 @@ public abstract class Side {
 		this.corners = corners;
 	}
 	/**
-	 * return a String whit all informations of this side
+	 * return a String with all informations of this side
 	 */
 	@Override
 	public String toString() {
-		return String.format("Corners %s Center %s Points %s",Arrays.toString(corners),center,pointValue);
+			
+		StringBuilder sb = new StringBuilder();
+
+		sb.append("Center ");
+		sb.append(center);
+		sb.append(" ");
+		
+		if(corners != null) {
+			sb.append("Corners [ ");
+
+			sb.append("TL: ");
+			if(corners[0] != null) {
+				sb.append(corners[0]);
+			}
+			else {
+				sb.append("NULL");
+			}
+			sb.append(" ");
+
+			sb.append("TR: ");
+			if(corners[1] != null) {
+				sb.append(corners[1]);
+			}
+			else {
+				sb.append("NULL");
+			}
+			sb.append(" ");
+
+			sb.append("BL: ");
+			if(corners[2] != null) {
+				sb.append(corners[2]);
+			}
+			else {
+				sb.append("NULL");
+			}
+			sb.append(" ");
+
+			sb.append("BR: ");
+			if(corners[3] != null) {
+				sb.append(corners[3]);
+			}
+			else {
+				sb.append("NULL");
+			}
+			sb.append(" ] ");
+		}
+		
+		sb.append("Points [ ");
+		sb.append(pointValue);
+		sb.append(" ] ");
+		
+		return sb.toString();
 	}
 	
 }

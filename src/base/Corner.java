@@ -24,12 +24,10 @@ public class Corner {
 		this.symbol = symbol;
 	}
 	/**
-	 * return a string whit all informations of the Corner
+	 * return a string with all informations of the Corner
 	 */
 	@Override
 	public String toString() {
-		return "Corner{" +
-				"symbol=" + symbol +
-				'}';
+		return symbol.toString();
 	}
 }

@@ -54,9 +54,25 @@ public class PointPositionRequirementSide extends PlaceRequirementSide {
 
 	@Override
 	public String toString() {
-		return "PointPositionRequirementSide{" +
-				"placeRequirementSide=" + super.toString() +
-				", positionRequirement=" + Arrays.deepToString(positionRequirement) +
-				"}\n";
+
+		StringBuilder sb = new StringBuilder();
+		
+		sb.append(super.toString());
+		
+		for(int i=0;i<positionRequirement.length;i++) {
+			sb.append("\n\t");
+			for(int j=0;j<positionRequirement[0].length;j++) {
+				if(positionRequirement[i][j] != null) {
+					sb.append(positionRequirement[i][j].getCard().getCardColor().toString());
+				}
+				else {
+					sb.append("\t");
+				}
+			}
+		}
+		
+		sb.append("");
+		
+		return sb.toString();
 	}
 }

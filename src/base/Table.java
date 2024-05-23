@@ -13,7 +13,7 @@ public class Table {
 	private final int N_TABLE_CARDS = 4;
 	private final int N_OBJECTIVE_TABLE_CARDS = 2;
 	/**
-	 * construct a table whit all deck taken from the Json file and prepare the table cards
+	 * construct a table with all deck taken from the Json file and prepare the table cards
 	 */
 	public Table() {// inizializza i decks dal file, pesca 2 carte gold e resource e li mette in tableCards e pesca 2 carte Objective e li mette in tableObjectiveCards
 		ArrayList <Card> cards= new ArrayList<Card>(Arrays.asList(CardUtility.getCards()));
@@ -219,7 +219,7 @@ public class Table {
 	}
 
 	/**
-	 * returns a String whit all informations of the Table
+	 * returns a String with all information of the Table
 	 */
 	@Override
 	public String toString() {
@@ -235,24 +235,61 @@ public class Table {
 		sb.append("goldDeck : ");
 		sb.append(goldDeck);
 		
-		sb.append("objectiveDeck : ");
-		sb.append(objectiveDeck);
-		
-		sb.append("startingDeck : ");
-		sb.append(startingDeck);
-		
 		sb.append("tableCards : ");
 		for(Card c : tableCards) {
-			sb.append("\n\t");
+			sb.append("\n");
 			sb.append(c);			
 		}
 		
-		sb.append("tableObjectiveCards : ");
+		sb.append("\ntableObjectiveCards : ");
 		for(Card c : tableObjectiveCards) {
-			sb.append("\n\t");
+			sb.append("\n");
 			sb.append(c);			
 		}
 				
+		return sb.toString();
+	}
+
+	/**
+	 * returns a String with all information of the Table related to the draw phase
+	 */
+	public String toStringDrawTable() {
+		
+		StringBuilder sb = new StringBuilder();
+
+		sb.append("TABLE:");
+		sb.append("\n");
+		
+		sb.append("resourceDeck : ");
+		sb.append(resourceDeck);
+		
+		sb.append("goldDeck : ");
+		sb.append(goldDeck);
+		
+		sb.append("tableCards : ");
+		for(Card c : tableCards) {
+			sb.append("\n");
+			sb.append(c);			
+		}
+		
+		return sb.toString();
+	}
+	/**
+	 * returns a String with all information of the Table cards
+	 */
+	public String toStringTableCards() {
+		
+		StringBuilder sb = new StringBuilder();
+
+		sb.append("TABLE:");
+		sb.append("\n");
+		
+		sb.append("tableCards : ");
+		for(Card c : tableCards) {
+			sb.append("\n");
+			sb.append(c);			
+		}
+		
 		return sb.toString();
 	}
 }

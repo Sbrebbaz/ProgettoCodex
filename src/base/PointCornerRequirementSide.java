@@ -22,9 +22,12 @@ public class PointCornerRequirementSide extends PlaceRequirementSide {
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("PointCornerRequirementSide{");
-        sb.append("pointCornerRequirementSide=").append(pointCornerRequirementSide);
-        sb.append('}');
+        StringBuilder sb = new StringBuilder();
+        
+        sb.append(super.toString());
+        
+        sb.append("[Corner Requirement]");
+        
         return sb.toString();
     }
 }

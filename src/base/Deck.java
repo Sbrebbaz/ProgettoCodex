@@ -5,7 +5,7 @@ import java.util.*;
 public class Deck {
 	private List<Card> deck;
 	/**
-	 * construction of Deck, initialize the deck whit the list of Card, if null create a new empty deck
+	 * construction of Deck, initialize the deck with the list of Card, if null create a new empty deck
 	 * @param deck
 	 */
 	public Deck(List<Card> deck) {
@@ -58,7 +58,7 @@ public class Deck {
 		shuffle();
 	}
 	/**
-	 * return a String whit all informations of the Deck
+	 * return a String with all informations of the Deck
 	 */
 	@Override
 	public String toString() {

@@ -53,10 +53,16 @@ public class PointResourceRequirementSide extends PlaceRequirementSide {
 
 	@Override
 	public String toString() {
-		return "PointResourceRequirementSide{" +
-				"pointRequirement=" + pointRequirement +
-				"placeRequirementSide= "+ super.toString() +
-				'}';
+		
+		StringBuilder sb = new StringBuilder();
+		
+		sb.append(super.toString());
+
+		sb.append("Points Requirement ");
+		sb.append(pointRequirement);
+		sb.append(" ");
+		
+		return sb.toString();
 	}
 
 }

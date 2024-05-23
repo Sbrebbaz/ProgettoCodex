@@ -12,9 +12,7 @@ public class Main {
 		try {
 			//Read card configuration from file
 			CardUtility.readCardsFromFile();
-			
-				UIUtility.clearScreen();
-				
+							
 				UIUtility.printTitle();
 
 				while(UIUtility.mainMenuManagement()) {

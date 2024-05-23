@@ -12,7 +12,7 @@ public class Player implements Comparable<Player> {
 	private Map map;
 	private static int COUNTER = 0;
 	/**
-	 * create a new player whit their name and color
+	 * create a new player with their name and color
 	 * @param name
 	 * @param color
 	 */
@@ -77,7 +77,7 @@ public class Player implements Comparable<Player> {
 		return points >= 20;
 	}
 	/**
-	 * compare a player whit another in descending order
+	 * compare a player with another in descending order
 	 */
 	public int compareTo(Player player) {
 		return player.getPoints() - this.getPoints();
@@ -207,7 +207,7 @@ public class Player implements Comparable<Player> {
 		return map;
 	}
 	/**
-	 * returns a String whit the generic informations of the Player
+	 * returns a String with the generic informations of the Player
 	 */
 	@Override
 	public String toString() {
@@ -224,7 +224,7 @@ public class Player implements Comparable<Player> {
 		return sb.toString();
 	}
 	/**
-	 * returns a String whit the hand of the player
+	 * returns a String with the hand of the player
 	 * @return
 	 */
 	public String ToStringPlayerHand() {
@@ -236,7 +236,6 @@ public class Player implements Comparable<Player> {
 		sb.append("\nHand:\n[\n");
 
 		for (Card card : hand) {
-			sb.append("\t");
 			sb.append(card);
 			sb.append("\n");
 		}

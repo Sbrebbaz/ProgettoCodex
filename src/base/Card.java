@@ -93,7 +93,7 @@ public class Card {
 		return side[visibleSide];
 	}
 	/**
-	 * swap visible side whit the other
+	 * swap visible side with the other
 	 */
 	public void swapSide() {
 		
@@ -112,14 +112,15 @@ public class Card {
 			return true;
 		}
 	}
+	
 	/**
-	 * @retrun return a String whit all informations of this card 
+	 * @retrun return a String with all informations of this card
 	 */
 	public String toString() {
 		
 		StringBuilder sb = new StringBuilder();
 
-		sb.append("[ id: '");
+		sb.append("\t[ \n\tid: '");
 		sb.append(id);
 
 		sb.append("' color: '");
@@ -127,23 +128,20 @@ public class Card {
 
 		sb.append("' type: '");
 		sb.append(cardType);
-		
-		sb.append("' selected side: '");
-		sb.append(visibleSide);
 
-		sb.append("' front[0]: '");
+		sb.append("' \n\tfront: ");
 		sb.append(side[0].toString());
 
-		sb.append("' back[1]: '");
+		sb.append(" \n\tback: ");
 		sb.append(side[1].toString());
 		
-		sb.append("']");
+		sb.append("\n\t]");
 		
 		return sb.toString();
 	}
 	/**
 	 * 
-	 * @return return a String whit the general informations of this card and only the informations of the visible side
+	 * @return return a String with the general informations of this card and only the informations of the visible side
 	 */
 	public String toStringVisibleSide() {
 		
