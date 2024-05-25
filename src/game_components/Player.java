@@ -28,6 +28,15 @@ public class Player implements Comparable<Player> {
 		hand = new ArrayList<Card>();
 		map = new Map();
 	}
+	/**
+	 * load the default configuration
+	 */
+	public void restart() {
+		hand = new ArrayList<Card>();
+		map = new Map();
+		secretObjective = null;
+		points = 0;
+	}
 
 	/**
 	 * set the secret objective card for the player
