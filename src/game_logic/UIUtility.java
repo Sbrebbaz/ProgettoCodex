@@ -59,6 +59,7 @@ public class UIUtility {
 
 		do {
 			try {
+				printTitle();
 				System.out.println("1 - Start a game");	
 				System.out.println("2 - Quit");	
 
