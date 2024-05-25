@@ -73,6 +73,9 @@ public class Game {
 		Collections.shuffle(players);
 		turnCounter = 0;
 		this.table=new Table();
+		for(Player player:players) {
+			player.restart();
+		}
 	}
 	/**
 	 * draw a card from the table deck
