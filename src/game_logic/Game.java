@@ -27,41 +27,52 @@ public class Game {
 	 * @throws Exception, cast if a critical error occurs
 	 */
 	public void play() throws Exception{
-
-		for(int i=0 ; i<getNumberOfPlayer();i++) {// set secret and starting card
-
-			for(int j=0; j<2;j++) {
-				drawCard(getCurrentPlayer(), CardType.OBJECTIVE);
+		
+		do {
+			for(int i=0 ; i<getNumberOfPlayer();i++) {// set secret and starting card
+	
+				for(int j=0; j<2;j++) {
+					drawCard(getCurrentPlayer(), CardType.OBJECTIVE);
+				}
+	
+				UIUtility.setSecretObjectiveCard(getCurrentPlayer());
+	
+				drawCard(getCurrentPlayer(), CardType.STARTING);
+				UIUtility.setStartingCard(getCurrentPlayer());
+	
+				drawCard(getCurrentPlayer(), CardType.RESOURCE);
+				drawCard(getCurrentPlayer(), CardType.RESOURCE);
+				drawCard(getCurrentPlayer(), CardType.GOLD);
+	
+				playNextTurn();
 			}
-
-			UIUtility.setSecretObjectiveCard(getCurrentPlayer());
-
-			drawCard(getCurrentPlayer(), CardType.STARTING);
-			UIUtility.setStartingCard(getCurrentPlayer());
-
-			drawCard(getCurrentPlayer(), CardType.RESOURCE);
-			drawCard(getCurrentPlayer(), CardType.RESOURCE);
-			drawCard(getCurrentPlayer(), CardType.GOLD);
-
-			playNextTurn();
-		}
-
-		while(!verifyWinningCondition()) {					
-			playTurn(true);
-		}
-
-		//Play LAST TURN
-		for(int i=0 ; i<getNumberOfPlayer();i++) {
-			playTurn(false);
-		}
-		//calculate objective points points
-		for(int i=0 ; i<getNumberOfPlayer();i++) {
-			calculatePlayerPoint(getCurrentPlayer());
-			playNextTurn();
-		}
-
-		UIUtility.clearScreen();
-		UIUtility.printScoreboard(this);
+	
+			while(!verifyWinningCondition()) {					
+				playTurn(true);
+			}
+	
+			//Play LAST TURN
+			for(int i=0 ; i<getNumberOfPlayer();i++) {
+				playTurn(false);
+			}
+			//calculate objective points points
+			for(int i=0 ; i<getNumberOfPlayer();i++) {
+				calculatePlayerPoint(getCurrentPlayer());
+				playNextTurn();
+			}
+	
+			UIUtility.clearScreen();
+			UIUtility.printScoreboard(this);
+			UIUtility.WaitForPlayerInput();
+		}while(UIUtility.playAnotherGame(this));
+	}
+	/**
+	 * loads the default configurations
+	 */
+	public void restart() {
+		Collections.shuffle(players);
+		turnCounter = 0;
+		this.table=new Table();
 	}
 	/**
 	 * draw a card from the table deck

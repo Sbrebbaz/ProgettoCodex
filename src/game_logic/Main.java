@@ -19,6 +19,7 @@ public class Main {
 
 				while(UIUtility.mainMenuManagement()) {
 					
+					players = new ArrayList<Player>();
 					playerCount = UIUtility.playerSelectionManagement();
 
 					for(int i = 0;i < playerCount; i++) {

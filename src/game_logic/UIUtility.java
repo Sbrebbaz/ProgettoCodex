@@ -508,6 +508,35 @@ public class UIUtility {
 		}
 	}
 	/**
+	 *  managing the menu for the rematch
+	 * @param game
+	 * @return
+	 */
+	public static boolean playAnotherGame(Game game) {
+		boolean valid = false;
+		clearScreen();
+		do {
+			try {
+				System.out.println("Want to play another game?");
+				System.out.println("1 - Yes");
+				System.out.println("2 - No");
+				int input = Integer.parseInt(consoleReader.readLine());
+				switch(input) {
+				case 1:
+					game.restart();
+					return true;
+				case 2:
+					return false;
+					default:
+						throw new InvalidMenuSelectionException("Unexpected value: " + input);
+				}
+			}catch(Exception e) {
+				ExceptionHandling();
+			}
+		}while(!valid);
+		return false;
+	}
+	/**
 	 * Waits for any input before proceeding
 	 */
 	public static void ExceptionHandling() {
