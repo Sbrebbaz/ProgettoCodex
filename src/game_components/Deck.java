@@ -1,15 +1,23 @@
-package base;
+package game_components;
 
 import java.util.*;
 
+import card_components.Card;
+
 public class Deck {
 	private List<Card> deck;
-
+	/**
+	 * construction of Deck, initialize the deck with the list of Card, if null create a new empty deck
+	 * @param deck
+	 */
 	public Deck(List<Card> deck) {
-		if(deck != null)
+		if(deck != null) {
 			this.deck = deck;
-		else
+			shuffle();
+		}
+		else {
 			deck = new ArrayList<Card>();
+		}
 	}
 
 	/**
@@ -31,22 +39,29 @@ public class Deck {
 			return false;
 		}
 	}
-
+	/**
+	 * draw a card from the deck
+	 * @return drawn card
+	 * @throws Exception, cast if drawn from an empty deck
+	 */
 	public Card drawCard() throws Exception {
 		if (!this.isEmpty()) {
-			Card draw = deck.get(0);
-			deck.remove(0);
-			return draw;
+			return deck.remove(0);
 		} else {
 			throw new Exception();
 		}
 	}
-
+	/**
+	 * adds a card to the deck
+	 * @param card
+	 */
 	public void addCard(Card card) {
 		deck.add(card);
 		shuffle();
 	}
-
+	/**
+	 * return a String with all informations of the Deck
+	 */
 	@Override
 	public String toString() {
 		return String.format("Remaining cards %s \n",deck.size());

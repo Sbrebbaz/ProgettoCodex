@@ -1,4 +1,4 @@
-package base;
+package enumeration;
 
 public enum Symbol {
 	EMPTY,

@@ -1,16 +1,17 @@
-package base;
+package card_components;
 
 import java.util.List;
 
+import enumeration.Symbol;
+import game_components.Map;
+
 public class PointCornerRequirementSide extends PlaceRequirementSide {
 
-    private PointCornerRequirementSide pointCornerRequirementSide;
-
+    
     public PointCornerRequirementSide(List<Symbol> center, Corner[] corners,int pointValue, List<Symbol> placeRequirements) {
         super(center, corners,pointValue, placeRequirements);
         // TODO Auto-generated constructor stub
     }
-
     public PointCornerRequirementSide(List<Symbol> center, Corner cornerTopLeft, Corner cornerTopRight,
                                       Corner cornerBottomLeft, Corner cornerBottomRight,int pointValue, List<Symbol> placeRequirements) {
         super(center, cornerTopLeft, cornerTopRight, cornerBottomLeft, cornerBottomRight,pointValue, placeRequirements);
@@ -24,9 +25,12 @@ public class PointCornerRequirementSide extends PlaceRequirementSide {
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("PointCornerRequirementSide{");
-        sb.append("pointCornerRequirementSide=").append(pointCornerRequirementSide);
-        sb.append('}');
+        StringBuilder sb = new StringBuilder();
+        
+        sb.append(super.toString());
+        
+        sb.append("[Corner Requirement]");
+        
         return sb.toString();
     }
 }
