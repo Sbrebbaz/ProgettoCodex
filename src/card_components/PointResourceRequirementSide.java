@@ -47,11 +47,7 @@ public class PointResourceRequirementSide extends PlaceRequirementSide {
 	
 	@Override
 	public int getPoints(Map map,int x,int y) {
-		int totalPoint = 0;
-		for(Symbol symbol: pointRequirement) {
-			totalPoint += this.getPointValue() * map.getSymbolCount(symbol);
-		}
-		return totalPoint;
+		return this.getPointValue() * map.getSetSymbolCount(pointRequirement);
 	}
 
 	@Override
