@@ -148,26 +148,57 @@ public class Map {
 		}
 	}
 	/**
-	 * get the number of time the @param symbol is found 
+	 * get number of time the set of symbol is found 
 	 * @param symbol
 	 * @return
 	 */
-	public int getSymbolCount(Symbol symbol) {//conta il numero di corner visibili con il simbolo cercato nella mappa
-		Corner tmp[];//contiene i 4 corner della carta attualmente scansionata
+	public int getSetSymbolCount(List<Symbol> symbol) {//conta il numero di corner visibili con il simbolo cercato nella mappa
+		List<Corner> cornersAlredyUsed = new ArrayList<Corner>();
 		int count = 0;
-		for (int i = subMap[0].x + 1; i < subMap[1].x; i++) {// gli indici partono dalla sottomatrice subMap
-			for (int j = subMap[0].y + 1; j < subMap[1].y; j++) {
-				if (grid[i][j] != null && grid[i][j].getCard() != null) {
-					tmp = grid[i][j].getCard().getVisibleSide().getCorners();
-					for (int k = 0; k < 4; k++) {
-						if (tmp[k] != null && tmp[k].getSymbol() == symbol && grid[i][j].getzIndex() > getZindexFromIndexCorner(i, j, k)) {//se il corner esiste, è uguale al simbolo cercato e la carta del corner analizzato..
-							count++;                                                                                                    //... si trova più in alto di quella collegata dal corner aumento il count
-						}
-					}
-				}
-			}
+		if (symbol.isEmpty()) {
+			return 0;
+		}
+		while(findSetListCount(symbol,cornersAlredyUsed)) {
+			count++;
 		}
 		return count;
+	}
+	/**
+	 * return true if the set of symbol can be found
+	 * @param symbol
+	 * @param cornersAlredyUsed
+	 * @return
+	 */
+	public boolean findSetListCount(List<Symbol> symbol,List<Corner> cornersAlredyUsed) {
+		Corner tmp[];//contiene i 4 corner della carta attualmente scansionata
+		boolean finish = false;//indica se hai gia finito di cerca i simboli nella lista -> lista vuota
+		
+		for (int i = subMap[0].x + 1; i < subMap[1].x && finish == false; i++) {// gli indici partono dalla sottomatrice subMap
+			for (int j = subMap[0].y + 1; j < subMap[1].y && finish == false; j++) {
+
+				if (grid[i][j] != null && grid[i][j].getCard() != null) {
+
+					tmp = grid[i][j].getCard().getVisibleSide().getCorners();
+
+					for (int k = 0; k < 4 && finish == false; k++) {
+
+						if ( !cornersAlredyUsed.contains(tmp[k]) && tmp[k] != null && symbol.contains(tmp[k].getSymbol()) &&
+								grid[i][j].getzIndex() > getZindexFromIndexCorner(i, j, k)) {//se il corner esiste, non è mai stato usato, il simbolo esiste nella lista e la carta del corner analizzato..
+							//... si trova più in alto di quella collegata dal corner tolgo il simbolo dalla lista
+							cornersAlredyUsed.add(tmp[k]);
+							symbol.remove(tmp[k].getSymbol());
+							if (symbol.isEmpty()) {//se non ci sono altri simboli da cercare esco
+								finish = true;
+							}
+
+						}
+					}
+
+				}
+
+			}
+		}
+		return finish;
 	}
 	/**
 	 * from the corner get the zIndex value of the card connected to it
@@ -226,7 +257,7 @@ public class Map {
 
 					for (int k = 0; k < 4 && finish == false; k++) {
 
-						if (tmp[k] != null && symbol.contains(tmp[k].getSymbol()) &&
+						if (  tmp[k] != null && symbol.contains(tmp[k].getSymbol()) &&
 								grid[i][j].getzIndex() > getZindexFromIndexCorner(i, j, k)) {//se il corner esiste, il simbolo esiste nella lista e la carta del corner analizzato..
 							//... si trova più in alto di quella collegata dal corner tolgo il simbolo dalla lista
 							symbol.remove(tmp[k].getSymbol());
@@ -298,8 +329,8 @@ public class Map {
 			return false;//...dimensioni diversi quindi diverse
 		}
 
-		for (int i = x; i < x + positionRequirement[0].length && isEquals; i++) {
-			for (int j = y; j < y + positionRequirement.length && isEquals; j++) {
+		for (int i = 0; i < positionRequirement[0].length && isEquals; i++) {
+			for (int j = 0; j < positionRequirement.length && isEquals; j++) {
 
 				if (outOfIndex(x + i, y + j)) {//se esco dalla grid vado alla prossima riga
 					break;
