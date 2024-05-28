@@ -3206,7 +3206,7 @@
     "cardColor": "EMPTY",
     "cardType": "OBJECTIVE",
     "frontSide": {
-      "type": "PointCornerRequirementSide",
+      "type": "PointPositionRequirementSide",
       "pointValue": 2,
       "placeRequiremenmts": [
         
@@ -3244,7 +3244,7 @@
     "cardColor": "EMPTY",
     "cardType": "OBJECTIVE",
     "frontSide": {
-      "type": "PointCornerRequirementSide",
+      "type": "PointPositionRequirementSide",
       "pointValue": 2,
       "placeRequiremenmts": [
         
@@ -3282,7 +3282,7 @@
     "cardColor": "EMPTY",
     "cardType": "OBJECTIVE",
     "frontSide": {
-      "type": "PointCornerRequirementSide",
+      "type": "PointPositionRequirementSide",
       "pointValue": 2,
       "placeRequiremenmts": [
         
@@ -3320,7 +3320,7 @@
     "cardColor": "EMPTY",
     "cardType": "OBJECTIVE",
     "frontSide": {
-      "type": "PointCornerRequirementSide",
+      "type": "PointPositionRequirementSide",
       "pointValue": 2,
       "placeRequiremenmts": [
         
