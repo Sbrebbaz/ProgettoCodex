@@ -153,44 +153,41 @@ public class Map {
 	 * @return
 	 */
 	public int getSetSymbolCount(List<Symbol> symbol) {//conta il numero di corner visibili con il simbolo cercato nella mappa
-		List<Corner> cornersAlredyUsed = new ArrayList<Corner>();
+		List<Symbol> allCorners = getAllVisibleCornersSymbol(symbol);
 		int count = 0;
 		if (symbol.isEmpty()) {
 			return 0;
 		}
-		while(findSetListCount(symbol,cornersAlredyUsed)) {
+		while(allCorners.containsAll(symbol)) {
 			count++;
+			for(Symbol tmpSymbol:symbol) {
+				allCorners.remove(tmpSymbol);
+			}
 		}
 		return count;
 	}
 	/**
-	 * return true if the set of symbol can be found
+	 * get all visible corner with a symbol contains in the list
 	 * @param symbol
-	 * @param cornersAlredyUsed
 	 * @return
 	 */
-	public boolean findSetListCount(List<Symbol> symbol,List<Corner> cornersAlredyUsed) {
+	public ArrayList<Symbol> getAllVisibleCornersSymbol(List<Symbol> symbol) {
 		Corner tmp[];//contiene i 4 corner della carta attualmente scansionata
-		boolean finish = false;//indica se hai gia finito di cerca i simboli nella lista -> lista vuota
+		ArrayList<Symbol> symbolFound = new ArrayList<Symbol>();
 		
-		for (int i = subMap[0].x + 1; i < subMap[1].x && finish == false; i++) {// gli indici partono dalla sottomatrice subMap
-			for (int j = subMap[0].y + 1; j < subMap[1].y && finish == false; j++) {
+		for (int i = subMap[0].x + 1; i < subMap[1].x; i++) {// gli indici partono dalla sottomatrice subMap
+			for (int j = subMap[0].y + 1; j < subMap[1].y; j++) {
 
 				if (grid[i][j] != null && grid[i][j].getCard() != null) {
 
 					tmp = grid[i][j].getCard().getVisibleSide().getCorners();
 
-					for (int k = 0; k < 4 && finish == false; k++) {
+					for (int k = 0; k < tmp.length; k++) {
 
-						if ( !cornersAlredyUsed.contains(tmp[k]) && tmp[k] != null && symbol.contains(tmp[k].getSymbol()) &&
+						if (tmp[k] != null && symbol.contains(tmp[k].getSymbol()) &&
 								grid[i][j].getzIndex() > getZindexFromIndexCorner(i, j, k)) {//se il corner esiste, non è mai stato usato, il simbolo esiste nella lista e la carta del corner analizzato..
-							//... si trova più in alto di quella collegata dal corner tolgo il simbolo dalla lista
-							cornersAlredyUsed.add(tmp[k]);
-							symbol.remove(tmp[k].getSymbol());
-							if (symbol.isEmpty()) {//se non ci sono altri simboli da cercare esco
-								finish = true;
-							}
-
+							//... si trova più in alto di quella collegata dal corner aggiungo il corner
+							symbolFound.add(tmp[k].getSymbol());
 						}
 					}
 
@@ -198,7 +195,7 @@ public class Map {
 
 			}
 		}
-		return finish;
+		return symbolFound;
 	}
 	/**
 	 * from the corner get the zIndex value of the card connected to it
@@ -243,36 +240,11 @@ public class Map {
 	 * @return true if they are found, false if not
 	 */
 	public boolean findListSymbol(List<Symbol> symbol) {
-		Corner tmp[];//contiene i 4 corner della carta attualmente scansionata
-		boolean finish = false;//indica se hai gia finito di cerca i simboli nella lista -> lista vuota
+		List<Symbol> allCorners = getAllVisibleCornersSymbol(symbol);
 		if (symbol.isEmpty()) {
 			return true;
 		}
-		for (int i = subMap[0].x + 1; i < subMap[1].x && finish == false; i++) {// gli indici partono dalla sottomatrice subMap
-			for (int j = subMap[0].y + 1; j < subMap[1].y && finish == false; j++) {
-
-				if (grid[i][j] != null && grid[i][j].getCard() != null) {
-
-					tmp = grid[i][j].getCard().getVisibleSide().getCorners();
-
-					for (int k = 0; k < 4 && finish == false; k++) {
-
-						if (  tmp[k] != null && symbol.contains(tmp[k].getSymbol()) &&
-								grid[i][j].getzIndex() > getZindexFromIndexCorner(i, j, k)) {//se il corner esiste, il simbolo esiste nella lista e la carta del corner analizzato..
-							//... si trova più in alto di quella collegata dal corner tolgo il simbolo dalla lista
-							symbol.remove(tmp[k].getSymbol());
-							if (symbol.isEmpty()) {//se non ci sono altri simboli da cercare esco
-								finish = true;
-							}
-
-						}
-					}
-
-				}
-
-			}
-		}
-		return finish;
+		return allCorners.containsAll(symbol);
 	}
 	/**
 	 * get the number of near corner connected to the position
