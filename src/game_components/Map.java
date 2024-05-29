@@ -153,7 +153,7 @@ public class Map {
 	 * @return
 	 */
 	public int getSetSymbolCount(List<Symbol> symbol) {//conta il numero di corner visibili con il simbolo cercato nella mappa
-		List<Symbol> allCorners = getAllVisibleCornersSymbol(symbol);
+		List<Symbol> allCorners = new ArrayList<Symbol>(getAllVisibleCornersSymbol(symbol));
 		int count = 0;
 		if (symbol.isEmpty()) {
 			return 0;
@@ -240,7 +240,7 @@ public class Map {
 	 * @return true if they are found, false if not
 	 */
 	public boolean findListSymbol(List<Symbol> symbol) {
-		List<Symbol> allCorners = getAllVisibleCornersSymbol(symbol);
+		List<Symbol> allCorners = new ArrayList<Symbol>(getAllVisibleCornersSymbol(symbol));
 		if (symbol.isEmpty()) {
 			return true;
 		}
