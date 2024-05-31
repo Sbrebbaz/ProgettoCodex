@@ -153,7 +153,7 @@ public class Map {
 	 * @return
 	 */
 	public int getSetSymbolCount(List<Symbol> symbol) {//conta il numero di corner visibili con il simbolo cercato nella mappa
-		List<Symbol> allCorners = new ArrayList<Symbol>(getAllVisibleCornersSymbol(symbol));
+		List<Symbol> allCorners = new ArrayList<Symbol>(getAllVisibleSymbol(symbol));
 		int count = 0;
 		if (symbol.isEmpty()) {
 			return 0;
@@ -167,11 +167,11 @@ public class Map {
 		return count;
 	}
 	/**
-	 * get all visible corner with a symbol contains in the list
+	 * get all visible symbol in the map
 	 * @param symbol
 	 * @return
 	 */
-	public ArrayList<Symbol> getAllVisibleCornersSymbol(List<Symbol> symbol) {
+	public ArrayList<Symbol> getAllVisibleSymbol(List<Symbol> symbol) {
 		Corner tmp[];//contiene i 4 corner della carta attualmente scansionata
 		ArrayList<Symbol> symbolFound = new ArrayList<Symbol>();
 		
@@ -181,7 +181,10 @@ public class Map {
 				if (grid[i][j] != null && grid[i][j].getCard() != null) {
 
 					tmp = grid[i][j].getCard().getVisibleSide().getCorners();
-
+					if(grid[i][j].getCard().getVisibleSide().getCenter() != null) {
+						symbolFound.addAll(grid[i][j].getCard().getVisibleSide().getCenter());
+					}
+					
 					for (int k = 0; k < tmp.length; k++) {
 
 						if (tmp[k] != null && symbol.contains(tmp[k].getSymbol()) &&
@@ -240,7 +243,7 @@ public class Map {
 	 * @return true if they are found, false if not
 	 */
 	public boolean findListSymbol(List<Symbol> symbol) {
-		List<Symbol> allCorners = new ArrayList<Symbol>(getAllVisibleCornersSymbol(symbol));
+		List<Symbol> allCorners = new ArrayList<Symbol>(getAllVisibleSymbol(symbol));
 		if (symbol.isEmpty()) {
 			return true;
 		}
